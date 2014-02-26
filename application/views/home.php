@@ -54,7 +54,53 @@
     <!-- End: HEADER -->
     <!-- Start: MAIN CONTENT -->
     <div class="content">
-    <!--  <!-- Start: slider -->
+    <div class="slider">
+        <div class="container-fluid">
+          <div id="heroSlider" class="carousel slide">
+            <div class="carousel-inner">
+              <div class="active item">
+                <div class="hero-unit">
+                  <div class="row-fluid">
+                    
+                    <div class="span5" align="center" style="width:970px; height:300px;">
+                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image1.jpg" class="thumbnail"></div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+              <div class="item">
+                <div class="hero-unit">
+                  <div class="row-fluid">
+                    <div class="span5" align="center" style="width:970px; height:300px;">
+                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image5.jpg" class="thumbnail"></div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+              <div class="item">
+                <div class="hero-unit">
+                  <div class="row-fluid">
+                   <div class="span5" align="center" style="width:970px; height:300px;">
+                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image6.jpg" class="thumbnail"></div>
+                    </div>
+                  </div>                  
+                </div>
+              </div>
+              <div class="item">
+                <div class="hero-unit">
+                  <div class="row-fluid">
+                 <div class="span5" align="center" style="width:970px; height:300px;">
+                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image7.jpg" class="thumbnail"></div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+            <a class="left carousel-control" href="#heroSlider" data-slide="prev">‹</a>
+            <a class="right carousel-control" href="#heroSlider" data-slide="next">›</a>
+          </div>
+        </div>
+      </div>
     
       <!-- End: PRODUCT LIST -->
     </div>
