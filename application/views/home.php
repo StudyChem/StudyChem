@@ -101,8 +101,46 @@
           </div>
         </div>
       </div>
-    
-      <!-- End: PRODUCT LIST -->
+    <div class="container">
+          <div class="page-header">
+            <h2>Learn Chemistry</h2>
+          </div>
+          <div class="row-fluid">
+            <ul style="margin-left: 250px" class="thumbnails">
+              <li class="span4">
+                <div class="thumbnail">
+                  <img style="height:185px" src="<?php base_url();?>assests/img/class10.jpg" alt="product name">
+                  <div class="caption">
+                    <h3>Class 9</h3>
+                    <p>
+                      
+                    </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <a href="product.html" class="btn">Read more</a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img style="height: 185px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
+                  <div class="caption">
+                    <h3>Class 10</h3>
+                    <p>
+                      
+                    </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <a href="product.html" class="btn">Read more</a>
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
     </div>
 
     <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
