@@ -1,0 +1,19 @@
+﻿.squarebox {
+    width: 100%;
+    /*border: solid 1px #336699;*/
+    text-align: center;
+    overflow: hidden; }
+.squareboxgradientcaption {
+   /* color: #ffffff;*/
+   /* color:black;*/
+    padding: 5px;
+    background-image: url(../images/bg-small-grey.jpg);
+    background-repeat: repeat-x; }
+.squareboxcontent {
+    height:auto;
+    margin-bottom:-15px;
+   /* background-color: #f5f5f5;*/
+    background-color:none;
+    padding: 0px;
+    overflow: hidden;
+    border-top: solid 1px #336699; }

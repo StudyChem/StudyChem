@@ -54,7 +54,7 @@
     <!-- End: HEADER -->
     <!-- Start: MAIN CONTENT -->
     <div class="content">
-    <div class="slider">
+ <!--   <div class="slider">
         <div class="container-fluid">
           <div id="heroSlider" class="carousel slide">
             <div class="carousel-inner">
@@ -100,45 +100,29 @@
             <a class="right carousel-control" href="#heroSlider" data-slide="next">›</a>
           </div>
         </div>
-      </div>
+      </div> -->
     <div class="container">
           <div class="page-header">
-            <h2>Learn Chemistry</h2>
+           <center> <h1>Learn Chemistry</h1></center>
+          </div>
+          <div class="page-header">
+            <h2>Class 9 Topics</h1>
           </div>
           <div class="row-fluid">
-            <ul style="margin-left: 250px" class="thumbnails">
-              <li class="span4">
-                <div class="thumbnail">
-                  <img style="height:185px" src="<?php base_url();?>assests/img/class10.jpg" alt="product name">
-                  <div class="caption">
-                    <h3>Class 9</h3>
-                    <p>
-                      
-                    </p>
-                  </div>
+            <ul class="thumbnails">
+              <li class="span3">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/periodic_table"> <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/periodic_table.jpg" alt="product name">
                   <div class="widget-footer">
+                    <h3>Periodic Table</h3>
                     <p>
-                      <a href="<?php echo base_url()?>class9" class="btn">Read more</a>
+                      Learning chemistry through Periodic Table.
                     </p>
                   </div>
-                </div>
+                  
+                </div> </a>
               </li>
-              <li class="span4">
-                <div class="thumbnail">
-                  <img style="height: 185px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
-                  <div class="caption">
-                    <h3>Class 10</h3>
-                    <p>
-                      
-                    </p>
-                  </div>
-                  <div class="widget-footer">
-                    <p>
-                      <a href="product.html" class="btn">Read more</a>
-                    </p>
-                  </div>
-                </div>
-              </li>
+             
             </ul>
           </div>
     </div>

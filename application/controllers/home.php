@@ -8,7 +8,7 @@ class Home extends CI_Controller {
         $this->load->helper('form');
         $this->load->helper('url');
         $this->load->library('session');
-    	}
+    }
 	/**
 	 * Index Page for this controller.
 	 *
@@ -28,6 +28,7 @@ class Home extends CI_Controller {
 	{
 		$this->load->view('home');
 	}
+	
 }
 
 /* End of file welcome.php */
