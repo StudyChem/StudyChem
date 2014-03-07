@@ -42,8 +42,8 @@
                 </li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Contact us</a></li>
-                <li><a href="#">Sign up</a></li>
-                <li><a href="#">Sign in</a></li>
+                <li><a href="<?php echo base_url();?>home/signup">Sign up</a></li>
+                <li><a href="<?php echo base_url();?>home/login">Log in</a></li>
               </ul>
             </div>
           </div>
@@ -122,7 +122,30 @@
                   
                 </div> </a>
               </li>
-             
+             <li class="span3">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/periodic_table"> <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/Chemical-Reactions.jpg" alt="product name">
+                  <div class="widget-footer">
+                    <h3>Chemical Reactions</h3>
+                    <p>
+                      Carry Out Chemical Reactions
+                    </p>
+                  </div>
+                  
+                </div> </a>
+              </li>
+			 <li class="span3">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/mixture_compound"> <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/mixandcom.jpg" alt="product name">
+                  <div class="widget-footer">
+                    <h3>Mixture and Compound</h3>
+                    <p>
+                      Distinguish Between Mixture and Compound
+                    </p>
+                  </div>
+                  
+                </div> </a>
+              </li> 
             </ul>
           </div>
     </div>

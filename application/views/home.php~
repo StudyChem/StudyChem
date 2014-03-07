@@ -43,7 +43,7 @@
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Contact us</a></li>
                 <li><a href="<?php echo base_url();?>home/signup">Sign up</a></li>
-                <li><a href="<?php echo base_url();?>home/login">Log in</a></li>
+                <li><a href="<?php echo base_url();?>home/login">Sign up</a></li>
               </ul>
             </div>
           </div>

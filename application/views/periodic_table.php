@@ -123,9 +123,6 @@ a:hover { text-decoration: underline; color: #ff0000 }
       <div class="mainbar">
         
         
-        <!--commented by-surojit, date-30/9/2011-->
-        <!--purpose-new framework/create div/header2.png above the applet ,status-disabled new div for logo-->
-        <!--commented by-surojit, date-30/9/2011-->
   
         <div class="div_for_logo">
         <font color="#FDD8A1" size=5><b align=left>Periodic Table</b></font>

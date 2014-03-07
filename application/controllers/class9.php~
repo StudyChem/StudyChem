@@ -21,7 +21,7 @@ class Class9 extends CI_Controller {
 	}
 	public function mixture_compound() 
 	{
-		$this -> load -> view('mixture_compd');
+		$this -> load -> view('mixture_compound');
 	}
 	
 }
