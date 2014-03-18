@@ -54,53 +54,7 @@
     <!-- End: HEADER -->
     <!-- Start: MAIN CONTENT -->
     <div class="content">
- <!--   <div class="slider">
-        <div class="container-fluid">
-          <div id="heroSlider" class="carousel slide">
-            <div class="carousel-inner">
-              <div class="active item">
-                <div class="hero-unit">
-                  <div class="row-fluid">
-                    
-                    <div class="span5" align="center" style="width:970px; height:300px;">
-                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image1.jpg" class="thumbnail"></div>
-                    </div>
-                  </div>                  
-                </div>
-              </div>
-              <div class="item">
-                <div class="hero-unit">
-                  <div class="row-fluid">
-                    <div class="span5" align="center" style="width:970px; height:300px;">
-                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image5.jpg" class="thumbnail"></div>
-                    </div>
-                  </div>                  
-                </div>
-              </div>
-              <div class="item">
-                <div class="hero-unit">
-                  <div class="row-fluid">
-                   <div class="span5" align="center" style="width:970px; height:300px;">
-                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image6.jpg" class="thumbnail"></div>
-                    </div>
-                  </div>                  
-                </div>
-              </div>
-              <div class="item">
-                <div class="hero-unit">
-                  <div class="row-fluid">
-                 <div class="span5" align="center" style="width:970px; height:300px;">
-                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image7.jpg" class="thumbnail"></div>
-                    </div>
-                  </div>
-              </div>
-            </div>
-            </div>
-            <a class="left carousel-control" href="#heroSlider" data-slide="prev">‹</a>
-            <a class="right carousel-control" href="#heroSlider" data-slide="next">›</a>
-          </div>
-        </div>
-      </div> -->
+ 
     <div class="container">
           <div class="page-header">
            <center> <h1>Learn Chemistry</h1></center>
@@ -146,7 +100,54 @@
                   
                 </div> </a>
               </li> 
+              <li class="span3">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/mixture_compound"> <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
+                  <div class="widget-footer">
+                    <h3>Melting Point</h3>
+                    <p>
+                      To determine the melting point of ice.
+                    </p>
+                  </div>
+                  
+                </div> </a>
+              </li> 
             </ul>
+            <ul class="thumbnails"> 
+            	<li class="span3">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/mixture_compound"> <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/solution.jpg" alt="product name">
+                  <div class="widget-footer">
+                    <h3>Solutions</h3>
+                    <p>
+                      To distinguish between Solutions.
+                    </p>
+                  </div>  
+                </div> </a>
+                </li>
+                <li class="span3">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/mixture_compound"> <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/boiling.jpg" alt="product name">
+                  <div class="widget-footer">
+                    <h3>Boiling Point</h3>
+                    <p>
+                      To determine Boiling Point of water.
+                    </p>
+                  </div>  
+                </div> </a>
+                </li>
+                <li class="span3">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/mixture_compound"> <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/exo.jpg" alt="product name">
+                  <div class="widget-footer">
+                    <h3>Exothermic and Endothermic</h3>
+                    <p>
+                      Different examples of exothermic and endothermic reactions.
+                    </p>
+                  </div>  
+                </div> </a>
+            </ul>
+
           </div>
     </div>
 
