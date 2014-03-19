@@ -1,15 +1,28 @@
 
 <html>
 <head>
-<!--Old Stuff starts-->
-<title>Periodic Table</title>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudyChem | Short description about StudyChem">
+    <meta name="author" content="Your name">
+    <title>StudyChem</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 	<link href="<?php echo base_url();?>assests  /css/css-tooltip.css" rel="stylesheet" type="text/css" />
 
 <!-- style.css defines width of the applet ,table divs-->
 	<link href="<?php echo base_url();?>assests/css/periodic-table-style.css" rel="stylesheet" type="text/css" />
-	
+	<link href="<?php echo base_url();?>assests/css/tabs.css" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap -->
+    <link href="<?php echo base_url('assests/css/bootstrap.min.css'); ?>" rel="stylesheet">
+    <!-- Bootstrap responsive -->
+    <link href="<?php echo base_url('assests/css/bootstrap-responsive.min.css'); ?>" rel="stylesheet">
+    <!-- Font awesome - iconic font with IE7 support --> 
+    <link href="<?php echo base_url('assests/css/font-awesome.css'); ?>" rel="stylesheet">
+    <link href="<?php echo base_url('assests/css/font-awesome-ie7.css'); ?> "rel="stylesheet">
+    <!-- Bootbusiness theme -->
+    <link href="<?php echo base_url('assests/css/boot-business.css');?>" rel="stylesheet">
 	
 
 <!-- Animated collapsible panel, with separate CSS and JavaScript -->
@@ -101,6 +114,52 @@ a:hover { text-decoration: underline; color: #ff0000 }
 </head>
 
 <body style="color: rgb(0, 0, 0); margin-left:-40;" onload="Disablecbx();" alink="#cc3300" link="#a00008" vlink="#666666" >
+<header>
+      <!-- Start: Navigation wrapper -->
+      <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+          <div class="container">
+            <a href="<?php echo site_url('home'); ?>" class="brand brand-bootbus">StudyChem</a>
+            <!-- Below button used for responsive navigation -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Start: Primary navigation -->
+            <div class="nav-collapse collapse">        
+              <ul class="nav pull-right">
+                <li class="dropdown">
+                  <a href="<?php echo site_url('home'); ?>"> Home </a>                    
+                </li>
+                <li class="dropdown">
+                  <a href="#"> About </a>
+                  
+                </li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="<?php echo base_url();?>home/signup">Sign up</a></li>
+                <li><a href="<?php echo base_url();?>home/login">Log in</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End: Navigation wrapper -->   
+    </header>
+
+<div class="content">
+ <div class="container">
+<table  id="xpandables" align="center" bgcolor="#E8E8E8" cellpadding="0px" cellspacing="0px" border="0px">
+             
+  <br>
+  <br>
+  <br>
+  <tr>
+  <td width="21px" height="150px" ></td>
+  <td>
+  <div ><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul class="widget-footer"><li class="current"><a href="?sub=75&brch=12&sim=94&cnt=1"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=2"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/periodic_simulation"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Simulator&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=167"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_7.png" alt=""/></div><div id="tab_name" >VivaVoce&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=6"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_6.png" alt=""/></div><div id="tab_name" >Reference&nbsp;</div></span></a></li></ul></div></td><td id="rcurve" width="21px" height="145px"></td></tr><tr><td></td><td></td></tr></table>
+
 
 <!------------ Old Body Starts----------------->
 <div class="main" >
