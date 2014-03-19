@@ -24,6 +24,10 @@ class Class9 extends CI_Controller {
 		$this -> load -> view('mixture_compd');
 	}
 	
+	public function periodic_simulation() 
+	{
+		$this -> load -> view('periodic_simulation');
+	}
 }
 
 /* End of file welcome.php */

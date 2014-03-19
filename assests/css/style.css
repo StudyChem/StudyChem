@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+body {
+	margin-top:0px;
+	
+	}
+html {
+	margin-top:0px;
+	
+	}
+#right_sidebar ul li {
+	padding-bottom:10px;
+	}
+#top_menu {
+	height: 135px;
+	width: 100%;
+}
+#logo_box {
+	height: 112px;
+	width: 306px;
+	float: left;
+}
+#top_right {
+	height: 111px;
+	width: 663px;
+	float: right;
+	background-color: #E8E8E8;
+}
+.search {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	padding-top: 30px;
+}
+.heading {
+	font-family:Arial, Helvetica, sans-serif;
+	/*font-family: Aclonica, serif;*/
+	font-weight:bold;
+	color:#666666;
+	font-size: 21px;
+	text-align:left;
+}
+.sub-headings{
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	color:#666666;
+	font-size:16px;
+	text-align:left;
+}
+.text {
+	font-family:Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	color:#333;
+	text-align:justify;
+	word-spacing:0px;
+}
+#wrapper {
+	width: 1050px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #E8E8E8;
+	padding-bottom: 15px;
+}
+#wrapper_inner {
+	margin-bottom:0px;
+	margin-left: auto;
+	background-color: #E8E8E8;
+	padding-bottom: 15px;
+	margin-right: auto;
+	width: 1350px;
+		
+}
+.clr {
+	clear: both;
+}
+#menubar {
+	height: 43px;
+	margin-top: 5px;
+}
+#fl_banner {
+	height: 300px;
+	width: 970px;
+}
+#labs_menu {
+	height: 146px;
+	width: 1005px;
+	margin-top: 18px;
+	margin-bottom: 10px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#main_content {
+	width: 970px;
+	margin:23px auto 0px auto;
+	}
+#left_main {
+	width: 733px;
+	height: 700px;
+	float: left;
+	background-color: #FFF;
+}
+#right_sidebar {
+	width: 237px;
+	float: right;
+	height: 700px;
+	background-color: #FFF;
+}
+#inner_left {
+	width: 250px;
+	height: 680px;
+	float: left;
+	background-color: #FFF;
+	padding-top: 20px;
+}
+#inner_right {
+	height: 700px;
+	width: 473px;
+	float: right;
+	padding-left: 10px;
+	background-color: #FFF;
+}
+
+#menu_container {
+	float: right;
+	height: 39px;
+	width: 450px;
+	background-color: #FFF;
+	padding-left: 20px;
+	padding-top: 4px;
+}
+#left_curve {
+	height: 35px;
+	width: 20px;
+	float: left;
+	background-color: #F66;
+}
+#right_curve {
+	float: right;
+	height: 35px;
+	width: 20px;
+	background-color: #C69;
+}
+#leftcurve_cont {
+	float: left;
+	width: 100%;
+	background-color: #06C;
+}
+
+/*------------------------------------*\
+	TOP_NAVIGATION_MENU
+\*------------------------------------*/
+.menu ul { /* menu ul style */	
+	list-style:none;
+	font-weight:bold;
+	float:none;
+
+	margin: 0px;
+	padding: 0px;	
+}
+.menu ul img { 
+	border:0px;
+}
+
+.menu li { /* horizontal menu */
+	float: left;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	z-index: 999;
+	background-color:#FFF;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #EEE;
+
+
+}
+
+.menu a { /* the link style of menu */	
+	background: url(../images/seperator.gif);
+	display: block;
+	line-height: 33px;
+	padding: 0 10px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#555;
+	background:#FFF;
+	text-decoration:none;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+
+
+}
+
+/* The sub menu is hidden by default and its position is places right under the parent menu */
+.menu ul ul {
+	width: auto;
+	display: none;
+	position: absolute;	
+	left: 0;
+	float: left;
+	list-style:none;
+
+}
+
+/* The sub menu list element is given auto width */
+.menu ul ul li {	
+	border-bottom:solid 1px #ccc !important;
+	border-left:solid 1px #ccc !important;
+	border-right:solid 1px #ccc !important;
+	text-align:left;
+	white-space: nowrap;
+	width:100%;
+	*width:170px;
+
+}
+.menu ul ul li:first-child {	
+	border-bottom:solid 1px #ccc !important;
+	border-left:solid 1px #ccc !important;
+	border-right:solid 1px #ccc !important;
+	border-top:solid 1px #ccc !important;
+}
+
+/* the third level menu (sub sub menu) is placed to the left side of its parent */
+.menu ul ul ul {
+	width: 100%;
+	left: 100%;
+	top: 0;
+
+}
+.menu ul li ul li  a{
+	padding-right:5px;
+
+}
+.menu ul ul a {	
+	line-height: 6px;
+	padding-left:10px;
+	padding-right:10px;
+	padding-bottom:7px;
+	padding-top:12px;
+	height: 15px;;
+	color: #000;
+
+}
+.menu a:hover {
+	color: #FFF;
+}
+.menu li:hover > a {
+	color:#FFF;
+	background:#0f93c4;
+	width: auto;
+}
+.menu ul ul:hover > a {
+	background:#02568e;
+	color: #FFF;
+	
+}
+.menu ul li:hover > ul {
+	display: block;
+	padding-left:0px;
+}
+.menu ul li:first-child {
+	border-left:none;
+	}
+.menu ul li:last-child {
+	border-right:1px solid #EEEEEE;
+	}
+#top_sec_container_inner {
+	padding-right: 25px;
+	padding-left: 25px;
+}
