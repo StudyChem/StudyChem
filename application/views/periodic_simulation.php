@@ -8,10 +8,10 @@
     <title>StudyChem</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<link href="<?php echo base_url();?>assests  /css/css-tooltip.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url();?>assests  /css/css-tooltip.css" rel="stylesheet" type="text/css" /> 
 
 <!-- style.css defines width of the applet ,table divs-->
-	<link href="<?php echo base_url();?>assests/css/periodic-table-style.css" rel="stylesheet" type="text/css" />
+	<link href="<?php echo base_url();?>assests/css/periodic-table-style.css" rel="stylesheet" type="text/css" /> 
 	<link href="<?php echo base_url();?>assests/css/tabs.css" rel="stylesheet" type="text/css">
 
     <!-- Bootstrap -->
@@ -87,28 +87,7 @@
 
 
 <script type="text/javascript" src="<?php echo base_url();?>assests/js/periodictable.js"></script>
-<style>
-td.transition{
-color: #000000;
-background-color:#FFE9FF;
-}
-.linkproperty:link{
-COLOR:#000000 ; 
-}
-.linkproperty:hover{
-COLOR:#FF4000 ;
-}
-.linkproperty:visited {
-COLOR:#80FF00;
-}
-.linkproperty:active {
-COLOR: #80FF00;
-}
-a:link {text-decoration: none; color:"Red"} 
-a:visited {text-decoration: none; color: #0000ff} 
-a:hover { text-decoration: underline; color: #ff0000 } 
 
-</style>
 
 <script type="text/javascript" src="<?php echo base_url();?>assests/js/jquery-1.7.1.min.js"></script>
 </head>
@@ -147,44 +126,49 @@ a:hover { text-decoration: underline; color: #ff0000 }
       </div>
       <!-- End: Navigation wrapper -->   
     </header>
+<style>
+td.transition{
+color: #000000;
+background-color:#FFE9FF;
+}
+.linkproperty:link{
+COLOR:#000000 ; 
+}
+.linkproperty:hover{
+COLOR:#FF4000 ;
+}
+.linkproperty:visited {
+COLOR:#80FF00;
+}
+.linkproperty:active {
+COLOR: #80FF00;
+}
+a:link {text-decoration: none; color:"Red"} 
+a:visited {text-decoration: none; color: #0000ff} 
+a:hover { text-decoration: underline; color: #ff0000 } 
 
+</style>
 <div class="content">
  <div class="container">
+ <div style="margin-top:50px"> </div>
 <table  id="xpandables" align="center" bgcolor="#E8E8E8" cellpadding="0px" cellspacing="0px" border="0px">
-             
-  <br>
-  <br>
-  <br>
+  <tr>
+    <td colspan="3" style="white-space:nowrap;"><div class="page-header"><h2>Learning Chemistry through the periodic table</h2></div></td>
+  </tr>           
+  
   <tr>
   <td width="21px" height="150px" ></td>
   <td>
-  <div ><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul class="widget-footer"><li class="current"><a href="?sub=75&brch=12&sim=94&cnt=1"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=2"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/periodic_simulation"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Simulator&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=167"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_7.png" alt=""/></div><div id="tab_name" >VivaVoce&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=6"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_6.png" alt=""/></div><div id="tab_name" >Reference&nbsp;</div></span></a></li></ul></div></td><td id="rcurve" width="21px" height="145px"></td></tr><tr><td></td><td></td></tr></table>
+  <div><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul style="margin-left:10px"class="widget-footer"><li class="current"><a href="<?php echo base_url();?>class9/periodic_table"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/periodic_procedure"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/periodic_simulation"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Simulator&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=167"></tr></table>
 
 
-<!------------ Old Body Starts----------------->
-<div class="main" >
 
-<!--commented by-surojit, date-30/9/2011-->
-        <!--purpose-new framework/remove cdac1 logo ,status-disabled divs with headear and header-resize class-->
-        <!--commented by-surojit, date-30/9/2011-->
-   <!--     
-  <div class="header" >
-    <div class="header_resize">
-      -->
-   <div id="mydividisheader">
-		<div id="mydivisheader_resize">       
-      <div class="clr"></div>
-    </div>
-  </div>
-
-  <div class="content" >
-    <div class="content_resize">
       <div class="mainbar">
         
         
   
         <div class="div_for_logo">
-        <font color="#FDD8A1" size=5><b align=left>Periodic Table</b></font>
+        <h3><font color="#FDD8A1" size=5><b align=left>Periodic Table</b></font></h3>
      		<div id="div_notes-icon" style="float:right;cursor:pointer; ">
      		<img style="vertical-align:bottom;border:0px;position:relative;bottom:-16px;left:4px;" src="<?php echo base_url();?>assests/img/normal.png" onmouseover="this.src='<?php echo base_url();?>assests/img/hovered.png';" onmouseout="this.src='<?php echo base_url();?>assests/img/normal.png';" title="show/hide notes" />
 			</div>
@@ -516,16 +500,7 @@ $(':checkbox').click(function(){
 		}
 
 });
-
-////end ----- to active links when checkbox checked using jquery
-
 </script>
-
-       
-<!----------------------end applet division------------------------------>    
-
-
-<!-------- start Animated collapsible panel, with separate CSS and JavaScript -------->      
         
         <div style="width:auto;">
     <div class="squarebox"><div

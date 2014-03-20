@@ -28,7 +28,12 @@ class Class9 extends CI_Controller {
 	{
 		$this -> load -> view('periodic_simulation');
 	}
-}
+	public function periodic_procedure() 
+	{
+		$this -> load -> view('periodic_procedure');
+	}
+	
+}	
 
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */
