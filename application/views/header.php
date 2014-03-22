@@ -51,7 +51,7 @@
                   <li><a href="#">Dashboard</a></li>
                   <li><a href="#">Quizzes</a></li>
                   <li><a href="#">Settings</a></li>
-                  <li><a href="#">Log out</a></li>
+                  <li><a href="<?php echo base_url();?>home/logout">Log out</a></li>
 
                   </ul>
                 </li> <?php } else {?>
