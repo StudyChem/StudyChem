@@ -50,7 +50,7 @@
                 <ul class="dropdown-menu">
                   <li><a href="#">Dashboard</a></li>
                   <li><a href="#">Quizzes</a></li>
-                  <li><a href="#">Settings</a></li>
+                  <li><a href="<?php echo base_url();?>student/settings">Settings</a></li>
                   <li><a href="<?php echo base_url();?>home/logout">Log out</a></li>
 
                   </ul>
