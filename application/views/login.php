@@ -18,39 +18,7 @@
   </head>
   <body>
     <!-- Start: HEADER -->
-    <header>
-      <!-- Start: Navigation wrapper -->
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <a href="<?php echo site_url('home'); ?>" class="brand brand-bootbus">StudyChem</a>
-            <!-- Below button used for responsive navigation -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- Start: Primary navigation -->
-            <div class="nav-collapse collapse">        
-              <ul class="nav pull-right">
-                <li class="dropdown">
-                  <a href="<?php echo site_url('home'); ?>"> Home </a>                    
-                </li>
-                <li class="dropdown">
-                  <a href="#"> About </a>
-                  
-                </li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="<?php echo base_url();?>home/signup">Sign up</a></li>
-                <li><a href="<?php echo base_url();?>home/login">Log in</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End: Navigation wrapper -->   
-    </header>
+    
     <!-- End: HEADER -->
     <!-- Start: MAIN CONTENT -->
     <div class="content">
@@ -63,9 +31,15 @@
             <h4 class="widget-header"><i class="icon-lock"></i> Login to StudyChem</h4>
             <div class="widget-body">
               <div class="center-align">
-                <form class="form-horizontal form-signin-signup">
-                  <input type="text" name="email" placeholder="Email">
-                  <input type="password" name="password" placeholder="Password">
+                <form action="<?php echo base_url();?>home/signin" method="post" class="form-horizontal form-signin-signup">
+                  <input type="text" name="username" id="username" placeholder="Email">
+                  <input type="password" name="password" id="password" placeholder="Password">
+                  <?php if(isset($Invalid)){
+					echo "<div class='alert alert-danger'>".$Invalid."</div>";
+					}?>
+					<?php if(validation_errors()!=""){
+					echo "<div class='alert alert-danger'>".validation_errors()."</div>";
+					} ?>
                   <div class="remember-me">
                     <div class="pull-left">
                       <label class="checkbox">
@@ -77,7 +51,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
-                  <input type="submit" value="Signin" class="btn btn-primary btn-large">
+                  <input type="submit" value="login" class="btn btn-primary btn-large">
                 </form>
                 <h4><i class="icon-question-sign"></i> Don't have an account?</h4>
                 <a href="<?php echo base_url();?>home/signup" class="btn btn-large bottom-space">Signup</a>

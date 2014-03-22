@@ -48,11 +48,9 @@ $autoload['packages'] = array();
 | or in your application/libraries folder.
 |
 | Prototype:
-|
-|	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 
 
 /*

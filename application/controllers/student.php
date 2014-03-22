@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Home extends CI_Controller {
+class Student extends CI_Controller {
 	function __construct()
    	{
         // this is your constructor
@@ -15,18 +15,7 @@ class Home extends CI_Controller {
 		$this -> load -> view('header');
 		$this->load->view('home');
 	}
-	public function signup()
-	{
-				$this -> load -> view('header');
-
-		$this->load->view('signup');
-	}
-	public function login()
-	{
-				$this -> load -> view('header');
-
-		$this->load->view('login');
-	}
+	
 	public function signin() {
 		$Error["Invalid"] = NULL;
 		$this -> load -> helper('url');
@@ -36,8 +25,6 @@ class Home extends CI_Controller {
 		$this -> form_validation -> set_rules("password", "password", "required|trim|xss_clean");
 		if ($this -> form_validation -> run() == FALSE) {
 			echo "adad";
-					$this -> load -> view('header');
-
 			$this->load->view("login", $Error);
 		} else {
 			$this -> load -> model("loginmodel");
@@ -46,12 +33,8 @@ class Home extends CI_Controller {
 				redirect(site_url('student'));			
 			} else if ($res == -1) {	
 				$Error["Invalid"] = "Incorrect username/password";
-						$this -> load -> view('header');
-
 				$this->load->view("login",$Error);
 			} else {
-						$this -> load -> view('header');
-
 				$this->load->view("login");
 			}
 		}

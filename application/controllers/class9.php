@@ -12,24 +12,35 @@ class Class9 extends CI_Controller {
 	
 	public function index()
 	{
+				$this -> load -> view('header');
+
 		$this-> load-> view('class9');
 	}
 
 	public function periodic_table() 
 	{
+			$this -> load -> view('header');
+
 		$this -> load -> view('periodic_table');
 	}
 	public function mixture_compound() 
 	{
+			$this -> load -> view('header');
+
 		$this -> load -> view('mixture_compd');
 	}
 	
 	public function periodic_simulation() 
 	{
+			$this -> load -> view('header');
+
 		$this -> load -> view('periodic_simulation');
 	}
 	public function periodic_procedure() 
 	{
+			$this -> load -> view('header');
+
+	
 		$this -> load -> view('periodic_procedure');
 	}
 	

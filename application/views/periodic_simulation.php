@@ -93,39 +93,6 @@
 </head>
 
 <body style="color: rgb(0, 0, 0); margin-left:-40;" onload="Disablecbx();" alink="#cc3300" link="#a00008" vlink="#666666" >
-<header>
-      <!-- Start: Navigation wrapper -->
-      <div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">
-          <div class="container">
-            <a href="<?php echo site_url('home'); ?>" class="brand brand-bootbus">StudyChem</a>
-            <!-- Below button used for responsive navigation -->
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <!-- Start: Primary navigation -->
-            <div class="nav-collapse collapse">        
-              <ul class="nav pull-right">
-                <li class="dropdown">
-                  <a href="<?php echo site_url('home'); ?>"> Home </a>                    
-                </li>
-                <li class="dropdown">
-                  <a href="#"> About </a>
-                  
-                </li>
-                <li><a href="#">FAQ</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="<?php echo base_url();?>home/signup">Sign up</a></li>
-                <li><a href="<?php echo base_url();?>home/login">Log in</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End: Navigation wrapper -->   
-    </header>
 <style>
 td.transition{
 color: #000000;
