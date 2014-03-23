@@ -172,3 +172,6 @@ These groups correspond to the filling of the atomic d-orbital subshell of the s
 </div>
 </div>
 </div>
+<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>

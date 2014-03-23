@@ -141,7 +141,9 @@ a:hover { text-decoration: underline; color: #ff0000 }
     <li>The radio buttons are used to highlight various properties of elements E.g. when radio button<strong> "Metal Types" </strong>is selected, color convention various metal types will appear and element will be highlighted accordingly.</li>
     <li>If you<strong> hover over </strong>colors displayed in color convention only that category of element will be highlighted.</li>
 </ol>
-
+<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
 </body>
 
 </html>

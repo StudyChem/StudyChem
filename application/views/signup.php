@@ -69,8 +69,8 @@
     </div>
     <!-- End: MAIN CONTENT -->
 
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="js/boot-business.js"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
   </body>
 </html>

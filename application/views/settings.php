@@ -63,9 +63,14 @@
           echo "<div class='alert alert-danger'>".validation_errors()."</div>";
           } ?>
                   <div>
-
                     <input type="submit" value="Save" class="btn btn-primary btn-large">
                   </div>
                 </form>
         </div>
     </div>
+      <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
+    </body>
+    </html>
+  

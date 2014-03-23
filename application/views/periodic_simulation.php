@@ -8,7 +8,7 @@
     <title>StudyChem</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-	<link href="<?php echo base_url();?>assests  /css/css-tooltip.css" rel="stylesheet" type="text/css" /> 
+	<link href="<?php echo base_url();?>assests/css/css-tooltip.css" rel="stylesheet" type="text/css" /> 
 
 <!-- style.css defines width of the applet ,table divs-->
 	<link href="<?php echo base_url();?>assests/css/periodic-table-style.css" rel="stylesheet" type="text/css" /> 
@@ -562,6 +562,9 @@ $('#div_notes-icon').click(function() {
   });
 });  
 </script>
+<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
 </body>
 
 </html>
