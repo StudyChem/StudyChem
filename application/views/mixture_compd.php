@@ -26,12 +26,12 @@
 <table  id="xpandables" align="center" bgcolor="#E8E8E8" cellpadding="0px" cellspacing="0px" border="0px">
              
   <tr>
-    <td colspan="3" style="white-space:nowrap;"><div class="page-header"><h2>Learning Chemistry through the periodic table</h2></div></td>
+    <td colspan="3" style="white-space:nowrap;"><div class="page-header"><h1>Learning Chemistry through the periodic table</h1></div></td>
   </tr>
   <tr>
   <td width="21px" height="150px" ></td>
   <td>
-  <div><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul style="margin-left:10px"class="widget-footer"><li class="current"><a href="<?php echo base_url();?>class9/periodic_table"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/periodic_procedure"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/periodic_simulation"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Simulator&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=167"></tr></table>
+  <div ><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul style="margin-left:10px"class="widget-footer"><li class="current"><a href="<?php echo base_url();?>class9/periodic_table"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/periodic_procedure"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/periodic_simulation"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Simulator&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=167"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_7.png" alt=""/></div><div id="tab_name" >VivaVoce&nbsp;</div></span></a></li><li class=""><a href="?sub=75&brch=12&sim=94&cnt=6"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_6.png" alt=""/></div><div id="tab_name" >Reference&nbsp;</div></span></a></li></ul></div></td><td id="rcurve" width="21px" height="145px"></td></tr><tr><td></td><td></td></tr></table>
 <div class = "row"> 
 <div class ="span10 offset1">
 Mendeleev discovered that on arranging in the increasing order of atomic mass 
@@ -39,25 +39,25 @@ elements with similar chemical properties occur periodically.Mendeleev formulate
 The properties of elements are the periodic function of their atomic masses. </p>
 
 <h3>A tabular arrangement of the elements based on the periodic law is called periodic table.</h3>
-<h3>Main features of Mendeleev’s periodic table -</h3>
+<h3>Main features of Mendeleevâ€™s periodic table -</h3>
 <ul class="features">
     <li><i class="icon-ok"></i>The horizontal rows present in the periodic table are called periods. There are seven (7) periods in the table.</li>
     <li><i class="icon-ok"></i>Properties of elements in a particular period show regular gradation (i.e. increase or decrease) from left to right.</li>
     <li><i class="icon-ok"></i>The vertical columns present in it are called groups. There are nine in number and are numbered from I to VIII and Zero.</li>
-    <li><i class="icon-ok"></i>Groups I to VII are subdivided into A and B subgroups. Groups Zero and VIII don’t have any subgroups.</li>
+    <li><i class="icon-ok"></i>Groups I to VII are subdivided into A and B subgroups. Groups Zero and VIII donâ€™t have any subgroups.</li>
     <li><i class="icon-ok"></i>All the elements in a particular group are chemically similar in nature. They show regular gradation in their physical properties&nbsp;and chemical reactivities.</li>
 </ul>
-<h3>Merits of Mendeleev’s periodic classification -</h3>
+<h3>Merits of Mendeleevâ€™s periodic classification -</h3>
 <ul>
     <li>He could classify all the 63 elements known at that time on the basis of similarities in properties.</li>
     <li>
-    Prediction of new elements Mendeleev’s periodic table had some blank spaces in it. These vacant spaces were for elements&nbsp; that were yet to be discovered 
+    Prediction of new elements Mendeleevâ€™s periodic table had some blank spaces in it. These vacant spaces were for elements&nbsp; that were yet to be discovered 
      </li>
     <li>
     He predicted the properties of those yet to be discovered elements and thus, helped in the discovery of other elements later on.
     </li>
 </ul>
-<h3>Defects in Mendeleev’s periodic classification-</h3>
+<h3>Defects in Mendeleevâ€™s periodic classification-</h3>
 <ul>
     <li>
     <h4>Position of Hydrogen -</h4>
@@ -77,7 +77,7 @@ The properties of elements are the periodic function of their atomic masses. </p
 <h3>The Modern Periodic Table (Modern classification) -</h3>
 Henry Moseley, an English physicist discovered in the year 1913 that atomic number, is&nbsp;the most fundamental property of an element and not its atomic mass. Atomic number&nbsp;(Z), of an element is the number of protons in the nucleus of its atom. The number of&nbsp;electrons in the neutral atom is also equal to its atomic number.
 <h3>Modern periodic law -</h3>
-&nbsp; &nbsp; &nbsp; &nbsp; The Modern Periodic Law states “The chemical and physical properties of elements&nbsp;are a periodic function of their atomic numbers” ,The periodic table based on the modern periodic law is called the Modern Periodic Table .&nbsp;<h3>Main features of modern periodic table -</h3>
+&nbsp; &nbsp; &nbsp; &nbsp; The Modern Periodic Law states â€œThe chemical and physical properties of elements&nbsp;are a periodic function of their atomic numbersâ€ ,The periodic table based on the modern periodic law is called the Modern Periodic Table .&nbsp;<h3>Main features of modern periodic table -</h3>
 <ul>
     <li>
     <h4>Groups -&nbsp;</h4>
@@ -99,16 +99,16 @@ also separately below the main periodic table along with lanthanides.</p>
     <h4>Periods &nbsp;-</h4>
     There are seven(7) periods in periodic table. In periodic table horizontal rows are used to represent periods .In a period the &nbsp; &nbsp;&nbsp; number of valence electrons and the nuclear&nbsp;charge increases from left to right. It increases the force of attraction between&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; them.</li>
 </ul>
-<h3>Merits of modern periodic table over Mendeleev’s periodic table -</h3>
+<h3>Merits of modern periodic table over Mendeleevâ€™s periodic table -</h3>
 The modern periodic table is based on atomic number which is more fundamental property&nbsp;of an atom than atomic mass .&nbsp;</p>
-This is free from main defects of Mendeleev’s periodic table.</p>
+This is free from main defects of Mendeleevâ€™s periodic table.</p>
 <ul>
     <li>
     <h4>Position of isotopes -&nbsp;</h4>
     All isotopes of the same elements have different atomic masses but same atomic number.&nbsp;Therefore, they occupy the same position in the modern periodic table which they should&nbsp;have because all of them are chemically similar.</li>
     <li>
     <h4>Anomalous pairs of elements&nbsp;-&nbsp;</h4>
-    When elements are arranged in the periodic table according to their atomic numbers the&nbsp;anomaly regarding certain pairs of elements in Mendeleev’s periodic table disappears. For example in the case of Ar and K with atomic number 18 and 19 Argon comes before K although Ar has greater atomic mass in comparison to K.<br>
+    When elements are arranged in the periodic table according to their atomic numbers the&nbsp;anomaly regarding certain pairs of elements in Mendeleevâ€™s periodic table disappears. For example in the case of Ar and K with atomic number 18 and 19 Argon comes before K although Ar has greater atomic mass in comparison to K.<br>
     &nbsp;</li>
 </ul>
 <h3>Periodic Properties - &nbsp;</h3>
@@ -129,7 +129,7 @@ A number of physical properties like density and melting and boiling points are 
 It is the energy change when an electron is accepted by an atom in an isolated gaseous state. By convention, it is assigned a positive value when energy is released during the process.The electron affinity of an atom or molecule is defined as the amount of energy released when an electron is added to a neutral atom or molecule to form a negative ion.</p>
 X + e<sup>-</sup>---&gt;X<sup>-</sup></p>
 <h3>Electronegativity -</h3>
-It is a measure of the tendency of a bonded atom to attract the bond-electrons towards itself. Electronegativity, symbol χ, is a chemical property that describes the tendency of an atom or a functional group to attract electrons (or electron density) towards itself.<br>
+It is a measure of the tendency of a bonded atom to attract the bond-electrons towards itself. Electronegativity, symbol Ï‡, is a chemical property that describes the tendency of an atom or a functional group to attract electrons (or electron density) towards itself.<br>
 An atom&#039;s electronegativity is affected by both its atomic number and the distance that its valence electrons reside from the charged nucleus. The higher the associated electronegativity number, the more an element or compound attracts electrons towards it.</p>
 <h3>Ionization energy -</h3>
 It is the minimum amount of energy required to remove an electron from an isolated gaseous atom in its ground state to form a gaseous ion .The ionization energy is the amount of energy it takes to detach one electron from a neutral atom.</p>

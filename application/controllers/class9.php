@@ -23,30 +23,11 @@ class Class9 extends CI_Controller {
 
 		$this -> load -> view('periodic_table');
 	}
-	
 	public function mixture_compound() 
 	{
 			$this -> load -> view('header');
 
-		$this -> load -> view('mixture_compound');
-	}
-	public function chemical_reactions() 
-	{
-			$this -> load -> view('header');
-
-		$this -> load -> view('chemical_reactions');
-	}
-	public function crxn_procedure() 
-	{
-			$this -> load -> view('header');
-
-		$this -> load -> view('crxn_procedure');
-	}
-	public function crxn_simulation() 
-	{
-			$this -> load -> view('header');
-
-		$this -> load -> view('crxn_simulation');
+		$this -> load -> view('mixture_compd');
 	}
 	
 	public function periodic_simulation() 
@@ -62,20 +43,74 @@ class Class9 extends CI_Controller {
 	
 		$this -> load -> view('periodic_procedure');
 	}
-	public function mixcmpd_procedure() 
+
+	public function exo_endo() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('exo_endo');
+	}
+	public function exo_endo_procedure() 
 	{
 			$this -> load -> view('header');
 
 	
-		$this -> load -> view('mixcmpd_procedure');
+		$this -> load -> view('exo_endo_procedure');
 	}
-	public function mixcmpd_simulation() 
+	public function exo_simulation() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('exo_simulation');
+	}
+	public function endo_simulation() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('endo_simulation');
+	}
+	
+
+	public function boiling_point() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('boiling_point');
+	}
+	public function boiling_point_procedure() 
 	{
 			$this -> load -> view('header');
 
 	
-		$this -> load -> view('mixcmpd_simulation');
+		$this -> load -> view('boiling_point_procedure');
 	}
+	public function boiling_point_simulation() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('boiling_point_simulation');
+	}
+	
+
+	public function solutions() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('solutions');
+	}
+	public function solutions_procedure() 
+	{
+			$this -> load -> view('header');
+	
+		$this -> load -> view('solutions_procedure');
+	}
+	public function solutions_simulation() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('solutions_simulation');
+	}
+		
 }	
 
 /* End of file welcome.php */
