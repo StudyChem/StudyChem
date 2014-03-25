@@ -45,7 +45,7 @@
                 </div> </a>
               </li>
              <li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class9/periodic_table"> <div class="thumbnail">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/chemical_reactions"> <div class="thumbnail">
                   <img style="height:205px" src="<?php echo base_url();?>assests/img/Chemical-Reactions.jpg" alt="product name">
                   <div class="widget-footer">
                     <h3>Chemical Reactions</h3>
