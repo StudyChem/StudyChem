@@ -41,7 +41,7 @@
   <div class ="span10 offset1">
   <div class="divContent"><h1>Burning  of Magnesium in Air</h1>
 <h2>Materials Required:</h2>
-<p><img style="width: 778px; height: 412px;" alt="" src="/userfiles/1/image/Burning%20of%20magnesium%20materials.png"></p>
+<p><img style="width: 778px; height: 412px;"   src="<?php echo base_url();?>assests/img/Burning%20of%20magnesium%20materials.png" alt="Burning%20of%20magnesium%20materials.png" ></p>
 <h2>Lab Procedure:&nbsp;</h2>
 <table style="margin-left:34px" cellpadding="0" cellspacing="0" border="1" width="910">
     <tbody>
@@ -85,7 +85,7 @@
 <h2>Inferences:</h2>
 <ul>
     <li>Magnesium is a silvery white metal that  burns in air and utilizes atmospheric oxygen from air to form magnesium oxide.</li>
-    <p style="text-align: center;"><img src="/userfiles/1/image/cheReactionEqn4.gif" alt="" align="middle" height="27" width="223"></p>
+    <p style="text-align: center;"><img src="<?php echo base_url();?>assests/img/infer.gif" alt="infer" align="middle" height="27" width="223"></p>
 </ul>
 <ul>
     <li>Magnesium  oxide changes the colour of red litmus paper to blue. This reaction shows that magnesium  oxide is basic in nature.</li>
@@ -100,7 +100,7 @@
 </ol>
 <h1>Reaction of Iron Nails with Copper Sulphate Solution in Water</h1>
 <h2>Materials Required:</h2>
-<ul><img alt="" src="/userfiles/1/image/Reaction%20of%20iron%20nails%20materials.png" height="425" width="900"></ul>
+<ul><img src="<?php echo base_url();?>assests/img/iron.png" alt="iron" height="425" width="900"></ul>
     <h2>Lab Procedure:</h2>
     <ul>
         <li>Clean two iron nails of sufficient size by  rubbing with sand paper so that their colour appears greyish.</li>
@@ -131,7 +131,7 @@
         <li>The greenish colour of the solution in the  test tube shows that Fe<sup>2+</sup> ions are present in the solution.</li>
         <li>This shows that iron is more reactive than  copper as Fe<sup>2+</sup> ions have displaced Cu<sup>2+</sup> ions from copper  sulphate solution and form light greenish coloured ferrous sulphate solution.</li>
     </ul>
-    <p style="text-align: center;"><img src="/userfiles/1/image/cheReactionEqn5.gif" alt="" align="middle" height="27" width="351"><br>
+    <p style="text-align: center;"><img src = "<?php echo base_url();?>assests/img/cheReactionEq5.gif" alt="cheRectionEqn5" align="middle" height="27" width="351"><br>
     &nbsp;</p>
     <ul>
         <li>This is a single displacement reaction in  which copper has been displaced by iron from copper sulphate solution and a new  compound, ferrous sulphate, is formed. So, this reaction is a chemical change.&nbsp;</li>
@@ -145,7 +145,7 @@
     </ol>
     <h1>Heating  of Copper Sulphate.</h1>
     <h2>Materials Required:</h2>
-    <ul><img alt="" src="/userfiles/1/image/Heating%20of%20copper%20sulphate%20materials.png" height="210" width="772"></ul>
+    <ul><img alt="" src = "<?php echo base_url();?>assests/img/Heating%20of%20copper%20sulphate%20materials.png" height="210" width="772"></ul>
         <h2>Lab Procedure:</h2>
         <ul>
             <li>Take a small amount of copper sulphate  crystals in a dry boiling tube.</li>
@@ -177,7 +177,7 @@
         <ul>
             <li>Copper sulphate crystals contain water of  crystallisation (CuSO<sub>4</sub>.5H<sub>2</sub>O).</li>
             <li>On heating, hydrated copper sulphate loses  its water molecule and forms white coloured anhydrous copper sulphate.&nbsp;</li>
-            <p style="text-align: center;"><img src="/userfiles/1/image/cheReactionEqn6.gif" alt="" align="middle" height="31" width="347"></p>
+            <p style="text-align: center;"><img src = "<?php echo base_url();?>assests/img/cheReactionEq6.gif" alt="" align="middle" height="31" width="347"></p>
         </ul>
         <ul>
             <li>On adding water anhydrous copper sulphate  changes to hydrated copper sulphate.</li>
@@ -191,7 +191,7 @@
         </ol>
         <h1>Reaction  of Zinc with Dilute Sulphuric Acid</h1>
         <h2>Materials Required:</h2>
-        <ul><img style="width: 840px; height: 350px;" alt="" src="/userfiles/1/image/Reaction%20of%20zinc%20materials.png"></ul>
+        <ul><img style="width: 840px; height: 350px;" alt="" src = "<?php echo base_url();?>assests/img/Reaction%20of%20zinc%20materials.png"></ul>
             <h2>Lab Procedure:</h2>
             <ul>
                 <li>Take a small quantity of dil. H<sub>2</sub>SO<sub>4</sub>  in a conical flask.</li>
@@ -262,19 +262,19 @@
             <ul>
                 <li>Zinc reacts with dil.H<sub>2</sub>SO<sub>4</sub>  to form zinc sulphate and evolve hydrogen gas.</li>
             </ul>
-            <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src="/userfiles/1/image/cheReactionEqn8.gif" alt="" align="middle" height="26" width="330">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+            <p style="text-align: center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <img src = "<?php echo base_url();?>assests/img/cheReactionEq8.gif" alt="" align="middle" height="26" width="330">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
             <ul>
                 <li>The test with red and blue litmus papers  shows that hydrogen gas is neither acidic nor basic in nature.</li>
             </ul>
             <ul>
                 <li>NaOH reacts with ZnSO<sub>4</sub>  to form a white gelatinous precipitate of zinc hydroxide (Zn(OH)<sub>2</sub>)  which is soluble in excess of NaOH.</li>
             </ul>
-            <p style="text-align: center;"><img src="/userfiles/1/image/cheReactionProcEqn1.gif" alt="" align="middle" height="28" width="477"><br>
+            <p style="text-align: center;"><img src = "<?php echo base_url();?>assests/img/cheReactionProcEqn1.gif" alt="" align="middle" height="28" width="477"><br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
             <ul>
                 <li>ZnSO<sub>4</sub> reacts with H<sub>2</sub>S to form a white  precipitate of zinc sulphide (ZnS).</li>
             </ul>
-            <p style="text-align: center;"><img src="/userfiles/1/image/cheReactionProcEqn2.gif" alt="" align="middle" height="26" width="352"></p>
+            <p style="text-align: center;"><img src = "<?php echo base_url();?>assests/img/cheReactionProcEqn2.gif" alt="" align="middle" height="26" width="352"></p>
             <ul>
                 <li>Zinc metal is more reactive  than hydrogen.</li>
             </ul>
@@ -293,7 +293,7 @@
             </ol>
             <h1>Reaction between Sodium Sulphate and Barium Chloride.</h1>
             <h2>Materials Required:</h2>
-            <p><img alt="" src="/userfiles/1/image/Reaction%20between%20sodium%20sulphate%20&amp;%20barium%20materials.png" height="375" width="900"></p>
+            <p><img alt="" src = "<?php echo base_url();?>assests/img/Reaction%20between%20sodium%20sulphate%20&amp;%20barium%20materials.png" height="375" width="900"></p>
             <h2>Lab Procedure:</h2>
             <ul>
                 <li>Take a small amount of barium  chloride solution in a test tube and pour it into a conical flask.</li>
@@ -321,7 +321,7 @@
             <h2>Inferences:</h2>
             <ul>
                 <li>Sodium sulphate chemically reacts with barium chloride in the form of their aqueous  solution to form a white precipitate of barium sulphate.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                <p style="text-align: center;"><img src="/userfiles/1/image/cheReactionEqn9.gif" alt="" align="middle" height="30" width="443"></p>
+                <p style="text-align: center;"><img src = "<?php echo base_url();?>assests/img/cheReactionEq9.gif" alt="" align="middle" height="30" width="443"></p>
             </ul>
             <ul>
                 <li>This reaction is a chemical change, as the products are entirely  different from the reactants in chemical composition and chemical properties.&nbsp;</li>

@@ -23,12 +23,7 @@ class Class9 extends CI_Controller {
 
 		$this -> load -> view('periodic_table');
 	}
-	public function mixture_compound() 
-	{
-			$this -> load -> view('header');
-
-		$this -> load -> view('mixture_compd');
-	}
+	
 	
 	public function periodic_simulation() 
 	{
@@ -90,7 +85,50 @@ class Class9 extends CI_Controller {
 
 		$this -> load -> view('boiling_point_simulation');
 	}
+		public function mixture_compound() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('mixture_compound');
+	}
+	public function chemical_reactions() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('chemical_reactions');
+	}
+	public function crxn_procedure() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('crxn_procedure');
+	}
+	public function crxn_simulation() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('crxn_simulation');
+	}
+	public function melting_point() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('melting_point');
+	}
+	public function mp_procedure() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('mp_procedure');
+	}
+	public function mp_simulation() 
+	{
+			$this -> load -> view('header');
+
+		$this -> load -> view('mp_simulation');
+	}
 	
+
 
 	public function solutions() 
 	{
