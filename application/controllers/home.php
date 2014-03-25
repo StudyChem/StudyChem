@@ -78,7 +78,10 @@ class Home extends CI_Controller {
 			$this -> load -> model("loginmodel");
 			$res = $this -> loginmodel -> SignIn();
 			if ($res == 1) {
-				redirect(site_url('student'));			
+				if($this -> session -> userdata('roleid')==1)
+					redirect(site_url('student'));			
+				else
+					redirect(site_url('teacher'));
 			} else if ($res == -1) {	
 				$Error["Invalid"] = "Incorrect username/password";
 						$this -> load -> view('header');

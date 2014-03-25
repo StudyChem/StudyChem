@@ -86,7 +86,12 @@
                   </div>
                   <div class="widget-footer">
                     <p>
+                      <?php if($this -> session -> userdata('roleid') == 2) { ?>
+                        <a href="<?php echo base_url()?>teacher/class9" class="btn">Read more</a>
+                    <?php } else { ?>
+
                       <a href="<?php echo base_url()?>class9" class="btn">Read more</a>
+                      <?php } ?>
                     </p>
                   </div>
                 </div>
