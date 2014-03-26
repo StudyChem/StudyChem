@@ -62,7 +62,247 @@ class Teacher extends CI_Controller {
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/class9',$topic);
 	}
-	
+	public function add_chemical() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("chemical" => 1);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+
+	}
+
+	public function remove_chemical() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("chemical" => 0);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+	}
+	public function add_mixture() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("mixture" => 1);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+
+	}
+
+	public function remove_mixture() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("mixture" => 0);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+	}
+	public function add_melting() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("melting" => 1);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+
+	}
+
+	public function remove_melting() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("melting" => 0);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+	}
+	public function add_solution() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("solution" => 1);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+
+	}
+
+	public function remove_solution() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("solution" => 0);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+	}
+	public function add_boiling() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("boiling" => 1);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+
+	}
+
+	public function remove_boiling() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("boiling" => 0);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+	}
+
+	public function add_exothermic() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("exothermic" => 1);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+
+	}
+
+	public function remove_exothermic() {
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('email',$email);
+		$data = array("exothermic" => 0);
+		$this -> db -> update('class9',$data);
+		
+		$this -> db -> where('email',$this -> session -> userdata('email'));
+		$data = $this -> db -> get('class9');
+		$row = $data -> row();
+		$topic['periodic'] = $row -> periodic;
+		$topic['chemical'] = $row -> chemical;
+		$topic['mixture'] = $row -> mixture;
+		$topic['melting'] = $row -> melting;
+		$topic['solution'] = $row -> solution;
+		$topic['boiling'] = $row -> boiling;
+		$topic['exothermic'] = $row -> exothermic;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/class9',$topic);
+	}
 
 	public function class9() {
 		$this -> db -> where('email',$this -> session -> userdata('email'));

@@ -87,10 +87,10 @@
                   <div class="widget-footer">
                     <p>
                       <?php if($this -> session -> userdata('roleid') == 2) { ?>
-                        <a href="<?php echo base_url()?>teacher/class9" class="btn">Read more</a>
+                      <center>  <a href="<?php echo base_url()?>teacher/class9" class="btn btn-success btn-large">Learn</a> </center>
                     <?php } else { ?>
 
-                      <a href="<?php echo base_url()?>class9" class="btn">Read more</a>
+                     <center> <a href="<?php echo base_url()?>class9" class="btn btn-success btn-large">Learn</a></center>
                       <?php } ?>
                     </p>
                   </div>
@@ -107,7 +107,7 @@
                   </div>
                   <div class="widget-footer">
                     <p>
-                      <a href="product.html" class="btn">Read more</a>
+                      <center><a href="#" class="btn btn-large btn-success">Learn</a></center>
                     </p>
                   </div>
                 </div>

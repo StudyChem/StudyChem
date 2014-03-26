@@ -25,13 +25,14 @@
  
     <div class="container">
           <div class="page-header">
-           <center> <h1>Learn Chemistry</h1></center>
+           <center> <h1>Class 9 Topics</h1></center>
           </div>
           <div class="page-header">
-            <h2>Class 9 Topics</h1>
+            <h2><?php echo $title?></h1>
           </div>
           <div class="row-fluid">
-            <ul class="thumbnails">
+            <ul class="thumbnails"> 
+            <?php if($periodic == 1) { ?>
               <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/periodic_table"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/periodic_table.jpg" alt="product name">
@@ -44,6 +45,7 @@
                   
                 </div> </a>
               </li>
+              <?php } if($chemical == 1) {?>
              <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/chemical_reactions"> <div class="thumbnail">
                   <img style="height:205px" src="<?php echo base_url();?>assests/img/Chemical-Reactions.jpg" alt="product name">
@@ -56,7 +58,8 @@
                   
                 </div> </a>
               </li>
-			 <li class="span3">
+              <?php } if($mixture==1) { ?>
+			     <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/mixture_compound"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/mixandcom.jpg" alt="product name">
                   <div class="widget-footer">
@@ -68,6 +71,7 @@
                   
                 </div> </a>
               </li> 
+              <?php } if($melting == 1) { ?>
               <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/melting_point"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
@@ -77,11 +81,12 @@
                       To determine the melting point of ice.
                     </p>
                   </div>
-                  
                 </div> </a>
               </li>  
             </ul>
             <ul class="thumbnails"> 
+            <?php } if($solution == 1) { ?>
+ 
             	<li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/solutions"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/solution.jpg" alt="product name">
@@ -93,6 +98,7 @@
                   </div>  
                 </div> </a>
                 </li>
+                <?php } if($boiling == 1) { ?>
                 <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/boiling_point"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/boiling.jpg" alt="product name">
@@ -104,6 +110,7 @@
                   </div>  
                 </div> </a>
                 </li>
+                <?php } if($exothermic == 1) { ?>
                 <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/exo_endo"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/exo.jpg" alt="product name">
@@ -114,7 +121,8 @@
                     </p>
                   </div>  
                 </div> </a>
-            </ul>
+                </li>
+                <?php } ?>
 
           </div>
     </div>

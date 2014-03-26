@@ -12,9 +12,37 @@ class Class9 extends CI_Controller {
 	
 	public function index()
 	{
-				$this -> load -> view('header');
-
-		$this-> load-> view('class9');
+		$this -> load -> model('studentmodel');
+		$email = $this -> studentmodel -> getTeacher();
+		if($email == "default") {
+			$topic['title'] = "You are not yet enrolled in any class!";
+			$topic['periodic'] = 1;
+			$topic['chemical'] = 1;
+			$topic['mixture'] = 1;
+			$topic['melting'] = 1;
+			$topic['solution'] = 1;
+			$topic['boiling'] = 1;
+			$topic['exothermic'] = 1;
+		}
+		else {
+			$this -> db -> where('email',$email);
+			$data = $this -> db -> get('student');
+			$row = $data -> row();
+			$name = $row -> name;
+			$topic['title'] = "Welcome! You are enrolled in ". $name ."'s class.";
+			$this -> db -> where('email',$email);
+			$data = $this -> db -> get('class9');
+			$row = $data -> row();
+			$topic['periodic'] = $row -> periodic;
+			$topic['chemical'] = $row -> chemical;
+			$topic['mixture'] = $row -> mixture;
+			$topic['melting'] = $row -> melting;
+			$topic['solution'] = $row -> solution;
+			$topic['boiling'] = $row -> boiling;
+			$topic['exothermic'] = $row -> exothermic;
+		}
+		$this -> load -> view('header');
+		$this-> load-> view('class9',$topic);
 	}
 
 	public function periodic_table() 

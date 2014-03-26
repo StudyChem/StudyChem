@@ -40,11 +40,11 @@
                     </p>
                   </div>
                   <?php if($periodic == 1) { ?>
-                  <form action="<?php echo base_url();?>teacher/remove_periodic" method="post">
-                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
+                  <a href="<?php echo base_url();?>teacher/remove_periodic">
+                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large"> </a>
                   <?php } else { ?>
-                  <form action="<?php echo base_url();?>teacher/add_periodic" method="post">
-                  <input type="submit" value="Add topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/add_periodic">
+                  <input type="submit" value="Add topic" class="btn btn-success btn-large"> </a>
                   <?php } ?>
 
                 </div> 
@@ -60,11 +60,13 @@
                     <p> 
                   </div>
                    <?php if($chemical == 1) { ?>
-                  <form action="<?php echo base_url();?>teacher/remove_chemical" method="post">
-                  <input type="submit" value="Remove topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/remove_chemical">
+                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
+                  </a>
                   <?php } else { ?>
-                  <form action="<?php echo base_url();?>teacher/add_chemical" method="post">
-                  <input type="submit" value="Add topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/add_chemical">
+                  <input type="submit" value="Add topic" class="btn btn-success btn-large">
+                  </a>
                   <?php } ?>
 
                 </div> 
@@ -79,11 +81,13 @@
                     </p>
                   </div>
                   <?php if($mixture == 1) { ?>
-                  <form action="<?php echo base_url();?>teacher/remove_mixture" method="post">
-                  <input type="submit" value="Remove topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/remove_mixture">
+                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
+                  </a>
                   <?php } else { ?>
-                  <form action="<?php echo base_url();?>teacher/add_mixture" method="post">
-                  <input type="submit" value="Add topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/add_mixture">
+                  <input type="submit" value="Add topic" class="btn btn-success btn-large">
+                  </a>
                   <?php } ?>
 
                   
@@ -99,11 +103,13 @@
                     </p>
                   </div>
                                     <?php if($melting == 1) { ?>
-                  <form action="<?php echo base_url();?>teacher/remove_melting" method="post">
-                  <input type="submit" value="Remove topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/remove_melting">
+                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
+                  </a>
                   <?php } else { ?>
-                  <form action="<?php echo base_url();?>teacher/add_melting" method="post">
-                  <input type="submit" value="Add topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/add_melting" >
+                  <input type="submit" value="Add topic" class="btn btn-success btn-large">
+                  </a>
                   <?php } ?>
 
                 </div> 
@@ -120,11 +126,13 @@
                     </p>
                   </div>  
                                     <?php if($solution == 1) { ?>
-                  <form action="<?php echo base_url();?>teacher/remove_solution" method="post">
-                  <input type="submit" value="Remove topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/remove_solution">
+                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
+                  </a>
                   <?php } else { ?>
-                  <form action="<?php echo base_url();?>teacher/add_solution" method="post">
-                  <input type="submit" value="Add topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/add_solution" >
+                  <input type="submit" value="Add topic" class="btn btn-success btn-large">
+                  </a>
                   <?php } ?>
 
                 </div> 
@@ -139,11 +147,13 @@
                     </p>
                   </div>  
                                     <?php if($boiling == 1) { ?>
-                  <form action="<?php echo base_url();?>teacher/remove_boiling" method="post">
-                  <input type="submit" value="Remove topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/remove_boiling">
+                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
                   <?php } else { ?>
-                  <form action="<?php echo base_url();?>teacher/add_boiling" method="post">
-                  <input type="submit" value="Add topic" class="btn btn-primary btn-large">
+                  </a>
+                  <a href="<?php echo base_url();?>teacher/add_boiling">
+                  <input type="submit" value="Add topic" class="btn btn-success btn-large">
+                  </a>
                   <?php } ?>
 
                 </div> 
@@ -158,11 +168,13 @@
                     </p>
                   </div>  
                  <?php if($exothermic == 1) { ?>
-                  <form action="<?php echo base_url();?>teacher/remove_exothermic" method="post">
-                  <input type="submit" value="Remove topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/remove_exothermic">
+                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
+                  </a>
                   <?php } else { ?>
-                  <form action="<?php echo base_url();?>teacher/add_exothermic" method="post">
-                  <input type="submit" value="Add topic" class="btn btn-primary btn-large">
+                  <a href="<?php echo base_url();?>teacher/add_exothermic">
+                  <input type="submit" value="Add topic" class="btn btn-success btn-large">
+                  </a>
                   <?php } ?>
 
                 </div> 
