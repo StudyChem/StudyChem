@@ -8,7 +8,7 @@ class StudentModel extends CI_Model {
 			return "default";
 		}
 				
-		else if ($data -> num_rows ==1)
+		else if ($data -> num_rows ==1 && $this -> session -> userdata('isLoggedIn'))
 		{
 			$row = $data -> row();
 			return $row -> teacher;
