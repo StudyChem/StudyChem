@@ -32,7 +32,9 @@
   <td width="21px" height="150px" ></td>
   <td>
   <div ><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul style="margin-left:10px"class="widget-footer"><li class="current"><a href="<?php echo base_url();?>class10/com_rxn"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class10/comb_procedure"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class10/comb_simulation"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Simulation&nbsp;</div></span></a></li></ul></div></td><td id="rcurve" width="21px" height="145px"></td></tr><tr><td></td><td></td></tr></table>
-
+<div class="page-header">
+<center><h1> Procedure </h1></center>
+</div>
  <div class = "row"> 
   <div class ="span10 offset1"> 
 <div class="divContent"><h1>Materials required:</h1>
