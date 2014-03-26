@@ -71,7 +71,12 @@
       </div>
     <div class="container">
           <div class="page-header">
-            <h2>Learn Chemistry</h2>
+            <?php if(isset($title)) { ?>
+            <h2>Learn Chemistry <?php echo $title ?></h2>
+            <?php } else { ?>
+           <center><h2>Learn Chemistry</h2></center>
+           <?php } ?>
+
           </div>
           <div class="row-fluid">
             <ul style="margin-left: 250px" class="thumbnails">
@@ -107,7 +112,23 @@
                   </div>
                   <div class="widget-footer">
                     <p>
-                      <center><a href="#" class="btn btn-large btn-success">Learn</a></center>
+                      <center><a href="<?php echo base_url();?>class10" class="btn btn-large btn-success">Learn</a></center>
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="span4">
+                <div class="thumbnail">
+                  <img style="height: 185px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
+                  <div class="caption">
+                    <h3>General Topics</h3>
+                    <p>
+                      
+                    </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <center><a href="<?php echo base_url();?>general" class="btn btn-large btn-success">Learn</a></center>
                     </p>
                   </div>
                 </div>

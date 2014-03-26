@@ -1,0 +1,6 @@
+COMPND  159_81.PDB                                                              
+HETATM    1 Br                  -1.140   0.000   0.000                
+HETATM    2 Br                   1.140   0.000   0.000                
+CONECT    1    2                                             
+CONECT    2    1                                             
+END   

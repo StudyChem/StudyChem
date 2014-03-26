@@ -29,7 +29,7 @@ class Class9 extends CI_Controller {
 			$data = $this -> db -> get('student');
 			$row = $data -> row();
 			$name = $row -> name;
-			$topic['title'] = "Welcome! You are enrolled in ". $name ."'s class.";
+			$topic['title'] = "Welcome! You are enrolled in ". $name ."'s class!";
 			$this -> db -> where('email',$email);
 			$data = $this -> db -> get('class9');
 			$row = $data -> row();

@@ -12,8 +12,10 @@ class Student extends CI_Controller {
 	
 	public function index()
 	{
+		$this -> load -> model('studentmodel');
 		$this -> load -> view('header');
 		$this->load->view('home');
+		
 	}
 	
 	public function settings() 
