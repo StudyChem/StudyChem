@@ -15,7 +15,66 @@ class Teacher extends CI_Controller {
 		$this -> load -> view('header');
 		$this->load->view('home');
 	}
+
+	public function dashboard() 
+	{
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('teacherClass');
+		$students['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/dashboard',$students);
+	}
 	
+	public function addStudent() 
+	{
+		$email = $_POST['addEmail'];
+		$this -> db -> where('email',$email);
+		$data = $this -> db -> get('student');
+
+		if($data -> num_rows()==0) {
+			$sendData['title'] = "Sorry! No such Student Exist. Try another E-mail address!";
+		}
+		else {
+			$row  = $data -> row();
+			$array = array('teacher' => $this -> session ->userdata('email'),
+						   'student' => $row -> email
+						   );
+			$this -> db -> insert('teacherClass',$array);
+			$sendData['title'] = "Student is successfully added into your class!";
+		}
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('teacherClass');
+		$sendData['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/dashboard',$sendData);
+	}
+
+	public function removeStudent() 
+	{
+		$email = $_POST['removeEmail'];
+		$this -> db -> where('student',$email);
+		$data = $this -> db -> get('teacherClass');
+
+		if($data -> num_rows()==0) {
+			$sendData['title1'] = "Sorry! No such Student Exist. Try another E-mail address!";
+		}
+		else {
+			$row  = $data -> row();
+			$array = array('teacher' => $this -> session ->userdata('email'),
+						   'student' => $row -> student
+						   );
+			$this -> db -> delete('teacherClass',$array);
+			$sendData['title1'] = "Student is successfully removed from your class!";
+		}
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('teacherClass');
+		$sendData['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/dashboard',$sendData);
+	}
 	public function settings() 
 	{	
 		$this -> load -> view('header');

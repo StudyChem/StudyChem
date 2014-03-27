@@ -40,7 +40,7 @@
                   <a href="#"> About </a>
                   
                 </li>
-                <li><a href="#">FAQ</a></li>
+                <li ><a href="#">FAQ</a></li>
                 <li><a href="#">Contact us</a></li>
                 <li><a href="<?php echo base_url();?>home/signup">Sign up</a></li>
                 <?php if($this->session->userdata("roleid")==1 || $this->session->userdata("roleid")==2) {?>
@@ -48,7 +48,11 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<b class="caret"></b></a>
 
                 <ul class="dropdown-menu">
+                <?php if($this->session->userdata("roleid")==2) { ?>
+                  <li><a href="<?php echo base_url();?>teacher/dashboard">Dashboard</a></li>
+                  <?php } else {?>
                   <li><a href="#">Dashboard</a></li>
+                  <?php } ?>
                   <li><a href="#">Quizzes</a></li>
                   <li><a href="<?php echo base_url();?>student/settings">Settings</a></li>
                   <li><a href="<?php echo base_url();?>home/logout">Log out</a></li>
