@@ -15,7 +15,30 @@ class Teacher extends CI_Controller {
 		$this -> load -> view('header');
 		$this->load->view('home');
 	}
+	public function addNews()
+	{
+		$head = $_POST['heading'];
+		$cont = $_POST['cont'];
+		$date = date('Y-m-d H:i:s');
+		$email = $this -> session -> userdata('email');
+		$data = array('teacher' => $email,
+					  'heading' => $head,
+					  'content' => $cont,
+					  'date' => $date
+					 );
+		$this -> db -> insert('news',$data);
+		redirect('teacher/timeline');
+	}
 
+	public function timeline() 
+	{
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('news');
+		$sendData['data'] = $data; 
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/timeline',$sendData);
+	}
 	public function dashboard() 
 	{
 		$email = $this -> session -> userdata('email');

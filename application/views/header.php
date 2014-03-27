@@ -53,6 +53,9 @@
                   <?php } else {?>
                   <li><a href="#">Dashboard</a></li>
                   <?php } ?>
+                  <?php if($this->session->userdata("roleid")==2) { ?>
+                  <li><a href="<?php echo base_url();?>teacher/timeline">News Feed</a></li>
+                  <?php } ?>
                   <li><a href="#">Quizzes</a></li>
                   <li><a href="<?php echo base_url();?>student/settings">Settings</a></li>
                   <li><a href="<?php echo base_url();?>home/logout">Log out</a></li>
