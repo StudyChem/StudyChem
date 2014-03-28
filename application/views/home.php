@@ -31,7 +31,7 @@
                   <div class="row-fluid">
                     
                     <div class="span5" align="center" style="width:970px; height:300px;">
-                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/1429688_slidetwo970x300.jpg" class="thumbnail"></div>
+                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/studychem_logo.jpg" class="thumbnail"></div>
                     </div>
                   </div>                  
                 </div>
@@ -49,7 +49,7 @@
                 <div class="hero-unit">
                   <div class="row-fluid">
                    <div class="span5" align="center" style="width:970px; height:300px;">
-                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/banner_image6.jpg" class="thumbnail"></div>
+                     <div align="center"> <img style="margin-left: 100px;" src="<?php echo base_url();?>assests/img/1429688_slidetwo970x300.jpg" class="thumbnail"></div>
                     </div>
                   </div>                  
                 </div>
