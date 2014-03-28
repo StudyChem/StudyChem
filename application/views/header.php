@@ -56,6 +56,18 @@
                   <?php if($this->session->userdata("roleid")==2) { ?>
                   <li><a href="<?php echo base_url();?>teacher/timeline">News Feed</a></li>
                   <?php } ?>
+                  <?php if($this->session->userdata("roleid")==1) { 
+                   $email =  $this -> session -> userdata('email');
+                   $this -> db -> where('student',$email);
+                   $result = $this -> db -> get('teacherClass');
+                   if ($result -> num_rows() == 1 ) {
+                    ?>
+                  <li><a href="<?php echo base_url();?>student/timeline">News Feed</a></li>
+                  <?php 
+                  } 
+                  } 
+                  ?>
+                  
                   <li><a href="#">Quizzes</a></li>
                   <li><a href="<?php echo base_url();?>student/settings">Settings</a></li>
                   <li><a href="<?php echo base_url();?>home/logout">Log out</a></li>
