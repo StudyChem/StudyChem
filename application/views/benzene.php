@@ -16,8 +16,9 @@ jmol = Jmol.getApplet(path,Info)
 
 <body>
 <center>
+<a href="javascript:Jmol.script(jmol,'rotate')">on</a>
 <applet name="jmol" code="JmolApplet"
-	archive = "<?php echo base_url('assests/jmol/JmolApplet.jar'); ?>" width=800 height=450 align = "middle">
+	archive = "<?php echo base_url('assests/jmol/JmolApplet.jar'); ?>" width=800 height=480 align = "middle">
 	<param name="progressbar"  value="true" />
 	<param name="load" value="<?php echo base_url();?>assests/jmol/pdb/benzene.pdb"/>
 	<param name="script" value="spin">
@@ -27,7 +28,6 @@ jmol = Jmol.getApplet(path,Info)
 	<param name="wireframeRotation" value="true">
 	<param name="perspectiveDepth"  value="false">
 </applet>
-
 </center>
 </body>
 </html>
