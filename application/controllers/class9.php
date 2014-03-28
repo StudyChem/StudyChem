@@ -156,5 +156,11 @@ class Class9 extends CI_Controller {
 	{
 		$this -> load -> view('header');
 		$this -> load -> view('solutions_simulation');
+	}
+
+	public function mixcmpd_simulation() 
+	{
+		$this -> load -> view('header');
+		$this -> load -> view('mixcmpd_simulation');
 	}		
 }	

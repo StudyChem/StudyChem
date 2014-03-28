@@ -84,45 +84,8 @@
                 </div> </a>
               </li>  
             </ul>
-            <ul class="thumbnails"> 
-            <?php } if($solution == 1) { ?>
- 
-            	<li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class9/solutions"> <div class="thumbnail">
-                  <img style="height:185px" src="<?php echo base_url();?>assests/img/solution.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h3>Solutions</h3>
-                    <p>
-                      To distinguish between Solutions.
-                    </p>
-                  </div>  
-                </div> </a>
-                </li>
-                <?php } if($boiling == 1) { ?>
-                <li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class9/boiling_point"> <div class="thumbnail">
-                  <img style="height:185px" src="<?php echo base_url();?>assests/img/boiling.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h3>Boiling Point</h3>
-                    <p>
-                      To determine Boiling Point of water.
-                    </p>
-                  </div>  
-                </div> </a>
-                </li>
-                <?php } if($exothermic == 1) { ?>
-                <li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class9/exo_endo"> <div class="thumbnail">
-                  <img style="height:185px" src="<?php echo base_url();?>assests/img/exo.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h3>Exothermic and Endothermic</h3>
-                    <p>
-                      Different examples of exothermic and endothermic reactions.
-                    </p>
-                  </div>  
-                </div> </a>
-                </li>
-                <?php } ?>
+            <?php }?>
+            
 
           </div>
     </div>

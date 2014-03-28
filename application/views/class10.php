@@ -68,7 +68,7 @@
               </li>  
 			<li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class10/decom_rxn"> <div class="thumbnail">
-                  <img style="height:155px" src="<?php echo base_url();?>assests/img/decom_rxn.jpg" alt="product name">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/decom_rxn.jpg" alt="product name">
                   <div class="widget-footer">
                     <h3>Decomposition Reactions</h3>
                     <p>
@@ -78,83 +78,7 @@
                   
                 </div> </a>
               </li>    
-			  <li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class10/acid_bases"> <div class="thumbnail">
-                  <img style="height:155px" src="<?php echo base_url();?>assests/img/acid_bases.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h3>Acids and Bases</h3>
-                    <p>
-                      Properties of Acid and Bases
-                    </p>
-                  </div>
-                  
-                </div> </a>
-              </li>  
-			  <li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class10/dd_rxn"> <div class="thumbnail">
-                  <img style="height:155px" src="<?php echo base_url();?>assests/img/dd_rxn.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h3><font size = "4px">Double Displacement Reactions</font></h3>
-                    <p>
-                      Double Displacement Reactions 
-                    </p>
-                  </div>
-                  
-                </div> </a>
-              </li>  
-			  <li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class10/acetic_acid"> <div class="thumbnail">
-                  <img style="height:155px" src="<?php echo base_url();?>assests/img/acetic_acid.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h3>Acetic Acid</h3>
-                    <p>
-                      Properties of Acetic Acid
-                    </p>
-                  </div>
-                  
-                </div> </a>
-              </li> 
-				<li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class10/rr_metals"> <div class="thumbnail">
-                  <img style="height:155px" src="<?php echo base_url();?>assests/img/rr_metals.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h3>Relative Reactivity of Metals</h3>
-                    <p><font size="2px">
-                      Study Relative Reactivity Using Salt Solutions</font>
-                    </p>
-                  </div>
-                  
-                </div> </a>
-              </li>  
-			  <li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class10/cc_soap"> <div class="thumbnail">
-                  <img style="height:155px" src="<?php echo base_url();?>assests/img/cc_soap.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h4>Cleaning Capactiy of Soap</h4>
-                    <p>
-                      Cleaning Capactiy of Soap with Hard and Soft water
-                    </p>
-                  </div>
-                  
-                </div> </a>
-              </li>  
-			  <li class="span3">
-               <a style="text-decoration:none" href="<?php echo base_url();?>class10/sap_mak"> <div class="thumbnail">
-                  <img style="height:155px" src="<?php echo base_url();?>assests/img/sap_mak.jpg" alt="product name">
-                  <div class="widget-footer">
-                    <h3>Saponification</h3>
-                    <p>
-                      Saponification- The process of making Soaps
-                    </p>
-                  </div>
-                  
-                </div> </a>
-              </li>
-				
-
-			  
-            </ul>
-          
+			    
     </div>
 
     <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
