@@ -1,5 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/* This controller contains the functionalities 
+/* of the student account.
+/*********************************************/
+
 class Student extends CI_Controller {
 	function __construct()
    	{

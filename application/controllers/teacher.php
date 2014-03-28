@@ -1,5 +1,9 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/* This controller contains the features of the 
+/* Teacher account.
+/*********************************************/
+
 class Teacher extends CI_Controller {
 	function __construct()
    	{
@@ -264,6 +268,7 @@ class Teacher extends CI_Controller {
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/class9',$topic);
 	}
+
 	public function add_solution() {
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
@@ -304,6 +309,7 @@ class Teacher extends CI_Controller {
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/class9',$topic);
 	}
+
 	public function add_boiling() {
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);

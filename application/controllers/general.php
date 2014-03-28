@@ -1,6 +1,12 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
+/* This controllers is for general topics 
+/* of the chemistry.
+/****************************************/
+
 class general extends CI_Controller {
+
+	// Default Constructor
 	function __construct()
    	{
         // this is your constructor
@@ -10,24 +16,29 @@ class general extends CI_Controller {
         $this->load->library('session');
     }
 	
+    /*Rediects to the home page of general topic */
 	public function index()
 	{
 		$this -> load -> view('header');
-		$this-> load-> view('general');
+		$this -> load -> view('general');
 	}
 
+	/* Loads jmol */
 	public function jmol()
 	{
 		$this -> load -> view('header');
-
 		$this -> load -> view('jmol');
 	}
+
+
 	public function molecule()
 	{
 		$this -> load -> view('header');
 		$this -> load -> view('molecule');
 		$this -> load -> view('benzene');
 	}
+
+	/* Loads benzene molecule */
 	public function benzene()
 	{
 		$this -> load -> view('header');
@@ -163,37 +174,28 @@ class general extends CI_Controller {
 	public function periodic_table() 
 	{
 		$this -> load -> view('header');
-
 		$this -> load -> view('periodic_table');
 	}
 	public function mixture_compound() 
 	{
-			$this -> load -> view('header');
-
+		$this -> load -> view('header');
 		$this -> load -> view('mixture_compd');
 	}
 	
 	public function periodic_simulation() 
 	{
-			$this -> load -> view('header');
-
+		$this -> load -> view('header');
 		$this -> load -> view('periodic_simulation');
 	}
 	public function periodic_procedure() 
 	{
-			$this -> load -> view('header');
-
-	
+		$this -> load -> view('header');
 		$this -> load -> view('periodic_procedure');
 	}
 	public function eqn_balancer()
 	{
-			$this -> load -> view('header');
-
+		$this -> load -> view('header');
 		$this -> load -> view('eqn_balancer');
 	}
 	
 }	
-
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */

@@ -79,10 +79,10 @@
 
           </div>
           <div class="row-fluid">
-            <ul style="margin-left: 250px" class="thumbnails">
+            <ul  class="thumbnails">
               <li class="span4">
                 <div class="thumbnail">
-                  <img style="height:185px" src="<?php base_url();?>assests/img/class10.jpg" alt="product name">
+                  <img style="height:200px" src="<?php base_url();?>assests/img/class10.jpg" alt="product name">
                   <div class="caption">
                     <h3>Class 9</h3>
                     <p>
@@ -103,7 +103,7 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img style="height: 185px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
+                  <img style="height: 200px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
                   <div class="caption">
                     <h3>Class 10</h3>
                     <p>
@@ -119,7 +119,7 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img style="height: 185px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
+                  <img style="height: 200px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
                   <div class="caption">
                     <h3>General Topics</h3>
                     <p>

@@ -43,6 +43,9 @@
           <?php if(validation_errors()!=""){
           echo "<div class='alert alert-danger'>".validation_errors()."</div>";
           } ?>
+          <?php if(isset($message)){
+          echo "<div class='alert alert-success'>".$message."</div>";
+          }?>
                   <div>
 
                     <input type="submit" value="Signup" class="btn btn-primary btn-large">

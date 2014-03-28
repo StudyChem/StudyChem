@@ -7,9 +7,14 @@ class LoginModel extends CI_Model {
 		if ($queryData -> num_rows == 1)
 		 {
 			$row = $queryData -> row();	
-			$data = array("email" => $row -> email, "isLoggedIn" => TRUE, "roleid" => $row -> roleid,"name" => $row -> name, "class" => $row -> class, "password" => $row -> password);
-			$this -> session -> set_userdata($data);		
-			return 1;
+			if($row -> isActivated == 1) {
+				$data = array("email" => $row -> email, "isLoggedIn" => TRUE, "roleid" => $row -> roleid,"name" => $row -> name, "class" => $row -> class, "password" => $row -> password);
+				$this -> session -> set_userdata($data);		
+				return 1;
+			}
+			else {
+				return -1;
+			}
 		}
 				
 		else 

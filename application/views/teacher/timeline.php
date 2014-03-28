@@ -5,10 +5,9 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-		<title>Course Timeline</title>
+		<title>StudyChem</title>
 		<meta name="description" content="Blueprint: Vertical Timeline" />
 		<meta name="keywords" content="timeline, vertical, layout, style, component, web development, template, responsive" />
-		<meta name="author" content="Codrops" />
 		<link rel="shortcut icon" href="../favicon.ico">
 
 		<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>assests/css/default1.css" />
@@ -24,6 +23,10 @@
 
 		<script src="<?php echo base_url();?>assests/js/modernizr.custom.js"></script>
 
+<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
+    
 <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
