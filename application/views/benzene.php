@@ -20,6 +20,7 @@ jmol = Jmol.getApplet(path,Info)
 	archive = "<?php echo base_url('assests/jmol/JmolApplet.jar'); ?>" width=800 height=450 align = "middle">
 	<param name="progressbar"  value="true" />
 	<param name="load" value="<?php echo base_url();?>assests/jmol/pdb/benzene.pdb"/>
+	<param name="script" value="spin">
 	<param name="bgcolor" value="black">
 	<param name="style" value="shaded">
 	<param name="label" value="none">

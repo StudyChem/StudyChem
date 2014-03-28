@@ -42,7 +42,9 @@
                 </li>
                 <li ><a href="#">FAQ</a></li>
                 <li><a href="#">Contact us</a></li>
+                <?php if($this -> session -> userdata('isLoggedIn') == FALSE)  { ?>
                 <li><a href="<?php echo base_url();?>home/signup">Sign up</a></li>
+                <?php } ?>
                 <?php if($this->session->userdata("roleid")==1 || $this->session->userdata("roleid")==2) {?>
                 <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Profile<b class="caret"></b></a>

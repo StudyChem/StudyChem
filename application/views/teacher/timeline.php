@@ -21,15 +21,11 @@
     <!-- Bootbusiness theme -->
     <link href="<?php echo base_url('assests/css/boot-business.css');?>" rel="stylesheet">
 
-		<script src="<?php echo base_url();?>assests/js/modernizr.custom.js"></script>
+		<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
+    		<script src="<?php echo base_url();?>assests/js/modernizr.custom.js"></script>
 
-<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
-    
-<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
 	</head>
 	<body>
 		<div class="content">
@@ -100,8 +96,4 @@
 });
 
 </script>
-
-<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
-    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
 </html>
