@@ -32,15 +32,15 @@
   <tr>
   <td width="21px" height="150px" ></td>
   <td>
-  <div ><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul style="margin-left:10px"class="widget-footer"><li class="current"><a href="<?php echo base_url();?>class10/det_php"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class10/php_procedure"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class10/php_simulation"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Simulation&nbsp;</div></span></a></li></ul></div></td><td id="rcurve" width="21px" height="145px"></td></tr><tr><td></td><td></td></tr></table>
+  <div ><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul style="margin-left:130px;width:805px"class="widget-footer"><li class="current"><a href="<?php echo base_url();?>class10/det_php"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class10/php_procedure"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class10/php_simulation"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Simulation&nbsp;</div></span></a></li></ul></div></td><td id="rcurve" width="21px" height="145px"></td></tr><tr><td></td><td></td></tr></table>
 
 
 
-<div class="divContent">
+
  
 
 <div align="center">
-<iframe src=" http://amrita.olabs.co.in/olab/html5/?sub=CHE&amp;cat=PHC&amp;exp=pH-Determination&amp;tempId=olab_ot&linktoken=9c4c528e54fdc3643c63316320620b16&elink_lan=en-IN" width='900px', height='425px' align="middle" class="iframeStyle" frameborder="0" scrolling ="no"> </iframe>
+<iframe style="margin-top:-79px" src=" http://amrita.olabs.co.in/olab/html5/?sub=CHE&amp;cat=PHC&amp;exp=pH-Determination&amp;tempId=olab_ot&linktoken=9c4c528e54fdc3643c63316320620b16&elink_lan=en-IN" width='900px', height='425px' align="middle" class="iframeStyle" frameborder="0" scrolling ="no"> </iframe>
  
 </div>
 </div>

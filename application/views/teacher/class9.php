@@ -104,7 +104,7 @@
                   <a href="<?php echo base_url();?>teacher/add_mixture">
                   <input type="submit" value="Add topic" class="btn btn-success btn-large">
                   </a>
-                  <a href="<?php echo base_url();?>class9/chemical_reactions">
+                  <a href="<?php echo base_url();?>class9/mixture_compound">
                   <input style="margin-left:25px" type="submit" value="View topic" class="btn btn-success btn-large"> </a>
                   
                   <?php } ?>

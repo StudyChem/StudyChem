@@ -17,6 +17,8 @@ class Home extends CI_Controller {
 	/* Rediects to the home page */
 	public function index()
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
 		$this -> load -> view('header');
 		$this->load->view('home');
 	}
@@ -24,12 +26,16 @@ class Home extends CI_Controller {
 	/* Redirects to the sign-up page */
 	public function signup()
 	{
+	$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
 		$this -> load -> view('header');
 		$this->load->view('signup');
 	}
 
 	/* Validation and sign-up process is conducted */
 	public function register() {
+	$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
 		$Error["Invalid"] = NULL;
 		$this -> load -> helper('url');
 		$this -> load -> library('session');
@@ -73,6 +79,8 @@ class Home extends CI_Controller {
 
 	public function activate($RegistrationKey)
 	{
+	$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
 		$this -> load -> model('registermodel');
 		$this -> registermodel -> activateAccount($RegistrationKey);
 		redirect('home/login');
@@ -81,12 +89,22 @@ class Home extends CI_Controller {
 	/* Redirects to the login page */
 	public function login()
 	{
+	$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+		if($this -> session -> userdata('isLoggedIn') == FALSE){ 
 		$this -> load -> view('header');
 		$this->load->view('login');
+		}
+		else {
+		redirect('home');
+		
+		}
 	}
 
 	/* Validation process for the login is conducted */
 	public function signin() {
+	$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
 		$Error["Invalid"] = NULL;
 		$this -> load -> helper('url');
 		$this -> load -> library('session');
@@ -119,6 +137,8 @@ class Home extends CI_Controller {
 
 	/* Logouts the user session */
 	public function logout() {
+	$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
 		$this -> load -> helper('url');
 		$this -> load -> library('session');
 		$this -> session -> sess_destroy();

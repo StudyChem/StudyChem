@@ -16,11 +16,15 @@ class Teacher extends CI_Controller {
 	
 	public function index()
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this->load->view('home');
 	}
 	public function addNews()
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$head = $_POST['heading'];
 		$cont = $_POST['cont'];
 		$date = date('Y-m-d H:i:s');
@@ -36,6 +40,8 @@ class Teacher extends CI_Controller {
 
 	public function timeline() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('news');
@@ -45,6 +51,8 @@ class Teacher extends CI_Controller {
 	}
 	public function dashboard() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('teacherClass');
@@ -55,6 +63,8 @@ class Teacher extends CI_Controller {
 	
 	public function addStudent() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $_POST['addEmail'];
 		$this -> db -> where('email',$email);
 		$data = $this -> db -> get('student');
@@ -80,6 +90,8 @@ class Teacher extends CI_Controller {
 
 	public function removeStudent() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $_POST['removeEmail'];
 		$this -> db -> where('student',$email);
 		$data = $this -> db -> get('teacherClass');
@@ -104,11 +116,15 @@ class Teacher extends CI_Controller {
 	}
 	public function settings() 
 	{	
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this -> load -> view('settings');
 	}	
 
 	public function add_periodic() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("periodic" => 1);
@@ -130,6 +146,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function remove_periodic() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("periodic" => 0);
@@ -149,6 +167,8 @@ class Teacher extends CI_Controller {
 		$this -> load -> view('teacher/class9',$topic);
 	}
 	public function add_chemical() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("chemical" => 1);
@@ -170,6 +190,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function remove_chemical() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("chemical" => 0);
@@ -189,6 +211,8 @@ class Teacher extends CI_Controller {
 		$this -> load -> view('teacher/class9',$topic);
 	}
 	public function add_mixture() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("mixture" => 1);
@@ -210,6 +234,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function remove_mixture() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("mixture" => 0);
@@ -229,6 +255,8 @@ class Teacher extends CI_Controller {
 		$this -> load -> view('teacher/class9',$topic);
 	}
 	public function add_melting() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("melting" => 1);
@@ -250,6 +278,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function remove_melting() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("melting" => 0);
@@ -270,6 +300,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function add_solution() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("solution" => 1);
@@ -291,6 +323,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function remove_solution() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("solution" => 0);
@@ -311,6 +345,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function add_boiling() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("boiling" => 1);
@@ -332,6 +368,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function remove_boiling() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("boiling" => 0);
@@ -352,6 +390,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function add_exothermic() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("exothermic" => 1);
@@ -373,6 +413,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function remove_exothermic() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("exothermic" => 0);
@@ -393,6 +435,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function class9() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$this -> db -> where('email',$this -> session -> userdata('email'));
 		$data = $this -> db -> get('class9');
 		$row = $data -> row();
@@ -408,6 +452,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function changePassword() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$Error["Invalid1"] = NULL;
 		$this -> load -> helper('url');
 		$this -> load -> library('session');
@@ -434,6 +480,8 @@ class Teacher extends CI_Controller {
 	}
 
 	public function editProfile() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$Error["Invalid"] = NULL;
 		$this -> load -> helper('url');
 		$this -> load -> library('session');

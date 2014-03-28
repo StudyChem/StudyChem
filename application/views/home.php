@@ -121,7 +121,7 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img style="height: 200px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
+                  <img style="height: 200px" src="<?php base_url();?>assests/img/general.png" alt="product name">
                   <div class="caption">
                     <h3>General Topics</h3>
                     <p>

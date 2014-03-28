@@ -45,13 +45,13 @@ body {
   <tr>
   <td width="21px" height="150px" ></td>
   <td>
-  <div ><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul style="margin-left:10px"class="widget-footer"><li class="current"><a href="<?php echo base_url();?>class9/exo_endo"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/exo_endo_procedure"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/exothermic"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Exothermic&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/Endothermic"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Endothermic&nbsp;</div></span></a></li></ul></div></td><td id="rcurve" width="21px" height="145px"></td></tr><tr><td></td><td></td></tr></table>
+  <div ><table id="tabtable" border="0px" cellpadding="0px" cellspacing="0px" width="100%"><tr><td id="lcurve" width="21px" height="145px"></td><td id="mcurve" rowspan="2"><div id="ddtabs2" class="glowingtabs"><ul style="margin-left:10px;"class="widget-footer"><li class="current"><a href="<?php echo base_url();?>class9/exo_endo"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/theory.png" alt=""/></div><div id="tab_name" >Theory&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/exo_endo_procedure"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_2.png" alt=""/></div><div id="tab_name" >Procedure&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/exothermic"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Exothermic&nbsp;</div></span></a></li><li class=""><a href="<?php echo base_url();?>class9/Endothermic"><span><div id="tabspan" ><img id="tabimg" src="<?php echo base_url();?>assests/img/content_4.png" alt=""/></div><div id="tab_name" >Endothermic&nbsp;</div></span></a></li></ul></div></td><td id="rcurve" width="21px" height="145px"></td></tr><tr><td></td><td></td></tr></table>
 <div class = "row"> 
 <div class ="span10 offset1">
 
 
 
- <div class="divContent">
+ 
 
 <div align="center">
 <iframe src="http://www.olabs.co.in/cdacmumbai/Simulations/Endothermic_Reactions/Endothermic_Final_Modified.html?linktoken=794d56b77daad45b096f4204f498943d&elink_lan=en-IN" width='900px', height='1200px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>

@@ -1,6 +1,6 @@
 /* General styles for all menus */
 .cbp-spmenu {
-	background: #47a3da;
+	background: #25383c;
 	position: fixed;
 	overflow:scroll;
 }
@@ -11,7 +11,7 @@
 	padding: 20px;
 	margin: 0;
 	font-weight: 300;
-	background: #0d77b6;
+	background: #25383c;
 }
 
 .cbp-spmenu a {

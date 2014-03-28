@@ -34,7 +34,7 @@
             <ul class="thumbnails">
               <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>general/molecule"> <div class="thumbnail">
-                  <img style="height:185px" src="<?php echo base_url();?>assests/img/periodic_table.jpg" alt="product name">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/molecule.jpg" alt="product name">
                   <div class="widget-footer">
                     <h3>Molecule Structure</h3>
                     <p>
@@ -46,9 +46,9 @@
               </li>
              <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>general/eqn_balancer"> <div class="thumbnail">
-                  <img style="height:205px" src="<?php echo base_url();?>assests/img/Chemical-Reactions.jpg" alt="product name">
+                  <img style="height:185px;" src="<?php echo base_url();?>assests/img/balance.gif" alt="product name">
                   <div class="widget-footer">
-                    <h3>Chemical Equation Balancer</h3>
+                    <h3>Equation Balancer</h3>
                     <p>
                       Balance Chemical Reactions
                     </p>

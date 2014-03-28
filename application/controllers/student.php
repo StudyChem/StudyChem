@@ -16,6 +16,8 @@ class Student extends CI_Controller {
 	
 	public function index()
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$this -> load -> model('studentmodel');
 		$this -> load -> view('header');
 		$this->load->view('home');
@@ -24,12 +26,15 @@ class Student extends CI_Controller {
 	
 	public function settings() 
 	{	
-		
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this -> load -> view('settings');
 	}	
 
 	public function changePassword() {
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$Error["Invalid1"] = NULL;
 		$this -> load -> helper('url');
 		$this -> load -> library('session');
@@ -56,6 +61,8 @@ class Student extends CI_Controller {
 	}
 
 	public function editProfile() {
+	$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$Error["Invalid"] = NULL;
 		$this -> load -> helper('url');
 		$this -> load -> library('session');
@@ -86,6 +93,8 @@ class Student extends CI_Controller {
 	}
 	public function timeline() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('student',$email);
 		$data = $this -> db -> get('teacherClass');

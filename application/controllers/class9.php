@@ -16,6 +16,9 @@ class Class9 extends CI_Controller {
 	
 	public function index()
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> model('studentmodel');
 		$email = $this -> studentmodel -> getTeacher();
 		if($email == "default") 
@@ -53,6 +56,9 @@ class Class9 extends CI_Controller {
 
 	public function periodic_table() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('periodic_table');
 	}
@@ -60,32 +66,50 @@ class Class9 extends CI_Controller {
 	
 	public function periodic_simulation() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('periodic_simulation');
 	}
 	public function periodic_procedure() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('periodic_procedure');
 	}
 
 	public function exo_endo() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('exo_endo');
 	}
 	public function exo_endo_procedure() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('exo_endo_procedure');
 	}
 	public function exo_simulation() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('exo_simulation');
 	}
 	public function endo_simulation() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('endo_simulation');
 	}
@@ -93,74 +117,134 @@ class Class9 extends CI_Controller {
 
 	public function boiling_point() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('boiling_point');
 	}
 	public function boiling_point_procedure() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('boiling_point_procedure');
 	}
 	public function boiling_point_simulation() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('boiling_point_simulation');
 	}
 	public function mixture_compound() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('mixture_compound');
 	}
 	public function chemical_reactions() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('chemical_reactions');
 	}
 	public function crxn_procedure() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('crxn_procedure');
 	}
 	public function crxn_simulation() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('crxn_simulation');
 	}
 	public function melting_point() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('melting_point');
 	}
 	public function mp_procedure() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('mp_procedure');
 	}
 	public function mp_simulation() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('mp_simulation');
 	}
 	
 	public function solutions() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache"); 
+	
 		$this -> load -> view('header');
 		$this -> load -> view('solutions');
 	}
 	public function solutions_procedure() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this -> load -> view('solutions_procedure');
 	}
 	public function solutions_simulation() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this -> load -> view('solutions_simulation');
 	}
 
 	public function mixcmpd_simulation() 
 	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this -> load -> view('mixcmpd_simulation');
-	}		
+	}	
+		public function mixcmpd_procedure() 
+	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$this -> load -> view('header');
+		$this -> load -> view('mixcmpd_procedure');
+	}
+		public function exothermic() 
+	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$this -> load -> view('header');
+		$this -> load -> view('exothermic');
+	}
+		public function endothermic() 
+	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$this -> load -> view('header');
+		$this -> load -> view('endothermic');
+	}
 }	
