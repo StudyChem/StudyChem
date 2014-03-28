@@ -84,6 +84,20 @@ class Student extends CI_Controller {
 		
 
 	}
+	public function timeline() 
+	{
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('student',$email);
+		$data = $this -> db -> get('teacherClass');
+		if($data -> num_rows() == 1) 
+		{
+			$row = $data -> row();
+			$teacher = $row -> teacher;
+			$sendData['data'] = $teacher;
+			$this -> load -> view('header');
+			$this -> load -> view('timeline',$sendData);
+		}
+	}
 	
 	
 }

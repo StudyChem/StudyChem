@@ -53,17 +53,6 @@
                 </form>
                 <h4><i class="icon-question-sign"></i> Already have an account?</h4>
                 <a href="signin.html" class="btn btn-large bottom-space">Signin</a>
-                <h4><i class="icon-thumbs-up"></i> Sign in with third party account</h4>
-                <ul class="signin-with-list">
-                  
-                  <li>
-                    <a class="btn-google">
-                      <i class="icon-google-plus icon-large"></i>
-                      Signin with Google
-                    </a>
-                  </li>
-                  
-                </ul>
               </div>
             </div>
           </div>

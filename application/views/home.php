@@ -6,6 +6,8 @@
     <meta name="description" content="StudyChem | Short description about StudyChem">
     <meta name="author" content="Your name">
     <title>StudyChem</title>
+    <link rel="icon" href="<?php echo base_url();?>assests/img/favicon.gif" type="image/gif" sizes="16x16">
+
     <!-- Bootstrap -->
     <link href="<?php echo base_url('assests/css/bootstrap.min.css'); ?>" rel="stylesheet">
     <!-- Bootstrap responsive -->
