@@ -121,11 +121,10 @@
               </li>
               <li class="span4">
                 <div class="thumbnail">
-                  <img style="height: 200px" src="<?php base_url();?>assests/img/general.png" alt="product name">
+                  <img style="height: 200px" src="<?php base_url();?>assests/img/general.jpg" alt="product name">
                   <div class="caption">
                     <h3>General Topics</h3>
                     <p>
-                      
                     </p>
                   </div>
                   <div class="widget-footer">
