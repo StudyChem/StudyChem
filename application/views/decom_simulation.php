@@ -45,7 +45,7 @@
  
 
 <div align="center" >
-<iframe style="margin-top:-89px" src="http://amrita.olabs.co.in/olab/CHE/INC/action-of-heat -on-ferrous-sulphate-crystals/decompositionReaction.html?linktoken=657e3895ae568d4c80a2d4e70e683295&elink_lan=en-IN" width='800px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
+<iframe style="margin-top:-89px" src="http://goo.gl/LhYbQ7" width='800px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
  
 </div>
 </div>

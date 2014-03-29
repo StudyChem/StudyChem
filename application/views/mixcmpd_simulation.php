@@ -54,7 +54,7 @@ body {
  
 
 <div align="center">
-<iframe style="margin-top:-89px" src="http://amrita.olabs.co.in/olab/CHE/SOL/Properties_of_mixture_and_Compound_new/index.html?linktoken=130126ba551a60c9df6686ffb61c1fa9&elink_lan=en-IN" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling = "no"> </iframe>
+<iframe style="margin-top:-89px" src="http://goo.gl/dUiFY6" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling = "no"> </iframe>
  
 </div>
 </div>

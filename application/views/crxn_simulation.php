@@ -54,7 +54,7 @@ body {
  
 
 <div align="center">
-<iframe style="margin-top:-89px"src="http://amrita.olabs.co.in/olab/CHE/PHC/Chemical_Reactions/chemicalReaction.html?linktoken=40a68ee0a2559f09ad9236f3824a709a&elink_lan=en-IN" width='900px', height='540px'  class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
+<iframe style="margin-top:-89px"src="http://goo.gl/FB69K7" width='900px', height='540px'  class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
  
 </div>
 </div>

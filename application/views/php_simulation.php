@@ -40,7 +40,7 @@
  
 
 <div align="center">
-<iframe style="margin-top:-79px" src=" http://amrita.olabs.co.in/olab/html5/?sub=CHE&amp;cat=PHC&amp;exp=pH-Determination&amp;tempId=olab_ot&linktoken=9c4c528e54fdc3643c63316320620b16&elink_lan=en-IN" width='900px', height='425px' align="middle" class="iframeStyle" frameborder="0" scrolling ="no"> </iframe>
+<iframe style="margin-top:-79px" src="http://goo.gl/MTiqf5" width='900px', height='425px' align="middle" class="iframeStyle" frameborder="0" scrolling ="no"> </iframe>
  
 </div>
 </div>

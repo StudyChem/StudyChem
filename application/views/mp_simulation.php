@@ -54,7 +54,7 @@ body {
  
 
 <div align="center">
-<iframe style="margin-top:-89px" src="http://amrita.olabs.co.in/olab/CHE/ANC/Melting-Point-Ice/melting_point_ice.html?linktoken=3b9f9f588ba1dff0468a5abe7afffee2&elink_lan=en-IN" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
+<iframe style="margin-top:-89px" src="http://goo.gl/h39C2u" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
  
 </div>
 </div>

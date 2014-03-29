@@ -40,7 +40,7 @@
  
 
 <div align="center">
-<iframe style="margin-top:-89px" src="http://amrita.olabs.co.in/olab/CHE/SOL/Identification-True-colloidal-suspension-Final/IdentificationOfSolution.html?linktoken=5faae441fd03ebd0b5f783af73b6d261&elink_lan=en-IN" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling = "no"> </iframe>
+<iframe style="margin-top:-89px" src="http://goo.gl/F73ilN" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling = "no"> </iframe>
  
 
 </div>

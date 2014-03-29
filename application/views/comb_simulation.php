@@ -40,7 +40,7 @@
  
 
 
-<iframe style="margin-top:-89px" src="http://amrita.olabs.co.in/olab/CHE/INC/Action_of_water_on-quick_lime/combinationReaction.html?linktoken=d6f7789e4e476c529e2e076bd02c83a3&elink_lan=en-IN" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
+<iframe style="margin-top:-89px" src="http://goo.gl/0bpHXz" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
  
 </div>
 </div>

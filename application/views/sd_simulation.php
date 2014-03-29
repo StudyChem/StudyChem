@@ -39,7 +39,7 @@
  
 
 <div align="center">
-<iframe style="margin-top:-89px" src="http://amrita.olabs.co.in/olab/CHE/PHC/Type_Of_Reaction_iron_nail_with_copper/singleDisplacement.html?linktoken=9f25011f134111bc64ceec7d09788163&elink_lan=en-IN" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
+<iframe style="margin-top:-89px" src="http://goo.gl/U2Sqjw" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
  
 </div>
 </div>

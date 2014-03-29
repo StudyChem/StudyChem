@@ -53,7 +53,7 @@ body {
  
 
 <div align="center">
-<iframe src="http://www.olabs.co.in/cdacmumbai/Simulations/Exothermic_Reactions/Exothermic_Final_Modified.html?linktoken=5eadcde443a59ce3aec22efc6deec937&elink_lan=en-IN" width='900px', height='1200px' align="middle" class="iframeStyle" frameborder="0"> </iframe>
+<iframe src="http://goo.gl/B4gD2T" width='900px', height='1200px' align="middle" class="iframeStyle" frameborder="0"> </iframe>
  
 </div>
 </div>

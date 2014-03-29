@@ -54,7 +54,7 @@ body {
  
 
 <div align="center">
-<iframe style="margin-top:-89px" src="http://amrita.olabs.co.in/olab/CHE/ANC/Boiling_Point_of_Water/BoilingPointSim.html?linktoken=e2baddcb74e943cbcaa5a77736122f0c&elink_lan=en-IN" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
+<iframe style="margin-top:-89px" src="http://goo.gl/gWSDgy" width='900px', height='540px' align="middle" class="iframeStyle" frameborder="0" scrolling="no"> </iframe>
  
 </div>
 </div>
