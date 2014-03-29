@@ -52,7 +52,7 @@
                   </div>
                 </form>
                 <h4><i class="icon-question-sign"></i> Already have an account?</h4>
-                <a href="signin.html" class="btn btn-large bottom-space">Signin</a>
+                <a href="<?php echo base_url();?>home/login" class="btn btn-large bottom-space">Signin</a>
               </div>
             </div>
           </div>
