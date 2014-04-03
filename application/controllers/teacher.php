@@ -102,7 +102,7 @@ $this->output->set_header("Pragma: no-cache");
 		
 		$error = null;
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
+		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$data1 = $this -> db -> get('addassignment');
@@ -180,13 +180,6 @@ $this->output->set_header("Pragma: no-cache");
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 $this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
-		
-		
-		
-		
-		
-		
-		
 		if(isset($_POST['upload']) && $_FILES['userfile']['size'] > 0)
 		{
 		$fileName = $_FILES['userfile']['name'];
@@ -214,8 +207,6 @@ $this->output->set_header("Pragma: no-cache");
 		$query = $this->db->get_where('upload', array('assgname' => $assgname)); 
         $count= $query->num_rows();    //counting result from query
 		if ($count >= 0){
-		
-		
 		$sendData['title'] = "Assignment already added";
 		}
 		
@@ -253,10 +244,6 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('addassignment');
 		$sendData['data'] = $data;
-		
-		
-	
-		
 		$this -> load -> view('teacher/assignments',$sendData);
 		} 
 	}	
@@ -265,63 +252,52 @@ $this->output->set_header("Pragma: no-cache");
 	{
 		
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
+		$this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
-		$config['upload_path'] = './uploads/';
-		$config['allowed_types'] = 'gif|jpg|png';
-		$config['max_size']	= '100';
-		$config['max_width']  = '1024';
-		$config['max_height']  = '768';
+		$config['upload_path'] = $_SERVER['DOCUMENT_ROOT'] . "/StudyChem/uploads";
+		$config['allowed_types'] = 'gif|jpg|png|pdf';
+		$config['max_size']	= '2048';
+		
 		$assgname =  $_POST['assgname'];
 		$assmsg =  $_POST['assmsg'];
 		$startdate =  $_POST['startdate'];
 		$lastdate =  $_POST['lastdate'];
-		//$file_name =  $_POST['name'];
 		$this->load->library('upload', $config);
 
 		$query = $this->db->get_where('upload', array('assgname' => $assgname)); 
         $count= $query->num_rows();    //counting result from query
 		if ($count >= 0){
-		
-		
 		$sendData['title'] = "Assignment already added";
 		}
 		
-		if ($count === 0){
+		if ($count == 0)
+		{ 
+			if ( !$this->upload->do_upload() )
+			{
+				$senddata = array('error' => $this->upload->display_errors());
+			}
+			else
+			{
+				$sdata = $this->upload->data();
+				$senddata = array('upload_data' => $this->upload->data());
+				$sendData['title1'] = "Assignment is successfully added into your class!";
+				$sdata = $this->upload->data();
+				$path = $sdata['file_path'] .$sdata['file_name']; 
+				$array = array( 'assgname' => $assgname, 'assmsg' => $assmsg,
+				'startdate' => $startdate, 'lastdate' => $lastdate ,'path' => $path
+				);
 		
-		if ( ! $this->upload->do_upload())
-		{
-			$senddata = array('error' => $this->upload->display_errors());
-
-			//$this->load->view('upload_form', $error);
+				$this -> db -> insert('upload',$array);
+				$sendData['title'] = "Assignment is successfully added into your class!";
+			}
 		}
-		else
-		{
-			$senddata = array('upload_data' => $this->upload->data());
-			$sendData['title1'] = "Assignment is successfully added into your class!";
-			//$this->load->view('upload_success', $data);
-		}
-		
-		$array = array( 'assgname' => $assgname, 'assmsg' => $assmsg,
-		'startdate' => $startdate, 'lastdate' => $lastdate
-						   
-						   );
-		
-		$this -> db -> insert('upload',$array);
-		$sendData['title'] = "Assignment is successfully added into your class!";
-		}
-		
-		
-		
 		$assgname = $_POST['assgname'];
 		$this -> db -> where('assgname',$assgname);
 		$data1 = $this -> db -> get('upload');
-		
 		$query = $this->db->get_where('addassignment', array('assgname' => $assgname)); 
         $count= $query->num_rows();   
-		
 		if($data1 -> num_rows()==0) {
-			$sendData['title1'] = "Sorry! No such assginment Exist. Try another E-mail address!";
+			$sendData['title1'] = "Sorry! No such assginment Exist!";
 		}
 		else if($count === 0){
 			$row  = $data1 -> row();
@@ -329,26 +305,42 @@ $this->output->set_header("Pragma: no-cache");
 						   'assgname' => $assgname
 						   );
 			$this -> db -> insert('addassignment',$array1);
-			
 		}
-		
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('addassignment');
-		$sendData['data'] = $data;
-		
-		
-	
-		
+		$sendData['data'] = $data;	
 		$this -> load -> view('teacher/assignments',$sendData);
-		
 	}
-	
-	
 
+	public function download($assgname)
+	{
+		$this -> output -> set_header('Last-Modified:' . gmdate('D, d M Y H:i:s') . 'GMT');
+		$this -> output -> set_header('Cache-Control: no-store, no-cache, must-revalidate');
+		$this -> output -> set_header('Cache-Control: post-check=0, pre-check=0', false);
+		$this -> output -> set_header('Pragma: no-cache');
+		
+		if ($this -> session -> userdata('isLoggedIn') && $this -> session -> userdata('roleid') == 2) {
+			$this -> load -> model('studentmodel');
+			$this -> db -> where('assgname',$assgname);
+			$data = $this -> db -> get('upload');
+			$data = $data -> row();
+			$filePath = $data -> path;
+			
+			$getFile = explode("/", $filePath);
+			$name = end($getFile);
+			$this -> load -> helper('download');
+			$data = file_get_contents($filePath);
+			force_download($name, $data);		
+		} else {
+			$this -> session -> sess_destroy();
+			redirect(base_url() . "Home/Login");
+		}
+	
+	}
 	public function add_periodic() {
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
+		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('email',$email);
 		$data = array("periodic" => 1);

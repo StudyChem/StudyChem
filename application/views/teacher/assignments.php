@@ -33,11 +33,11 @@
         <table class="table table-striped table-hover">
         <thead>
                 <tr>
-                  <th>Assg.No</th>
-                  <th>AssgName</th>
-                  <th>Assgmsg</th>
-                  <th>StartDate</th>
-				  <th>LastDate</th>
+                  <th>#</th>
+                  <th>Assignment</th>
+                  <th>Details</th>
+                  <th>Start Date</th>
+				          <th>End Date</th>
 				  
                 </tr>
         </thead>
@@ -45,26 +45,24 @@
         <?php
         $i=1;
         foreach($data -> result() as $row) { 
-            //$email = $row -> student;
-			$assgname = $row -> assgname;
+      			$assgname = $row -> assgname;
             $this -> db -> where('assgname',$assgname);
             $r = $this -> db -> get('upload');
             $stu = $r->row();
             $assgname = $stu -> assgname;
             $assmsg = $stu -> assmsg;
-			$startdate = $stu -> startdate;
+			      $startdate = $stu -> startdate;
             $lastdate = $stu -> lastdate;
-			
-
             ?>
+            
             <tr class="info">
-                <td> <?php echo $i; $i++;?> </td>
-                <td> <?php echo $assgname;?> </td>
+                 <td><?php echo $i; $i++;?> </td>
+                <td><a href="<?php echo site_url('teacher/download/'.$assgname.'/');?>" >  <?php echo $assgname;?> </a> </td>
                 <td> <?php echo $assmsg;?> </td>
                 <td> <?php echo $startdate;?> </td>
-				<td> <?php echo $lastdate;?> </td>
-				
+				        <td> <?php echo $lastdate;?> </td>				
             </tr>
+            
         <?php } ?>
 
         </tbody>
@@ -112,19 +110,7 @@
 		<?php endforeach; ?>
 		</ul>	
 
-       <br>
-       <div class="page-header">
-          <h3>  Remove any existing Student! </h3>
-        </div>
-       <form class="form-search" action="<?php echo base_url();?>teacher/removeStudent" method="post">
-        <input type="text" name="removeEmail"class="input-medium search-query" placeholder="Email of the student">
-        <button type="submit" class="btn btn-danger">Remove</button>
-       </form>
-       <?php if(isset($title1)) { ?>
-        <div class="alert alert-success"> 
-        <p> <?php echo $title1 ?> </p>
-        </div>
-       <?php } ?>
+   
 
        
 <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
