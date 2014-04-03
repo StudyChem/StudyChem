@@ -28,11 +28,11 @@
         </div>
         <div class="row-fluid">
         <form action="<?php echo base_url();?>student/editProfile" method="post" class="form-horizontal form-signin-signup">
-                  <input type="text" name="name" placeholder="Your full name. E.g. Rohan garg" value="<?php echo $this -> session -> userdata('name');?>">
+                  <input type="text" name="name" placeholder="Your full name. E.g. Rohan garg" value="<?php echo $this -> session -> userdata('name');?>" >
            <input type="text" name="class" placeholder="Your class (should be either '9' or '10')" value="<?php echo $this -> session -> userdata('class');?>">
                   <input type="text" name="email" placeholder="Your valid email address." value="<?php echo $this -> session -> userdata('email');?>" disabled>
-                  <?php if(isset($valid)){
-          echo "<div class='alert alert-success'>".$valid."</div>";
+                  <?php if(isset($valid1)){
+          echo "<div class='alert alert-success'>".$valid1."</div>";
           }?>
                   <?php if(isset($Invalid)){
           echo "<div class='alert alert-danger'>".$Invalid."</div>";

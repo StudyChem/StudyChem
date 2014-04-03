@@ -134,6 +134,23 @@
                   </div>
                 </div>
               </li>
+			  
+			  <li class="span4">
+                <div class="thumbnail">
+                  <img style="height: 200px" src="<?php base_url();?>assests/img/general.jpg" alt="product name">
+                  <div class="caption">
+                    <h3>Quiz Arena</h3>
+                    <p>
+                    </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <center><a href="<?php echo base_url();?>general" class="btn btn-large btn-success">Learn</a></center>
+                    </p>
+                  </div>
+                </div>
+              </li>
+			  
             </ul>
           </div>
     </div>

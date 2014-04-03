@@ -69,8 +69,18 @@
                   } 
                   } 
                   ?>
+                  <?php if($this->session->userdata("roleid")==2) { ?>
+                  <li><a href="<?php echo base_url();?>teacher/quiz">Quizzes</a></li>
+                  <?php } ?>
+				  
+				  <?php if($this->session->userdata("roleid")==2) { ?>
+                  <li><a href="<?php echo base_url();?>teacher/assignments">Assignments</a></li>
+                  <?php } ?>
+				  
+				  <?php if($this->session->userdata("roleid")==2) { ?>
+                  <li><a href="<?php echo base_url();?>teacher/attendance">Attendance</a></li>
+                  <?php } ?>
                   
-                  <li><a href="#">Quizzes</a></li>
                   <li><a href="<?php echo base_url();?>student/settings">Settings</a></li>
                   <li><a href="<?php echo base_url();?>home/logout">Log out</a></li>
 

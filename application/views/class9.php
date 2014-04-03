@@ -28,7 +28,7 @@
            <center> <h1>Class 9 Topics</h1></center>
           </div>
           <div class="page-header">
-            <h2><?php echo $title?></h1>
+           <h2><?php echo $title?></h1>
           </div>
           <div class="row-fluid">
             <ul class="thumbnails"> 

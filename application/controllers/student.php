@@ -83,7 +83,7 @@ $this->output->set_header("Pragma: no-cache");
 		else {
 			$this -> load -> model("registermodel");
 			$res = $this -> registermodel -> editProfile();
-			$success["valid"] = "Your settings are successfully updated!";
+			$success["valid1"] = "Your settings are successfully updated!";
 			$this -> load -> view('header');
 			$this -> load -> view("settings",$success);
 			//redirect('home/login');
