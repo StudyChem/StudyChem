@@ -49,17 +49,7 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/timeline',$sendData);
 	}
-	public function quiz() 
-	{
-		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-		$this->output->set_header("Pragma: no-cache");
-		$email = $this -> session -> userdata('email');
-		$this -> db -> where('teacher',$email);
-		$data = $this -> db -> get('news');
-		$sendData['data'] = $data; 
-		$this -> load -> view('header');
-		$this -> load -> view('teacher/quiz',$sendData);
-	}
+	
 	public function dashboard() 
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
@@ -73,85 +63,250 @@ $this->output->set_header("Pragma: no-cache");
 	}
 	
 	public function attendance() 
-{
-$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
-$email = $this -> session -> userdata('email');
-$this -> db -> where('teacher',$email);
-$data = $this -> db -> get('teacherClass');
-$students['data'] = $data;
-$this -> load -> view('header');
-$this -> load -> view('teacher/attendance',$students);
-}
-
-public function markattend() 
-{	
-$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
-$email = $this -> session -> userdata('email');
-$date = $_POST['attdate'];
-$student = $_POST['emailid'];
-if(isset($_POST['present'])){
-$present = $_POST['present'];
-$this -> db -> where('student',$student);
-$this -> db -> where('date',$date);
-$number = $this -> db -> get('stuhasattend');
-if($number-> num_rows() == 0){
-$array = array('student' => $student, 'date' => $date, 'value' => 1,
-'teacher' => $email);
-$this -> db -> insert('stuhasattend',$array);}
-else{
-$this -> db -> where('student',$student);
-$this -> db -> where('date',$date);
-$array = array('student' => $student, 'date' => $date, 'value' => 1,
-'teacher' => $email);
-$this -> db -> update('stuhasattend',$array);
-}
-
-}
-else if(isset($_POST['absent'])){
-$absent = $_POST['absent'];
-$this -> db -> where('student',$student);
-$this -> db -> where('date',$date);
-$number = $this -> db -> get('stuhasattend');
-if($number-> num_rows() == 0){
-$array = array('student' => $student, 'date' => $date, 'value' => 0,
-'teacher' => $email);
-$this -> db -> insert('stuhasattend',$array);}
-else{
-$this -> db -> where('student',$student);
-$this -> db -> where('date',$date);
-$array = array('student' => $student, 'date' => $date, 'value' => 0,
-'teacher' => $email);
-$this -> db -> update('stuhasattend',$array);
-}
-}
-$email = $this -> session -> userdata('email');
-$this -> db -> where('teacher',$email);
-$data = $this -> db -> get('teacherClass');
-$students['data'] = $data;
-$this -> load -> view('header');
-$this -> load -> view('teacher/attendance',$students);
-}
-
-public function showattendance() 
-{	
-$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
-$email = $this -> session -> userdata('email');
-$date = $_POST['showdate'];
-$this -> db -> where('teacher',$email);
-$this -> db -> where('date',$date);
-$data1 = $this -> db -> get('stuhasattend');
-$students['showdate']= $date;
-$students['data1']= $data1;
-$email = $this -> session -> userdata('email');
-$this -> db -> where('teacher',$email);
-$data = $this -> db -> get('teacherClass');
-$students['data'] = $data;
-$this -> load -> view('header');
-$this -> load -> view('teacher/attendance',$students);
-}
+	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('teacherClass');
+		$students['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/attendance',$students);
+	}
+	
+	public function markattend() 
+	{	
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		$date = $_POST['attdate'];
+		$student = $_POST['emailid'];
+		if(isset($_POST['present'])){
+				$present = $_POST['present'];
+				$this -> db -> where('student',$student);
+				$this -> db -> where('date',$date);
+				$number = $this -> db -> get('stuhasattend');
+				if($number-> num_rows() == 0){
+				$array = array('student' => $student, 'date' => $date, 'value' => 1,
+								'teacher' => $email);
+				$this -> db -> insert('stuhasattend',$array);}
+				else{
+				$this -> db -> where('student',$student);
+				$this -> db -> where('date',$date);
+				$array = array('student' => $student, 'date' => $date, 'value' => 1,
+								'teacher' => $email);
+				$this -> db -> update('stuhasattend',$array);
+				}
+				
+		}
+		else if(isset($_POST['absent'])){
+				$absent = $_POST['absent'];
+				$this -> db -> where('student',$student);
+				$this -> db -> where('date',$date);
+				$number = $this -> db -> get('stuhasattend');
+				if($number-> num_rows() == 0){
+				$array = array('student' => $student, 'date' => $date, 'value' => 0,
+								'teacher' => $email);
+				$this -> db -> insert('stuhasattend',$array);}
+				else{
+				$this -> db -> where('student',$student);
+				$this -> db -> where('date',$date);
+				$array = array('student' => $student, 'date' => $date, 'value' => 0,
+								'teacher' => $email);
+				$this -> db -> update('stuhasattend',$array);
+				}
+		}
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('teacherClass');
+		$students['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/attendance',$students);
+	}
+	
+	public function quiz_upload() 
+	{	
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		$quizname = $_POST['quizname'];
+		$quizdes = $_POST['quizdes'];
+		$num_qsn = $_POST['noofqsns'];
+		$duration = $_POST['duration'];
+		$startdate = $_POST['startdate'];
+		$enddate = $_POST['enddate'];
+		$code = $_POST['code'];
+		$quiznumber = $_POST['quiznumber'];
+		$query = $this->db->get_where('quiz_table', array('quiznumber' => $quiznumber,'teacher' => $email)); 
+        $count= $query->num_rows();  
+		if($count === 0){
+		$array  = array('teacher' => $email, 'quizname' => $quizname,
+						'quizdes' => $quizdes,
+						'num_qsn' => $num_qsn,
+						'duration' => $duration,
+						'startdate' => $startdate,
+						'enddate' => $enddate,
+						'code' => $code,
+						'quiznumber' => $quiznumber
+						
+						);
+		$this->db->insert('quiz_table', $array);}				
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('quiz_table');
+		$quiz['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/quiz',$quiz);
+	}
+	public function qsn_add1(){
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$this -> load -> view('header');
+		$quizid = $_POST['quizid'];
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		
+		$data = $this -> db -> get('problem');
+		$quiz['data'] = $data;
+		$quiz['quizid'] = $quizid;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/qsn_add',$quiz);
+		
+		
+	
+	}
+	public function qsn_add() 
+	{	
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		$quiz_id = $_POST['quizid'];
+		$qsnnum = $_POST['qsnnumber'];
+		$question = $_POST['question1'];
+		$opta = $_POST['opta'];
+		$optb = $_POST['optb'];
+		$optc = $_POST['optc'];
+		$optd = $_POST['optd'];
+		$cans = $_POST['cans'];
+		$marks = $_POST['marks'];
+		
+		
+		$query = $this->db->get_where('problem', array('ques_num' => $qsnnum, 'quizid' => $quiz_id , 'teacher' => $email)); 
+        $count= $query->num_rows();  
+		if($count === 0){
+		$array  = array('teacher' => $email, 'quizid' => $quiz_id,
+						'ques_num' => $qsnnum,
+						'ques' => $question,
+						'opta' => $opta,
+						'optb' => $optb,
+						'optc' => $optc,
+						'optd' => $optd,
+						'correctans' => $cans,
+						'marks' => $marks
+						);
+		$this->db->insert('problem', $array);}				
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quiz_id);
+		$data = $this -> db -> get('problem');
+		$quiz['data'] = $data;
+		$quiz['quizid'] = $quiz_id;
+		
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/qsn_add',$quiz);
+	}
+	
+	public function qsn_del() 
+	{	
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		
+		$quizid = $_POST['quizid'];
+		$ques_num = $_POST['ques_num'];
+		
+		
+		
+		$array  = array('teacher' => $email, 'quizid' => $quizid,
+						'ques_num' => $ques_num
+						
+						);
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		$this -> db -> where('ques_num',$ques_num);
+		$this -> db -> delete('problem',$array);
+		
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		$data = $this -> db -> get('problem');
+		$quiz['data'] = $data;
+		$quiz['quizid'] = $quizid;
+		
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/qsn_add',$quiz);
+	}
+	
+	public function quiz_del() 
+	{	
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		
+		$quizid = $_POST['quizid'];
+		
+		
+		
+		
+		$array  = array('teacher' => $email, 'quizid' => $quizid
+						
+						
+						);
+						
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		
+		$this -> db -> delete('problem',$array);
+		
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		
+		$this -> db -> delete('quiz_table',$array);
+		
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('quiz_table');
+		$quiz['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/quiz',$quiz);
+		
+		
+	}
+	
+	
+	public function showattendance() 
+	{	
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		$date = $_POST['showdate'];
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('date',$date);
+		$data1 = $this -> db -> get('stuhasattend');
+		$students['showdate']= $date;
+		$students['data1']= $data1;
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('teacherClass');
+		$students['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/attendance',$students);
+	}
+	
 	
 	
 	public function assignments() 
@@ -169,6 +324,117 @@ $this -> load -> view('teacher/attendance',$students);
 	
 		
 	}
+	
+	public function quiz() 
+	{
+		
+		$error = null;
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('quiz_table');
+		$quiz['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/quiz',$quiz);
+	
+		
+	}
+	
+	public function editQuestion(){
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$quizid = $_POST['quizid'];
+		$ques_num = $_POST['ques_num'];
+		
+		
+		
+		
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		//$this -> db -> where('ques_num',$ques_num);
+		
+		
+		$data = $this -> db -> get('problem');
+		
+		
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		$this -> db -> where('ques_num',$ques_num);
+		
+		
+		$data2 = $this -> db -> get('problem');
+		
+		$data3 = $data2->row();
+		$quiz['data'] = $data;
+		$quiz['data2'] = $data2;
+		$quiz['quizid'] = $quizid;
+		
+		$quiz['question1'] = $data3->ques;
+		$quiz['opta'] = $data3->opta;
+		$quiz['optb'] = $data3->optb;
+		$quiz['optc'] = $data3->optc;
+		$quiz['optd'] = $data3->optd;
+		$quiz['cans'] = $data3->correctans;
+		$quiz['marks'] = $data3->marks;
+		$quiz['edit']= 1;
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/qsn_add',$quiz);
+		
+	
+	
+	}
+	
+	public function update_qsn(){
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$quizid = $_POST['quizid'];
+		$ques_num = $_POST['ques_num'];
+		$email = $this -> session -> userdata('email');
+		$question = $_POST['question2'];
+		$opta = $_POST['opta1'];
+		$optb = $_POST['optb2'];
+		$optc = $_POST['optc3'];
+		$optd = $_POST['optd4'];
+		$cans = $_POST['cans1'];
+		$marks = $_POST['marks1'];
+		
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		$this -> db -> where('ques_num',$ques_num);
+		
+		
+		$array  = array('teacher' => $email, 'quizid' => $quizid,
+						'ques_num' => $ques_num,
+						'ques' => $question,
+						'opta' => $opta,
+						'optb' => $optb,
+						'optc' => $optc,
+						'optd' => $optd,
+						'correctans' => $cans,
+						'marks' => $marks
+						);
+		$this->db->update('problem', $array);
+		
+		
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$this -> db -> where('quizid',$quizid);
+		
+		$data = $this -> db -> get('problem');
+		$quiz['data'] = $data;
+		$quiz['quizid'] = $quizid;
+		$quiz['ques_num'] = $ques_num;
+		
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/qsn_add',$quiz);
+		
+	
+	
+	}
+	
 	
 	public function addStudent() 
 	{
@@ -395,6 +661,10 @@ $this->output->set_header("Pragma: no-cache");
 		}
 	
 	}
+	
+	
+	
+	
 	public function add_periodic() {
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 		$this->output->set_header("Pragma: no-cache");

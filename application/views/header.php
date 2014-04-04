@@ -75,7 +75,8 @@
 				  
 				  <?php if($this->session->userdata("roleid")==2) { ?>
                   <li><a href="<?php echo base_url();?>teacher/assignments">Assignments</a></li>
-                  <?php } ?>
+                  <?php } else if($this->session->userdata("roleid")==1) { ?>
+				  <li><a href="<?php echo base_url();?>student/assignments">Assignments</a></li> <?php } ?>
 				  
 				  <?php if($this->session->userdata("roleid")==2) { ?>
                   <li><a href="<?php echo base_url();?>teacher/attendance">Attendance</a></li>

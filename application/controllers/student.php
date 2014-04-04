@@ -14,6 +14,49 @@ class Student extends CI_Controller {
         $this->load->library('session');
     }
 	
+	public function assignments() 
+	{
+		
+		$error = null;
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('student',$email);
+		$data1 = $this -> db -> get('teacherclass');
+		
+		$teacher = $data1 -> row();
+		$email = $teacher -> teacher;
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('addassignment');
+		$sendData['data'] = $data;
+		$this -> load -> view('header');
+		$this -> load -> view('assignments',$sendData);
+	}
+	
+	public function download($assgname)
+	{
+		$this -> output -> set_header('Last-Modified:' . gmdate('D, d M Y H:i:s') . 'GMT');
+		$this -> output -> set_header('Cache-Control: no-store, no-cache, must-revalidate');
+		$this -> output -> set_header('Cache-Control: post-check=0, pre-check=0', false);
+		$this -> output -> set_header('Pragma: no-cache');
+		
+		if ($this -> session -> userdata('isLoggedIn') && $this -> session -> userdata('roleid') == 1) {
+			$this -> db -> where('assgname',$assgname);
+			$data = $this -> db -> get('upload');
+			$data = $data -> row();
+			$filePath = $data -> path;
+			
+			$getFile = explode("/", $filePath);
+			$name = end($getFile);
+			$this -> load -> helper('download');
+			$data = file_get_contents($filePath);
+			force_download($name, $data);		
+		} else {
+			$this -> session -> sess_destroy();
+			redirect(base_url() . "Home/Login");
+		}
+	
+	}
 	public function index()
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
