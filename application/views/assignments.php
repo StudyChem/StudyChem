@@ -37,7 +37,7 @@
                   <th>Assignment</th>
                   <th>Details</th>
                   <th>Start Date</th>
-				          <th>End Date</th>
+				  <th>End Date</th>
 				  
                 </tr>
         </thead>

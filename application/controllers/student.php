@@ -13,6 +13,22 @@ class Student extends CI_Controller {
         $this->load->helper('url');
         $this->load->library('session');
     }
+
+    public function quiz()
+    {
+    	$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$student_email = $this -> session -> userdata('email');
+		$this -> db -> where('student',$student_email);
+		$data = $this -> db -> get('teacherClass');
+		$data = $data -> row();
+		$teacher_email = $data -> teacher;
+		$this -> db -> where('teacher',$teacher_email);
+		$quiz_data = $this -> db -> get('quiz_table');
+		$data1['quiz_data'] = $quiz_data;
+		$this -> load -> view('header');
+		$this -> load -> view('quiz',$data1);
+    }
 	
 	public function assignments() 
 	{
@@ -134,10 +150,26 @@ $this->output->set_header("Pragma: no-cache");
 		
 
 	}
+	public function starttest($quizid) 
+	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('student',$email);
+		$teacher = $this -> db -> get('teacherClass');
+		$teacher = $teacher -> row();
+		$teacher = $teacher -> teacher;
+		$this -> db -> where('teacher',$teacher);
+		$this -> db -> where('quizid',$quizid);
+		$questions = $this -> db -> get('problem');
+		$senddata['questions'] = $questions;
+		$this -> load -> view('startquiz',$senddata);
+			
+	}
 	public function timeline() 
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
+		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('student',$email);
 		$data = $this -> db -> get('teacherClass');

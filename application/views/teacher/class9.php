@@ -28,6 +28,12 @@
            <center> <h1> Class 9 Topics </h1></center>
           </div>
           <div class="page-header">
+          <p>
+           <a href="<?php echo base_url();?>teacher/addNewTopic"> <button class="btn btn-danger"> Add New Topic</button>
+           </a>
+          </p>
+          </div>
+          <div class="page-header">
           <h2> Set topics for your students! </h2>
           </div>
           

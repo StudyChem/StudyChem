@@ -29,7 +29,10 @@
         <div class="alert alert-info"> 
         <p> You have not uploaded any assignments for your class! </p>
         </div>
-        <?php } else {?>
+        <?php 
+        } else 
+        {
+          ?>
         <table class="table table-striped table-hover">
         <thead>
                 <tr>

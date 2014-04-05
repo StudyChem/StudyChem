@@ -65,6 +65,7 @@
                    if ($result -> num_rows() == 1 ) {
                     ?>
                   <li><a href="<?php echo base_url();?>student/timeline">News Feed</a></li>
+                  <li> <a href="<?php echo base_url();?>student/quiz"> Quiz </a> </li>
                   <?php 
                   } 
                   } 
