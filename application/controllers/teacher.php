@@ -79,7 +79,10 @@ $this->output->set_header("Pragma: no-cache");
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
-		$date = $_POST['attdate'];
+		//$num = $_POST['num'];
+		$str = 'attdate';
+		$date = $_POST[$str];
+		echo $date;
 		$student = $_POST['emailid'];
 		if(isset($_POST['present'])){
 				$present = $_POST['present'];
@@ -1050,9 +1053,5 @@ $this->output->set_header("Pragma: no-cache");
 			$this -> load -> view("settings",$success);
 			//redirect('home/login');
 		}
-		
-
 	}
-	
-	
 }

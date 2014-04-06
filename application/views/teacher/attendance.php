@@ -39,7 +39,7 @@
         <input type="date" id = "date2" name="SelectDate" class="input-medium search-query"  >
        
        </form>
-		
+
 		
 		
 		<table class="table table-striped table-hover">
@@ -67,15 +67,10 @@
                 <td> <?php echo $name;?> </td>
                 <td> <form class="form-search" action="<?php echo base_url();?>teacher/markattend" method="post">
 					<input type="hidden" name="emailid" value="<?php echo $email; ?>"/>
-					<input type="hidden" id = "date1" name="attdate" />
-			
-			<script>	$('#date2').change(function() {
-			$('#date1').val($(this).val());
-			});
-			</script>
-					
-					<button name="present" type="submit" value="P">P</button>
-					<button name="absent" type="submit" value="A">A</button> </form>
+					<input type="hidden" id = "date<?php echo $i-1;?>" name="attdate" /> 
+			    <input type="hidden" name="num" value="<?php echo $i-1; ?>"/>			
+					<button id="b1"name="present" type="submit" value="P" onclick="fun(<?php echo $i-1;?>)">P</button>
+					<button id="b2"name="absent" type="submit" value="A" onclick="fun(<?php echo $i-1;?>)">A</button> </form>
 				</td>
                 <td> <?php echo $email;?> </td>
             </tr>
@@ -91,6 +86,7 @@
         <input type="date" name="showdate" class="input-medium search-query" >
 		<button type="submit" name ="show"  class="btn btn-info">Show</button>
        </form>
+       
 	   
 	   <?php if(isset($showdate)) { ?>
         
@@ -119,7 +115,7 @@
             $r = $this -> db -> get('stuhasattend');
             $stu = $r->row();
             $name = $stu -> student;
-			$this -> db -> where('email',$name);
+			      $this -> db -> where('email',$name);
 			$name1 = $this->db->get('student');
 			$data = $name1 -> row();
 			$name = $data -> name;
@@ -136,14 +132,8 @@
         </tbody>
         </table>
         <?php } ?>
-		
-		
-		
-       <?php } ?>
-	   
-	   
-	   
-       <?php if(isset($title)) { ?>
+		    <?php } ?>
+	     <?php if(isset($title)) { ?>
         <div class="alert alert-success"> 
         <p> <?php echo $title?> </p>
         </div>
@@ -162,6 +152,14 @@
         </div>
        <?php } ?>
 
-       
+       <script>  
+       function fun(i) {
+        alert("sd");
+      var x=$("#date2").val();
+      alert(x);
+      document.getElementById('date'+i).value = x;
+      alert('date'+i);
+      }
+      </script>
 
        
