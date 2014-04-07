@@ -85,7 +85,31 @@
               </li>  
             </ul>
             <?php }?>
-            
+            <ul class="thumbnails"> 
+            <?php
+              $student = $this -> session -> userdata('email');
+              $this -> db -> where('student',$student);
+              $data = $this -> db -> get('teacherClass');
+              $data = $data -> row();
+              $teacher = $data -> teacher;
+              $this -> db -> where('teacher',$teacher);
+              $topics = $this -> db -> get('topic');
+              if($topics -> num_rows() >=1) { 
+                foreach($topics -> result() as $row){
+                ?> 
+                <li class="span3">
+               <a style="text-decoration:none" href="<?php echo base_url();?>class9/topic/<?php echo $row->id;?>"> <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
+                  <div class="widget-footer">
+                    <h3><?php echo $row -> topic;?></h3>
+                    <p>
+                     <?php echo $row -> topic;?>
+                    </p>
+                  </div>
+                </div> </a>
+              </li>
+              <?php } }?>
+            </ul>
 
           </div>
     </div>

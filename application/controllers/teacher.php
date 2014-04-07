@@ -81,6 +81,23 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/newTopic');
 	}
+
+	public function addTopic()
+	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$theory = $_POST['area1'];
+		$topic =$_POST['topic'];
+		$email = $this -> session -> userdata('email');
+		$array = array("teacher" => $email,
+					   "topic" => $topic,
+					   "theory" => $theory);
+		$this -> db -> insert('topic',$array);
+		$success['tag'] = "Topic added successfully";
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/newTopic',$success);
+
+	}
 	public function markattend() 
 	{	
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");

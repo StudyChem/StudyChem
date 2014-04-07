@@ -14,6 +14,24 @@ class Class9 extends CI_Controller {
         $this->load->library('session');
     }
 	
+	public function topic($topic) 
+	{
+		$student = $this -> session -> userdata('email');
+        $this -> db -> where('student',$student);
+        $data = $this -> db -> get('teacherClass');
+        $data = $data -> row();
+        $teacher = $data -> teacher;
+        $this -> db -> where('teacher',$teacher);
+        $this -> db -> where('id',$topic);
+        
+        $topics = $this -> db -> get('topic');
+        $topics = $topics -> row();
+        $data1['title'] = $topics -> topic;
+        $data1['theory'] = $topics -> theory;
+        $this -> load -> view('header');
+        $this -> load -> view('topic',$data1);
+
+	}
 	public function index()
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");

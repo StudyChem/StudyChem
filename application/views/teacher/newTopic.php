@@ -26,12 +26,27 @@
     <div class="page-header">
     <center><h2>Add new Topic</h2></center>
     </div>
+    <?php if(isset($tag)) { ?>
+    <div class="alert alert-success"> 
+        <p> <?php echo $tag;?> </p>
+    </div>
+    <?php } ?>
+        
+    <form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/addTopic" method="post" enctype="multipart/form-data">
+        <center><input type="text" style="width:500px;"name="topic" class="input-medium search-query" placeholder="Name of the topic">
+</center>
     <div id="sample" style="margin-left:250px;">
     <textarea style=" width:700px;height:500px;background-color;#d1d1d1;" name="area1">  
     </textarea>
     <br>
     <button type="submit" class="btn btn-large btn-success"> Add topic </button>
+</div>
+</form>
     </div>
 </div>
-</div>
+
+<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
+    <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
+       
 </html>
