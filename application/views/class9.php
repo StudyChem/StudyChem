@@ -96,7 +96,9 @@
               $topics = $this -> db -> get('topic');
               if($topics -> num_rows() >=1) { 
                 foreach($topics -> result() as $row){
+                if($row -> show == 1) {
                 ?> 
+
                 <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/topic/<?php echo $row->id;?>"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
@@ -108,7 +110,7 @@
                   </div>
                 </div> </a>
               </li>
-              <?php } }?>
+              <?php } } }?>
             </ul>
 
           </div>

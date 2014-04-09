@@ -224,6 +224,43 @@
 
                 </div> 
             </ul>
+            <ul class="thumbnails"> 
+            <?php
+              $teacher = $this -> session -> userdata('email');
+              $this -> db -> where('teacher',$teacher);
+              $topics = $this -> db -> get('topic');
+              if($topics -> num_rows() >=1) { 
+                foreach($topics -> result() as $row){
+                ?> 
+                <li class="span3">
+                <div class="thumbnail">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
+                  <div class="widget-footer">
+                    <h3><?php echo $row -> topic;?></h3>
+                    <p>
+                     <?php echo $row -> topic;?>
+                    </p>
+                  </div>
+                  <p>  
+                 <?php if($row -> show == 1) { ?>
+                  <a href="<?php echo base_url();?>teacher/removeTopic/<?php echo $row->id;?>">
+                  <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
+                  </a>
+                  <?php } else { ?>
+                  <a href="<?php echo base_url();?>teacher/showTopic/<?php echo $row->id;?>">
+                  <input type="submit" value="Add topic" class="btn btn-success btn-large">
+                  </a>
+                  <a href="<?php echo base_url();?>teacher/viewTopic/<?php echo $row->id;?>">
+                  <input style="margin-left:25px" type="submit" value="View topic" class="btn btn-success btn-large"> </a>
+                  
+                  <?php } ?>
+                  </p>
+
+                </div> 
+              </li>
+              <?php } }?>
+            </ul>
+
             
           </div>
     </div>

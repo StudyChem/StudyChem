@@ -61,7 +61,61 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/dashboard',$students);
 	}
-	
+	public function removeTopic($id)
+	{
+		$this -> db -> where('id',$id);
+		$array = array('show' => 0);
+		$this -> db -> update('topic',$array);
+		$this -> class9();
+	}
+	public function showTopic($id)
+	{
+		$this -> db -> where('id',$id);
+		$array = array('show' => 1);
+		$this -> db -> update('topic',$array);
+		$this -> class9();
+	}
+	public function viewTopic($id)
+	{
+		$teacher = $this -> session -> userdata('email');
+        $this -> db -> where('teacher',$teacher);
+        $this -> db -> where('id',$id);
+        
+        $topics = $this -> db -> get('topic');
+        $topics = $topics -> row();
+        $data1['title'] = $topics -> topic;
+        $data1['theory'] = $topics -> theory;
+        $data1['id'] = $topics -> id;
+        $this -> load -> view('header');
+        $this -> load -> view('topic',$data1);
+	}
+	public function editTopic($id)
+	{
+		$teacher = $this -> session -> userdata('email');
+        $this -> db -> where('teacher',$teacher);
+        $this -> db -> where('id',$id);
+        
+        $topics = $this -> db -> get('topic');
+        $topics = $topics -> row();
+        $data1['title'] = $topics -> topic;
+        $data1['theory'] = $topics -> theory;
+        $data1['id'] = $topics -> id;
+        $this -> load -> view('header');
+        $this -> load -> view('teacher/editTopic',$data1);
+	}
+	public function edit_topic($id)
+	{
+		$teacher = $this -> session -> userdata('email');
+        $theory = $_POST['area1'];
+		$topic =$_POST['topic'];
+		$this -> db -> where('id',$id);
+		$this -> db -> where('teacher',$teacher);
+		$array = array("topic" => $topic,
+					   "theory" => $theory);
+		$this -> db -> update('topic',$array);
+		$this -> viewTopic($id);
+	}	
+
 	public function attendance() 
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");

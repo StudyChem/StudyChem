@@ -26,13 +26,16 @@
            <center> <h1><?php echo $title;?></h1></center>
           </div>
           <p> 
-          <center>
-            <?php echo $theory; ?>
-          </center>
+              <?php echo $theory; ?>
           </p>
-
+          <?php if($this -> session -> userdata('roleid')==2) { ?>
+         <a href="<?php echo base_url();?>teacher/editTopic/<?php echo $id;?>"> 
+         <button type="submit" class="btn btn-large btn-success">Edit </button>
+         </a>
+         <?php } ?>
           </div>
     </div>
+
 
     <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
