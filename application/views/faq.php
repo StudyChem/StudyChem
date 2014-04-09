@@ -23,7 +23,7 @@
 		<div class="container">
 			<table  id="xpandables" align="center" bgcolor="#E8E8E8" cellpadding="0px" cellspacing="0px" border="0px">
             <tr>
-				<td colspan="3" style="white-space:nowrap;"><div class="page-header"><h1>FAQ</h1></div></td>
+				<td colspan="3" style="white-space:nowrap;"><div class="page-header" align="center"><h1>FAQ</h1></div></td>
 			</tr>
 			<tr>
 				<td width="21px" height="150px" ></td>

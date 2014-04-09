@@ -125,7 +125,7 @@
                     </p>
                   </div>
                   <p>
-                                    <?php if($melting == 1) { ?>
+                  <?php if($melting == 1) { ?>
                   <a href="<?php echo base_url();?>teacher/remove_melting">
                   <input type="submit" value="Remove topic" class="btn btn-danger btn-large">
                   </a>
@@ -227,9 +227,13 @@
               $teacher = $this -> session -> userdata('email');
               $this -> db -> where('teacher',$teacher);
               $topics = $this -> db -> get('topic');
-              if($topics -> num_rows() >=1) { 
+              if($topics -> num_rows() >=1) {
+				$i=0;			  
                 foreach($topics -> result() as $row){
-                ?> 
+                if($i%4==0) { ?>
+				 <ul class="thumbnails"> 
+
+				<?php } $i++;?> 
                 <li class="span3">
                 <div class="thumbnail1">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
@@ -256,8 +260,11 @@
 
                 </div> 
               </li>
-              <?php } }?>
-            </ul>
+			  <?php if($i%4==0) { ?>
+			  </ul>
+			  
+              <?php } } }?>
+            
 
             
           </div>
