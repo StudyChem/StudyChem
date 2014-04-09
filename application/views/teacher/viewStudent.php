@@ -149,22 +149,14 @@
     </div>
 	<div class="panel panel-danger">
       <div class="panel-heading">
-        <h3 class="panel-title">Quizzies</h3>
+        <h3 class="panel-title">Quizzes</h3>
       </div>
       <div class="panel-body">
         XYXZ
       </div>
     </div>
 	
-	<div class="panel panel-danger">
-      <div class="panel-heading">
-        <h3 class="panel-title">Description</h3>
-      </div>
-      <div class="panel-body">
-        XYXZ
-      </div>
-    </div>
-</div>
+	
 </div>   
     <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
