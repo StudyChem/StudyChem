@@ -35,12 +35,13 @@
     <form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/addTopic" method="post" enctype="multipart/form-data">
         <center><input type="text" style="width:500px;"name="topic" class="input-medium search-query" placeholder="Name of the topic">
 </center>
-    <div id="sample" style="margin-left:250px;">
-    <textarea style=" width:700px;height:500px;background-color;#d1d1d1;" name="area1">  
+    <center><div id="sample">
+    <textarea style="width:1000px;height:700px;background-color;#d1d1d1;margin-right:100px;" name="area1">  
     </textarea>
     <br>
     <button type="submit" class="btn btn-large btn-success"> Add topic </button>
 </div>
+</center>
 </form>
     </div>
 </div>
