@@ -31,6 +31,24 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('header');
 		$this->load->view('signup');
 	}
+	public function about(){
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+		$this -> load -> view('header');
+		$this->load->view('about');
+	}
+	public function contact(){
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+		$this -> load -> view('header');
+		$this->load->view('contact');
+	}
+	public function faq(){
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+$this->output->set_header("Pragma: no-cache"); 
+		$this -> load -> view('header');
+		$this->load->view('faq');
+	}
 
 	/* Validation and sign-up process is conducted */
 	public function register() {

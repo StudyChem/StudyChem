@@ -83,7 +83,7 @@
           <div class="row-fluid">
             <ul  class="thumbnails">
               <li class="span4">
-                <div class="thumbnail">
+                <div class="thumbnail"> <?php if($this -> session -> userdata('roleid') == 2) { ?><a href="<?php echo base_url()?>teacher/class9">
                   <img style="height:200px" src="<?php base_url();?>assests/img/class10.jpg" alt="product name">
                   <div class="caption">
                     <h3>Class 9</h3>
@@ -101,10 +101,30 @@
                       <?php } ?>
                     </p>
                   </div>
-                </div>
+                <?php } else { ?>
+				<a href="<?php echo base_url()?>class9">
+                  <img style="height:200px" src="<?php base_url();?>assests/img/class10.jpg" alt="product name">
+                  <div class="caption">
+                    <h3>Class 9</h3>
+                    <p>
+                      
+                    </p>
+                  </div>
+                  <div class="widget-footer">
+                    <p>
+                      <?php if($this -> session -> userdata('roleid') == 2) { ?>
+                      <center>  <a href="<?php echo base_url()?>teacher/class9" class="btn btn-success btn-large">Learn</a> </center>
+                    <?php } else { ?>
+
+                     <center> <a href="<?php echo base_url()?>class9" class="btn btn-success btn-large">Learn</a></center>
+                      <?php } ?>
+                    </p>
+                  </div>
+				<?php } ?>
+				</div></a>
               </li>
               <li class="span4">
-                <div class="thumbnail">
+                <div class="thumbnail"><a href="<?php echo base_url();?>class10" >
                   <img style="height: 200px" src="<?php base_url();?>assests/img/class9.jpg" alt="product name">
                   <div class="caption">
                     <h3>Class 10</h3>
@@ -116,11 +136,12 @@
                     <p>
                       <center><a href="<?php echo base_url();?>class10" class="btn btn-large btn-success">Learn</a></center>
                     </p>
-                  </div>
+                  </div></a>
                 </div>
               </li>
               <li class="span4">
                 <div class="thumbnail">
+				<a href="<?php echo base_url();?>general">
                   <img style="height: 200px" src="<?php base_url();?>assests/img/general.jpg" alt="product name">
                   <div class="caption">
                     <h3>General Topics</h3>
@@ -132,24 +153,11 @@
                       <center><a href="<?php echo base_url();?>general" class="btn btn-large btn-success">Learn</a></center>
                     </p>
                   </div>
-                </div>
+                </a>
+				</div>
               </li>
 			  
-			  <li class="span4">
-                <div class="thumbnail">
-                  <img style="height: 200px" src="<?php base_url();?>assests/img/general.jpg" alt="product name">
-                  <div class="caption">
-                    <h3>Quiz Arena</h3>
-                    <p>
-                    </p>
-                  </div>
-                  <div class="widget-footer">
-                    <p>
-                      <center><a href="<?php echo base_url();?>general" class="btn btn-large btn-success">Learn</a></center>
-                    </p>
-                  </div>
-                </div>
-              </li>
+			 
 			  
             </ul>
           </div>

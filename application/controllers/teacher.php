@@ -115,18 +115,6 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> db -> update('topic',$array);
 		$this -> viewTopic($id);
 	}	
-
-	public function attendance() 
-	{
-		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-		$this->output->set_header("Pragma: no-cache");
-		$email = $this -> session -> userdata('email');
-		$this -> db -> where('teacher',$email);
-		$data = $this -> db -> get('teacherClass');
-		$students['data'] = $data;
-		$this -> load -> view('header');
-		$this -> load -> view('teacher/attendance',$students);
-	}
 	
 	public function addNewTopic()
 	{
@@ -152,51 +140,10 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('teacher/newTopic',$success);
 
 	}
-	public function markattend() 
-	{	
+	public function attendance() 
+	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 		$this->output->set_header("Pragma: no-cache");
-		$email = $this -> session -> userdata('email');
-		//$num = $_POST['num'];
-		$str = 'attdate';
-		$date = $_POST[$str];
-		echo $date;
-		$student = $_POST['emailid'];
-		if(isset($_POST['present'])){
-				$present = $_POST['present'];
-				$this -> db -> where('student',$student);
-				$this -> db -> where('date',$date);
-				$number = $this -> db -> get('stuhasattend');
-				if($number-> num_rows() == 0){
-				$array = array('student' => $student, 'date' => $date, 'value' => 1,
-								'teacher' => $email);
-				$this -> db -> insert('stuhasattend',$array);}
-				else{
-				$this -> db -> where('student',$student);
-				$this -> db -> where('date',$date);
-				$array = array('student' => $student, 'date' => $date, 'value' => 1,
-								'teacher' => $email);
-				$this -> db -> update('stuhasattend',$array);
-				}
-				
-		}
-		else if(isset($_POST['absent'])){
-				$absent = $_POST['absent'];
-				$this -> db -> where('student',$student);
-				$this -> db -> where('date',$date);
-				$number = $this -> db -> get('stuhasattend');
-				if($number-> num_rows() == 0){
-				$array = array('student' => $student, 'date' => $date, 'value' => 0,
-								'teacher' => $email);
-				$this -> db -> insert('stuhasattend',$array);}
-				else{
-				$this -> db -> where('student',$student);
-				$this -> db -> where('date',$date);
-				$array = array('student' => $student, 'date' => $date, 'value' => 0,
-								'teacher' => $email);
-				$this -> db -> update('stuhasattend',$array);
-				}
-		}
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('teacherClass');
@@ -205,33 +152,125 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> load -> view('teacher/attendance',$students);
 	}
 	
-	public function quiz_upload() 
+	public function markattend() 
 	{	
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
+		$date = $_POST['attdate'];
+		$_SESSION['date'] = $date;
+		$student = $_POST['emailid'];
+		if(isset($_POST['present'])){
+				$students['attend'] = "Marked";
+				$present = $_POST['present'];
+				$this -> db -> where('student',$student);
+				$this -> db -> where('date1',$date);
+				$number = $this -> db -> get('stuhasattend');
+				if($number-> num_rows() == 0){
+				$array = array('student' => $student, 'date1' => $date, 'value' => 1,
+								'teacher' => $email);
+				$this -> db -> insert('stuhasattend',$array);}
+				else{
+				$this -> db -> where('student',$student);
+				$this -> db -> where('date1',$date);
+				$array = array('student' => $student, 'date1' => $date, 'value' => 1,
+								'teacher' => $email);
+				$this -> db -> update('stuhasattend',$array);
+				}
+				
+		}
+		else if(isset($_POST['absent'])){
+				$absent = $_POST['absent'];
+				$this -> db -> where('student',$student);
+				$this -> db -> where('date1',$date);
+				$number = $this -> db -> get('stuhasattend');
+				if($number-> num_rows() == 0){
+				$array = array('student' => $student, 'date1' => $date, 'value' => 0,
+								'teacher' => $email);
+				$this -> db -> insert('stuhasattend',$array);}
+				else{
+				$this -> db -> where('student',$student);
+				$this -> db -> where('date1',$date);
+				$array = array('student' => $student, 'date1' => $date, 'value' => 0,
+								'teacher' => $email);
+				$this -> db -> update('stuhasattend',$array);
+				}
+		}
+		
+		$email = $this -> session -> userdata('email');
+		$this -> db -> where('teacher',$email);
+		$data = $this -> db -> get('teacherClass');
+		$students['data'] = $data;
+		
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/attendance',$students);
+	}
+	
+	public function quiz_upload() 
+	{	
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		$this -> load -> helper('url');
+		$this -> load -> library('session');
+		$this -> load -> library("form_validation");
+		$this -> form_validation -> set_rules("quiznumber", "Quiz Number", "required|numeric|trim|xss_clean");
+		$this -> form_validation -> set_rules("quizname", "Quiz Name ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("quizdes", "Quiz Description ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("duration", "Quiz Duration ", "required|numeric|trim|xss_clean");
+		$this -> form_validation -> set_rules("startdate", "Start Date ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("enddate", "Last Date ", "required|trim|xss_clean");
+		
+		$email = $this -> session -> userdata('email');
 		$quizname = $_POST['quizname'];
 		$quizdes = $_POST['quizdes'];
-		$num_qsn = $_POST['noofqsns'];
+		//$num_qsn = $_POST['noofqsns'];
 		$duration = $_POST['duration'];
 		$startdate = $_POST['startdate'];
 		$enddate = $_POST['enddate'];
-		$code = $_POST['code'];
+		//$code = $_POST['code'];
 		$quiznumber = $_POST['quiznumber'];
+		
+		if ($this -> form_validation -> run() == FALSE) {
+			
+		}
+		else if( strtotime($enddate)<strtotime($startdate)){
+			$quiz['dateissue']="End date cannot be less than start date";
+		}
+		else{
 		$query = $this->db->get_where('quiz_table', array('quiznumber' => $quiznumber,'teacher' => $email)); 
         $count= $query->num_rows();  
 		if($count === 0){
 		$array  = array('teacher' => $email, 'quizname' => $quizname,
 						'quizdes' => $quizdes,
-						'num_qsn' => $num_qsn,
+						
 						'duration' => $duration,
 						'startdate' => $startdate,
 						'enddate' => $enddate,
-						'code' => $code,
+						
 						'quiznumber' => $quiznumber
 						
 						);
-		$this->db->insert('quiz_table', $array);}				
+		$this->db->insert('quiz_table', $array);}
+
+		else if($count > 0){
+		$array  = array('teacher' => $email, 'quizname' => $quizname,
+						'quizdes' => $quizdes,
+						
+						'duration' => $duration,
+						'startdate' => $startdate,
+						'enddate' => $enddate,
+						
+						'quiznumber' => $quiznumber
+						
+						);
+		$this->db->update('quiz_table', $array);}
+		$quiz['title'] = "Quiz Number";
+		$quiz['quizno'] = $quiznumber;
+		$quiz['title1'] = "successfully added";
+		
+		}
+
+		
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('quiz_table');
@@ -261,6 +300,18 @@ $this->output->set_header("Pragma: no-cache");
 	{	
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 		$this->output->set_header("Pragma: no-cache");
+		$this -> load -> helper('url');
+		$this -> load -> library('session');
+		$this -> load -> library("form_validation");
+		$this -> form_validation -> set_rules("qsnnumber", "Question Number", "required|numeric|trim|xss_clean");
+		$this -> form_validation -> set_rules("question1", "Question ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("opta", "Option A ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("optb", "Option B ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("optc", "Option C ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("optd", "Option D ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("cans", "Correct Answer ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("marks", "Marks ", "required|numeric|trim|xss_clean");
+		
 		$email = $this -> session -> userdata('email');
 		$quiz_id = $_POST['quizid'];
 		$qsnnum = $_POST['qsnnumber'];
@@ -271,8 +322,15 @@ $this->output->set_header("Pragma: no-cache");
 		$optd = $_POST['optd'];
 		$cans = $_POST['cans'];
 		$marks = $_POST['marks'];
+		if ($this -> form_validation -> run() == FALSE) {
+			//$this -> load -> view('header');
+			//$this->load->view("settings", $Error);
+		}
+		else if( $cans != $opta && $cans != $optb && $cans != $optc && $cans != $optd ){
 		
-		
+			$quiz["Invalid"] = "Invalid Ans. Please Choose either from Option A,B,C or D";
+		}
+		else{
 		$query = $this->db->get_where('problem', array('ques_num' => $qsnnum, 'quizid' => $quiz_id , 'teacher' => $email)); 
         $count= $query->num_rows();  
 		if($count === 0){
@@ -286,7 +344,12 @@ $this->output->set_header("Pragma: no-cache");
 						'correctans' => $cans,
 						'marks' => $marks
 						);
-		$this->db->insert('problem', $array);}				
+		$this->db->insert('problem', $array);}
+		$quiz['title'] = "Question Number" ;
+		$quiz['ques'] = $qsnnum;
+		$quiz['title1'] ="successfully added";
+		}
+		
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$this -> db -> where('quizid',$quiz_id);
@@ -325,7 +388,9 @@ $this->output->set_header("Pragma: no-cache");
 		$data = $this -> db -> get('problem');
 		$quiz['data'] = $data;
 		$quiz['quizid'] = $quizid;
-		
+		$quiz['titledel'] = "Question Number";
+		$quiz['delete'] = $ques_num;
+		$quiz['titledel1'] = "successfully deleted";
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/qsn_add',$quiz);
 	}
@@ -337,9 +402,10 @@ $this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		
 		$quizid = $_POST['quizid'];
-		
-		
-		
+		$this -> db -> where('quizid',$quizid);
+		$data = $this->db->get('quiz_table');
+		$res = $data->row();
+		$quiznum = $res-> quiznumber;
 		
 		$array  = array('teacher' => $email, 'quizid' => $quizid
 						
@@ -362,6 +428,11 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('quiz_table');
 		$quiz['data'] = $data;
+		
+		$quiz['titledel'] = "Quiz Number";
+		$quiz['quizdel'] = $quiznum;
+		$quiz['titledel1'] = "successfully deleted";
+		
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/quiz',$quiz);
 		
@@ -375,11 +446,16 @@ $this->output->set_header("Pragma: no-cache");
 		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$date = $_POST['showdate'];
+		$_SESSION['date2'] = $date;
+		
+		
+		
+		
 		$this -> db -> where('teacher',$email);
-		$this -> db -> where('date',$date);
-		$data1 = $this -> db -> get('stuhasattend');
+		$this -> db -> where('date1',$date);
+		$data2 = $this -> db -> get('stuhasattend');
 		$students['showdate']= $date;
-		$students['data1']= $data1;
+		$students['data1']= $data2;
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('teacherClass');
@@ -461,6 +537,8 @@ $this->output->set_header("Pragma: no-cache");
 		$quiz['cans'] = $data3->correctans;
 		$quiz['marks'] = $data3->marks;
 		$quiz['edit']= 1;
+		//$ques_num = $_POST['ques_num'];
+		$quiz['ques_num2']= $ques_num;
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/qsn_add',$quiz);
 		
@@ -471,6 +549,21 @@ $this->output->set_header("Pragma: no-cache");
 	public function update_qsn(){
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 		$this->output->set_header("Pragma: no-cache");
+		$this -> load -> helper('url');
+		$this -> load -> library('session');
+		$this -> load -> library("form_validation");
+		$this -> form_validation -> set_rules("qsnnumber", "Question Number", "required|numeric|trim|xss_clean");
+		$this -> form_validation -> set_rules("question1", "Question ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("opta1", "Option A ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("optb2", "Option B ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("optc3", "Option C ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("optd4", "Option D ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("cans1", "Correct Answer ", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("marks1", "Marks ", "required|numeric|trim|xss_clean");
+		
+		
+		
+		
 		$quizid = $_POST['quizid'];
 		$ques_num = $_POST['ques_num'];
 		$email = $this -> session -> userdata('email');
@@ -482,6 +575,16 @@ $this->output->set_header("Pragma: no-cache");
 		$cans = $_POST['cans1'];
 		$marks = $_POST['marks1'];
 		
+		
+		if ($this -> form_validation -> run() == FALSE) {
+			//$this -> load -> view('header');
+			//$this->load->view("settings", $Error);
+		}
+		else if( $cans != $opta && $cans != $optb && $cans != $optc && $cans != $optd ){
+		
+			$quiz["Invalid1"] = "Invalid Ans. Please Choose either from Option A,B,C or D";
+		}
+		else {
 		$this -> db -> where('teacher',$email);
 		$this -> db -> where('quizid',$quizid);
 		$this -> db -> where('ques_num',$ques_num);
@@ -498,6 +601,10 @@ $this->output->set_header("Pragma: no-cache");
 						'marks' => $marks
 						);
 		$this->db->update('problem', $array);
+		$quiz['titleupd'] = "Question Number" ;
+		$quiz['quest'] = $ques_num;
+		$quiz['titleupd1'] ="successfully updated";
+		}
 		
 		
 		$email = $this -> session -> userdata('email');
@@ -509,6 +616,8 @@ $this->output->set_header("Pragma: no-cache");
 		$quiz['quizid'] = $quizid;
 		$quiz['ques_num'] = $ques_num;
 		
+		
+		
 		$this -> load -> view('header');
 		$this -> load -> view('teacher/qsn_add',$quiz);
 		
@@ -516,6 +625,67 @@ $this->output->set_header("Pragma: no-cache");
 	
 	}
 	
+	public function viewStudent()
+	{
+		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
+		$this->output->set_header("Pragma: no-cache");
+		
+		$this -> load -> view('header');
+		$stdemail =  $_POST['stdemail'];
+		$senddata['name'] = $stdemail;
+		
+		$this->db->where('email',$stdemail);
+		$data = $this->db->get('student');
+		$row = $data->row();
+		$senddata['name'] = $row->name;
+		$senddata['class'] = $row->class;
+		$this->db->where('student',$stdemail);
+		$data2 = $this->db->get('submission');
+		$senddata['data2'] = $data2;
+		
+		$this->db->where('student',$stdemail);
+		$data3 = $this->db->get('stuhasattend');
+		$senddata['data3'] = $data3;
+		
+		$this->db->where('student',$stdemail);
+		//$this->db->where('value', 1);
+		$this->db->select('Monthname(date1) as month1, SUM(CASE WHEN value = 1 THEN 1 ELSE 0 END ) as total1 ,SUM(CASE WHEN value = 0 THEN 1 ELSE 0 END ) as total2,COUNT(Month(date1)) as total3');
+		
+		$this->db->group_by('month1'); 
+		//$this->db->order_by('total1', 'desc');
+		
+		$query = $this->db->get('stuhasattend'); 
+		
+		
+		//$this->db->where('student',$stdemail);
+		//$this->db->select('Monthname(date1) as month2, COUNT(Month(date1)) as total2');
+		//$this->db->from('stuhasattend b');
+		//$this->db->group_by('month2'); 
+		//$this->db->order_by('total2', 'desc');
+		//$this->db->join('a', 'a.month1 = b.month2');
+		
+		//SELECT Monthname(date1) as month1,
+       //Count(CASE WHEN up = 1 THEN 1 ELSE 0 END) AS UpCount,
+       //Count(CASE WHEN down = 2 THEN 1 ELSE 0 END) AS DownCount
+    //FROM stuhasattend
+    //GROUP BY 'month1'
+		
+		
+			
+			
+		$senddata['data4'] = $query;
+		
+			
+			$query = $this->db->get('stuhasattend'); 
+			
+			
+		//$senddata['data5'] = $query;
+		
+		$this -> load -> view('header');
+		$this -> load -> view('teacher/viewStudent',$senddata);
+		
+		
+	}
 	
 	public function addStudent() 
 	{
@@ -541,17 +711,22 @@ $this->output->set_header("Pragma: no-cache");
 		$data = $this -> db -> get('teacherClass');
 		$sendData['data'] = $data;
 		$this -> load -> view('header');
-		$this -> load -> view('teacher/assignments',$sendData);
+		$this -> load -> view('teacher/dashboard',$sendData);
 	}
 
 	public function removeStudent() 
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 $this->output->set_header("Pragma: no-cache");
+		$email1 = $this -> session -> userdata('email');
 		$email = $_POST['removeEmail'];
 		$this -> db -> where('student',$email);
 		$data = $this -> db -> get('teacherClass');
 
+		$this->db->where('teacher',$email1);
+		$this->db->where('student',$email);
+		$this->db->delete('stuhasattend');
+		
 		if($data -> num_rows()==0) {
 			$sendData['title1'] = "Sorry! No such Student Exist. Try another E-mail address!";
 		}
@@ -657,20 +832,38 @@ $this->output->set_header("Pragma: no-cache");
 		
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 		$this->output->set_header("Pragma: no-cache");
+		
+		$this -> load -> helper('url');
+		$this -> load -> library('session');
+		$this -> load -> library("form_validation");
+		$this -> form_validation -> set_rules("assgname", "Asssignmet Name", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("assmsg", "Asssignment Description", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("startdate", "Upload Date", "required|trim|xss_clean");
+		$this -> form_validation -> set_rules("lastdate", "Last Date  of Submission ", "required|trim|xss_clean");
+		//$this -> form_validation -> set_rules("userfile", "Upload file cannot be empty ", "required|trim|xss_clean");
+		
 		$this -> load -> view('header');
 		$config['upload_path'] = $_SERVER['DOCUMENT_ROOT'] . "/StudyChem/uploads";
-		$config['allowed_types'] = 'gif|jpg|png|pdf';
-		$config['max_size']	= '2048';
-		
+		$config['allowed_types'] = 'pdf|doc';
+		$config['max_size']	= '15000';
+		$email = $this->session->userdata('email');
 		$assgname =  $_POST['assgname'];
 		$assmsg =  $_POST['assmsg'];
 		$startdate =  $_POST['startdate'];
 		$lastdate =  $_POST['lastdate'];
 		$this->load->library('upload', $config);
 
+		if ($this -> form_validation -> run() == FALSE) {
+			
+		}
+		else if( strtotime($lastdate)<strtotime($startdate)){
+			$senddata['dateissue']="End date cannot be less than start date";
+		}
+		
+		else{
 		$query = $this->db->get_where('upload', array('assgname' => $assgname)); 
         $count= $query->num_rows();    //counting result from query
-		if ($count >= 0){
+		if ($count > 0){
 		$sendData['title'] = "Assignment already added";
 		}
 		
@@ -678,7 +871,11 @@ $this->output->set_header("Pragma: no-cache");
 		{ 
 			if ( !$this->upload->do_upload() )
 			{
-				$senddata = array('error' => $this->upload->display_errors());
+				//echo $this->upload->display_errors();
+				$error2 = $this->upload->display_errors();
+				//$senddata[] = array('error' => $this->upload->display_errors());
+				$sendData['error1'] =  $error2;
+				
 			}
 			else
 			{
@@ -688,7 +885,8 @@ $this->output->set_header("Pragma: no-cache");
 				$sdata = $this->upload->data();
 				$path = $sdata['file_path'] .$sdata['file_name']; 
 				$array = array( 'assgname' => $assgname, 'assmsg' => $assmsg,
-				'startdate' => $startdate, 'lastdate' => $lastdate ,'path' => $path
+				'startdate' => $startdate, 'lastdate' => $lastdate ,'path' => $path,
+				'teacher' => $email
 				);
 		
 				$this -> db -> insert('upload',$array);
@@ -709,6 +907,7 @@ $this->output->set_header("Pragma: no-cache");
 						   'assgname' => $assgname
 						   );
 			$this -> db -> insert('addassignment',$array1);
+		}
 		}
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
@@ -1077,7 +1276,7 @@ $this->output->set_header("Pragma: no-cache");
 
 	public function changePassword() {
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
+		$this->output->set_header("Pragma: no-cache");
 		$Error["Invalid1"] = NULL;
 		$this -> load -> helper('url');
 		$this -> load -> library('session');
@@ -1105,7 +1304,7 @@ $this->output->set_header("Pragma: no-cache");
 
 	public function editProfile() {
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
+		$this->output->set_header("Pragma: no-cache");
 		$Error["Invalid"] = NULL;
 		$this -> load -> helper('url');
 		$this -> load -> library('session');
@@ -1131,5 +1330,7 @@ $this->output->set_header("Pragma: no-cache");
 			$this -> load -> view("settings",$success);
 			//redirect('home/login');
 		}
+		
+
 	}
 }

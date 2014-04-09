@@ -37,11 +37,11 @@
                   <a href="<?php echo site_url('home'); ?>"> Home </a>                    
                 </li>
                 <li class="dropdown">
-                  <a href="#"> About </a>
+                  <a href="<?php echo base_url();?>home/about"> About </a>
                   
                 </li>
-                <li ><a href="#">FAQ</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li ><a href="<?php echo base_url();?>home/faq">FAQ</a></li>
+                <li><a href="<?php echo base_url();?>home/contact">Contact us</a></li>
                 <?php if($this -> session -> userdata('isLoggedIn') == FALSE)  { ?>
                 <li><a href="<?php echo base_url();?>home/signup">Sign up</a></li>
                 <?php } ?>
@@ -65,14 +65,15 @@
                    if ($result -> num_rows() == 1 ) {
                     ?>
                   <li><a href="<?php echo base_url();?>student/timeline">News Feed</a></li>
-                  <li> <a href="<?php echo base_url();?>student/quiz"> Quiz </a> </li>
                   <?php 
                   } 
                   } 
                   ?>
                   <?php if($this->session->userdata("roleid")==2) { ?>
                   <li><a href="<?php echo base_url();?>teacher/quiz">Quizzes</a></li>
-                  <?php } ?>
+                  <?php } else if($this->session->userdata("roleid")==1) { $qsn =1; ?>
+				  
+				  <li><a href="<?php echo site_url('student/quiz/'.$qsn.'/');?>">Quizzes</a></li> <?php } ?>
 				  
 				  <?php if($this->session->userdata("roleid")==2) { ?>
                   <li><a href="<?php echo base_url();?>teacher/assignments">Assignments</a></li>

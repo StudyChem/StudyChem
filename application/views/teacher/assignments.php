@@ -27,16 +27,13 @@
         </div>
         <?php if($data -> num_rows() == 0) { ?>
         <div class="alert alert-info"> 
-        <p> You have not uploaded any assignments for your class! </p>
+        <p> Your teacher has not uploaded any assignments for your class! </p>
         </div>
-        <?php 
-        } else 
-        {
-          ?>
+        <?php } else {?>
         <table class="table table-striped table-hover">
         <thead>
                 <tr>
-                  <th>#</th>
+                  <th>S.No</th>
                   <th>Assignment</th>
                   <th>Details</th>
                   <th>Start Date</th>
@@ -71,6 +68,24 @@
         </tbody>
         </table>
         <?php } ?>
+		
+		<?php if(isset($title)) { ?>
+        <div class="alert alert-success"> 
+        <p> <?php echo $title?> </p>
+        </div>
+		<?php } ?>
+		  <?php if(isset($dateissue)){
+          echo "<div class='alert alert-danger'>".$dateissue."</div>";
+          }?>
+          <?php if(validation_errors()!=""){
+          echo "<div class='alert alert-danger'>".validation_errors()."</div>";
+          } ?>
+			<?php if(isset($error1)) {
+	   
+	   echo "<div class='alert alert-danger'>".$error1."</div>";
+	   } ?>
+
+       
         <div class="page-header">
           <h3>  Add New Assignments </h3>
         </div>
@@ -95,17 +110,8 @@
 	   
        </div>
 	   </form>
-       <?php if(isset($title)) { ?>
-        <div class="alert alert-success"> 
-        <p> <?php echo $title?> </p>
-        </div>
-		</div>
-       <?php } ?>
-	   
-	   <?php if(isset($error)) {
-	   
-	   echo $error; } ?>
-	   
+       
+	   	   
 		
 	   <ul>
 		<?php if(isset($upload_data)) foreach ($upload_data as $item => $value):?>

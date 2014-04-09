@@ -39,6 +39,7 @@
                   <th>QuizDes</th>
                   <th>Start Date</th>
 				  <th>End Date</th>
+				  <th>Quiz Status</th>
 				  <th>Edit</th>
 				  <th>Remove</th>
 				  
@@ -66,6 +67,7 @@
                 <td> <?php echo $quizdes;?> </td>
                 <td> <?php echo $startdate;?> </td>
 				<td> <?php echo $enddate;?> </td>
+				<td class = "alert alert-success">Quiz added</td>
 				<td><form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/qsn_add1" method="post" >
 				<button name = "addqsns" class="btn btn-primary btn-large" id = "addqsns" type="submit">Edit</button>
 				<input type="hidden" name="quizid" value="<?php echo $quizid; ?>"/>
@@ -84,34 +86,54 @@
         </table>
         <?php } ?>
 		</div>
+		
+		<?php if(isset($dateissue)){
+          echo "<div class='alert alert-danger'>".$dateissue."</div>";
+          }?>
+          <?php if(validation_errors()!=""){
+          echo "<div class='alert alert-danger'>".validation_errors()."</div>";
+          } ?>
+		
+		
+		<?php if(isset($title)) { ?>
+        <div class="alert alert-success"> 
+        <p> <?php echo $title?> <?php echo $quizno?> <?php echo $title1?> </p>
+        </div>
+		
+       <?php } ?>
+	   
+	   <?php if(isset($titledel)) { ?>
+        <div class="alert alert-success"> 
+        <p> <?php echo $titledel?> <?php echo $quizdel?> <?php echo $titledel1?> </p>
+        </div>
+		
+       <?php } ?>
         <div class="page-header">
           <h2>
-		  Create a new quiz
+		  Create a new quiz or edit the created quiz
 		  </h2>
         </div>
 		<div class="row-fluid">
        <form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/quiz_upload" method="post" enctype="multipart/form-data">
-        <input type="text" name="quiznumber" class="input-medium search-query" placeholder="Quiz Number" >
-		<input type="text" name="quizname" class="input-medium search-query" placeholder="Name of the quiz">
-		<input type="text" name="quizdes" class="input-medium search-query" placeholder="Quiz Description">
-		<input type="text" name="noofqsns" class="input-medium search-query" placeholder="Number of questions">
-		<input type="text" name="duration" class="input-medium search-query" placeholder="Quiz Duration"><br>
-		<h3>Start Date</h3><input type="date" name="startdate" class="input-medium search-query" >
-		<br><h3>End Date</h3><input type="date" name="enddate" class="input-medium search-query" >
-		<br><input type="text" name="code" class="input-medium search-query" placeholder="Secret Quiz Code">
+        <h4>Quiz Number</h4><input type="text" name="quiznumber" class="input-medium search-query" placeholder="Quiz Number" >
+		<h4>Name of the quiz</h4><input type="text" name="quizname" class="input-medium search-query" placeholder="Name of the quiz">
+		<h4>Quiz Description</h4><input type="text" name="quizdes" class="input-medium search-query" placeholder="Quiz Description">
+		<!-- <h4>Number of questions</h4><input type="text" name="noofqsns" class="input-medium search-query" placeholder="Number of questions"> !-->
+		<h4>Quiz Duration in mins</h4><input type="text" name="duration" class="input-medium search-query" placeholder="Quiz Duration"><br>
+		<h4>Start Date</h4><input type="date" name="startdate" class="input-medium search-query" >
+		<br><h4>End Date</h4><input type="date" name="enddate" class="input-medium search-query" >
+		
 		
 		<br><br>
 		<button name = "createquiz" class="btn btn-primary btn-large" id = "createquiz" type="submit">Submit</button>
 		
 	   
        </div>
+	   
+	   
+	   
 	   </form>
-       <?php if(isset($title)) { ?>
-        <div class="alert alert-success"> 
-        <p> <?php echo $title?> </p>
-        </div>
-		</div>
-       <?php } ?>
+       
 	   
 	   <?php if(isset($error)) {
 	   

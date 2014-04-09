@@ -33,7 +33,7 @@
               <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class10/det_php"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/Det_php.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Determine pH</h3>
                     <p>
                       Determine pH with pH indicator Strips
@@ -45,7 +45,7 @@
              <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class10/sd_rxn"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/sd_rxn.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Displacement Reaction</h3>
                     <p>
                       Simple Displacement Reaction
@@ -57,7 +57,7 @@
 			 <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class10/com_rxn"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/com_rxn.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Combination Reaction</h3>
                     <p>
                       Combination Reactions
@@ -69,7 +69,7 @@
 			<li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class10/decom_rxn"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/decom_rxn.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Decomposition Reactions</h3>
                     <p>
                       Decomposition Reactions

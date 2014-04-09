@@ -43,6 +43,7 @@
 				  
                   <th>Edit</th>
 				  <th>Remove</th>
+				 
 				  
                 </tr>
         </thead>
@@ -66,7 +67,7 @@
                 <td><form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/editQuestion" method="post" >
 				<button id = "qsnedit" name = "qsnedit" class="btn btn-primary btn-large" >Edit</button>
 				<input type="hidden" name="quizid" value="<?php echo $quiz_id; ?>"/>
-				<input type="hidden" name="ques_num" value="<?php echo $ques_num; ?>"/></form>
+				<input type="hidden" name="ques_num"  value="<?php echo $ques_num; ?>"/></form>
 				</td>
 				
 				
@@ -75,20 +76,27 @@
 				<input type="hidden" name="quizid" value="<?php echo $quiz_id; ?>"/>
 				<input type="hidden" name="ques_num" value="<?php echo $ques_num; ?>"/>
 				</form></td>
+				
+       
             </tr>
             
-<script type="text/javascript">
 
-	$('#<?php echo $ques_num?>').on('click', function(e){
-  	$('#myModal').modal('toggle');
-});
-</script>
         <?php } ?>
 
         </tbody>
         </table>
         <?php } ?>
 		</div>
+		
+		<?php if(validation_errors()!=""){ 
+			$hello  = "The question could not be saved"; ?>
+			<div class='alert alert-danger' > <?php echo $hello; ?> <br><br>
+           <?php echo validation_errors(); ?></div>";
+          <?php } ?>
+	  <?php if(isset($Invalid1)){
+          echo "<div class='alert alert-danger' >".$Invalid1."</div>";
+          } ?>
+	  
 		
 		<?php if(isset($edit) ){?>
 		
@@ -98,39 +106,62 @@
 		  </h2>
         </div>
 		
-		<div class="row-fluid">
+		<div class="row-fluid" style= "width:600px; ">
        <form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/update_qsn" method="post" enctype="multipart/form-data">
         
-		<input type="text" name="question2" class="input-medium search-query" placeholder="<?php echo $question1; ?>">
-		<input type="text" name="opta1" class="input-medium search-query" placeholder="<?php echo $opta; ?>">
-		<input type="text" name="optb2" class="input-medium search-query" placeholder="<?php echo $optb; ?>">
-		<input type="text" name="optc3" class="input-medium search-query" placeholder="<?php echo $optc; ?>"><br>
-		<input type="text" name="optd4" class="input-medium search-query" placeholder="<?php echo $optd; ?>"><br>
-		<input type="text" name="cans1" class="input-medium search-query" placeholder="<?php echo $cans; ?>"><br>
-		<input type="text" name="marks1" class="input-medium search-query" placeholder="<?php echo $marks; ?>"><br>
+		<h4>Question &nbsp;&nbsp;<input  type="text" name="question2" class="input-medium search-query" placeholder="<?php echo $question1; ?>"></h4>
+		<h4>Option A &nbsp;&nbsp;<input type="text" name="opta1" class="input-medium search-query" placeholder="<?php echo $opta; ?>"></h4>
+		<h4>Option B &nbsp;&nbsp;<input type="text" name="optb2" class="input-medium search-query" placeholder="<?php echo $optb; ?>"></h4>
+		<h4>Option C &nbsp;&nbsp;<input type="text" name="optc3" class="input-medium search-query" placeholder="<?php echo $optc; ?>"><br></h4>
+		<h4>Option D &nbsp;&nbsp;<input type="text" name="optd4" class="input-medium search-query" placeholder="<?php echo $optd; ?>"><br></h4>
+		<h4>Answer &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="cans1" class="input-medium search-query" placeholder="<?php echo $cans; ?>"><br></h4>
+		<h4>Marks &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="marks1" class="input-medium search-query" placeholder="<?php echo $marks; ?>"><br></h4>
+		
 		<br><br>
 		<button name = "update_qsn" class="btn btn-primary btn-large" id = "update_qsn" type="submit">Update Question</button>
 		<input type="hidden" name="quizid" value="<?php echo $quizid; ?>"/>
-	   <input type="hidden" name="ques_num" value="<?php echo $ques_num; ?>"/>	
+	   <input type="hidden" name="ques_num" value="<?php echo $ques_num2; ?>"/>	
        </div>
+	   
+	   
 	   </form>
        
 		<?php }?>
+		
+		<?php if(isset($title)) { ?>
+        <div class="alert alert-success"> 
+        <p>  <?php echo $title?> <?php echo $ques?> <?php echo $title1?>  </p>
+        </div>
+       <?php } ?>
+	   
+	   <?php if(isset($titledel)) { ?>
+        <div class="alert alert-success"> 
+        <p>  <?php echo $titledel?> <?php echo $delete?> <?php echo $titledel1?>  </p>
+        </div>
+       <?php } ?>
+
+	   <?php if(isset($titleupd)) { ?>
+        <div class="alert alert-success"> 
+        <p>  <?php echo $titleupd?> <?php echo $quest?> <?php echo $titleupd1?>  </p>
+        </div>
+       <?php } ?>
+	   
+	  
         <div class="page-header">
           <h2>
 		  Add new question
 		  </h2>
         </div>
-		<div class="row-fluid">
+		<div class="row-fluid" style= "width:600px; float: left;">
        <form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/qsn_add" method="post" enctype="multipart/form-data">
-        <input type="text" name="qsnnumber" class="input-medium search-query" placeholder="Question Number" >
-		<textarea name="question1" class="form-control span4" placeholder="Question" rows="3" style="width:850px;"></textarea><br><br>
-		<input type="text" name="opta" class="input-medium search-query" placeholder="Option A">
-		<input type="text" name="optb" class="input-medium search-query" placeholder="Option B">
-		<input type="text" name="optc" class="input-medium search-query" placeholder="Option C"><br>
-		<input type="text" name="optd" class="input-medium search-query" placeholder="Option D"><br>
-		<input type="text" name="cans" class="input-medium search-query" placeholder="Correct Answer"><br>
-		<input type="text" name="marks" class="input-medium search-query" placeholder="Marks"><br>
+        <h4>Qsn.No &nbsp;&nbsp;&nbsp;&nbsp;<input  type="text" name="qsnnumber" class="input-medium search-query" placeholder="Question Number" ></h4>
+		<h4>Question &nbsp;&nbsp;<textarea name="question1" class="form-control span4" placeholder="Question" rows="3" style= "width:450px;" ></textarea><br><br></h4>
+		<h4>Option A &nbsp;&nbsp;<input type="text" name="opta" class="input-medium search-query" placeholder="Option A"></h4>
+		<h4>Option B &nbsp;&nbsp;<input type="text" name="optb" class="input-medium search-query" placeholder="Option B"></h4>
+		<h4>Option C &nbsp;&nbsp;<input type="text" name="optc" class="input-medium search-query" placeholder="Option C"><br></h4>
+		<h4>Option D &nbsp;&nbsp;<input type="text" name="optd" class="input-medium search-query" placeholder="Option D"><br></h4>
+		<h4>Answer &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="cans" class="input-medium search-query" placeholder="Correct Answer"><br></h4>
+		<h4>Marks &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="marks" class="input-medium search-query" placeholder="Marks"><br></h4>
 		
 		
 		<br><br>
@@ -138,34 +169,12 @@
 		<input type="hidden" name="quizid" value="<?php echo $quizid; ?>"/>
 	   
        </div>
+	   
+	   
 	   </form>
        
-	   
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel" >Question "<?php echo $ques_num; ?>"</h4>
-      </div>
-      <div class="modal-body">
-      <form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/qsn_add" method="post" enctype="multipart/form-data">
-        <textarea name="qsnnumber" class="form-control span4" placeholder="Question Number" > 
-		<input type="text" name="question1" class="input-medium search-query" placeholder="Question">
-		<input type="text" name="opta" class="input-medium search-query" placeholder="Option A">
-		<input type="text" name="optb" class="input-medium search-query" placeholder="Option B">
-		<input type="text" name="optc" class="input-medium search-query" placeholder="Option C"><br>
-		<input type="text" name="optd" class="input-medium search-query" placeholder="Option D"><br>
-		<input type="text" name="cans" class="input-medium search-query" placeholder="Correct Answer"><br>
-		<input type="text" name="marks" class="input-medium search-query" placeholder="Marks"><br>
-		
-		
-		<br><br>
-		<button name = "setqsn" class="btn btn-primary btn-large" id = "setqsn" type="submit">Save Question</button>
-		<input type="hidden" name="quizid" value="<?php echo $quizid; ?>"/>
-	   
-       </div>
-	   </form>
+	  
+
        	
 
       </div>

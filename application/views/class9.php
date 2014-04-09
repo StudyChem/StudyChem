@@ -36,7 +36,7 @@
               <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/periodic_table"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/periodic_table.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Periodic Table</h3>
                     <p>
                       Learning chemistry through Periodic Table.
@@ -48,8 +48,8 @@
               <?php } if($chemical == 1) {?>
              <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/chemical_reactions"> <div class="thumbnail">
-                  <img style="height:205px" src="<?php echo base_url();?>assests/img/Chemical-Reactions.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <img style="height:185px" src="<?php echo base_url();?>assests/img/Chemical-Reactions.jpg" alt="product name">
+                  <div class="widget-footer1">
                     <h3>Chemical Reactions</h3>
                     <p>
                       Carry Out Chemical Reactions
@@ -62,7 +62,7 @@
 			     <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/mixture_compound"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/mixandcom.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Mixture and Compound</h3>
                     <p>
                       Distinguish Between Mixture and Compound
@@ -75,7 +75,7 @@
               <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/melting_point"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Melting Point</h3>
                     <p>
                       To determine the melting point of ice.
@@ -102,7 +102,7 @@
                 <li class="span3">
                <a style="text-decoration:none" href="<?php echo base_url();?>class9/topic/<?php echo $row->id;?>"> <div class="thumbnail">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3><?php echo $row -> topic;?></h3>
                     <p>
                      <?php echo $row -> topic;?>

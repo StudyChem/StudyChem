@@ -123,6 +123,12 @@
   background-color: #EEEEEC;
   border-top: 1px solid #DDD;
 }
+.widget-footer1 {
+  padding: 6%;
+  background-color: #EEEEEC;
+  border-top: 1px solid #DDD;
+  height : 140px;
+}
 .widget-footer p {
   margin: 0;
 }

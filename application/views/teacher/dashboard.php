@@ -33,7 +33,7 @@
         <table class="table table-striped table-hover">
         <thead>
                 <tr>
-                  <th>#</th>
+                  <th>S.No</th>
                   <th>Name</th>
                   <th>Class</th>
                   <th>Email</th>
@@ -52,15 +52,31 @@
             ?>
             <tr class="info">
                 <td> <?php echo $i; $i++;?> </td>
-                <td> <?php echo $name;?> </td>
+                <td> <?php echo $name;?></a></td>
                 <td> <?php echo $class;?> </td>
                 <td> <?php echo $email;?> </td>
+				<td> <form class="form-horizontal form-signin-signup" action="<?php echo base_url();?>teacher/viewStudent" method="post" enctype="multipart/form-data">
+						<button name = "upload" class="btn btn-primary btn-large" id = "upload" type="submit" value="upload">View Profile</button>
+						<input type="hidden" name="stdemail" value="<?php echo $email;?> ">
+						</form>
+					</td>
             </tr>
         <?php } ?>
 
         </tbody>
         </table>
         <?php } ?>
+		
+		<?php if(isset($title)) { ?>
+        <div class="alert alert-success"> 
+        <p> <?php echo $title?> </p>
+        </div>
+       <?php } ?>
+		<?php if(isset($title1)) { ?>
+        <div class="alert alert-success"> 
+        <p> <?php echo $title1 ?> </p>
+        </div>
+       <?php } ?>
         <div class="page-header">
           <h3>  Add New Student! </h3>
         </div>
@@ -68,11 +84,7 @@
         <input type="text" name="addEmail"class="input-medium search-query" placeholder="Email of the student">
        <button type="submit" class="btn btn-info">Add</button>
        </form>
-       <?php if(isset($title)) { ?>
-        <div class="alert alert-success"> 
-        <p> <?php echo $title?> </p>
-        </div>
-       <?php } ?>
+       
        <br>
        <div class="page-header">
           <h3>  Remove any existing Student! </h3>
@@ -81,11 +93,7 @@
         <input type="text" name="removeEmail"class="input-medium search-query" placeholder="Email of the student">
         <button type="submit" class="btn btn-danger">Remove</button>
        </form>
-       <?php if(isset($title1)) { ?>
-        <div class="alert alert-success"> 
-        <p> <?php echo $title1 ?> </p>
-        </div>
-       <?php } ?>
+       
 
        
 <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>

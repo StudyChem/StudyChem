@@ -40,15 +40,14 @@
           <div class="row-fluid">
             <ul class="thumbnails">
               <li class="span3">
-                <div class="thumbnail">
+                <div class="thumbnail1">
                 <img style="height:185px" src="<?php echo base_url();?>assests/img/periodic_table.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Periodic Table</h3>
                     <p>
                       Learning chemistry through Periodic Table.
                     </p>
                   </div>
-                  <br>
                   <p>
                   <?php if($periodic == 1) { ?>
                   <a href="<?php echo base_url();?>teacher/remove_periodic">
@@ -65,15 +64,14 @@
                 </div> 
               </li>
              <li class="span3">
-                <div class="thumbnail">
+                <div class="thumbnail1">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/Chemical-Reactions.jpg" alt="product name">
-                    <div class="widget-footer">
+                    <div class="widget-footer1">
                     <h3>Chemical Reactions</h3>
                     <p>
                       Carry Out Chemical Reactions
                     </p>    
                   </div>
-                  <br>
                   <p>    
                    <?php if($chemical == 1) { ?>
                   <a href="<?php echo base_url();?>teacher/remove_chemical">
@@ -90,16 +88,16 @@
                 </p>
                 </div> 
               </li>
-			 <li class="span3">
-               <div class="thumbnail">
+			   <li class="span3">
+               <div class="thumbnail1">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/mixandcom.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Mixture and Compound</h3>
                     <p>
                       Distinguish Between Mixture and Compound
                     </p>
                   </div>
-                  <br>
+                
                   <p>
                   <?php if($mixture == 1) { ?>
                   <a href="<?php echo base_url();?>teacher/remove_mixture">
@@ -118,9 +116,9 @@
                 </div> 
               </li> 
               <li class="span3">
-                <div class="thumbnail">
+                <div class="thumbnail1">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Melting Point</h3>
                     <p>
                       To determine the melting point of ice.
@@ -146,9 +144,9 @@
             </ul>
             <ul class="thumbnails"> 
             	<li class="span3">
-               <div class="thumbnail">
+               <div class="thumbnail1">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/solution.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Solutions</h3>
                     <p>
                       To distinguish between Solutions.
@@ -172,9 +170,9 @@
                 </div> 
                 </li>
                 <li class="span3">
-                <div class="thumbnail">
+                <div class="thumbnail1">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/boiling.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Boiling Point</h3>
                     <p>
                       To determine Boiling Point of water.
@@ -199,9 +197,9 @@
                 </div> 
                 </li>
                 <li class="span3">
-                <div class="thumbnail">
+                <div class="thumbnail1">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/exo.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3>Exothermic and Endothermic</h3>
                     <p>
                       Different examples of exothermic and endothermic reactions.
@@ -233,9 +231,9 @@
                 foreach($topics -> result() as $row){
                 ?> 
                 <li class="span3">
-                <div class="thumbnail">
+                <div class="thumbnail1">
                   <img style="height:185px" src="<?php echo base_url();?>assests/img/melting.jpg" alt="product name">
-                  <div class="widget-footer">
+                  <div class="widget-footer1">
                     <h3><?php echo $row -> topic;?></h3>
                     <p>
                      <?php echo $row -> topic;?>

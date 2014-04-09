@@ -19,6 +19,8 @@
 	<script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assests/js/bootstrap.min.js'); ?>"></script>
     <script type="text/javascript" src="<?php echo base_url('assests/js/boot-business.js'); ?>"></script>
+	
+	
   </head>
   <body>
 <div class="content">
@@ -35,12 +37,10 @@
         </div>
         <?php } else {?>
         
-		<form class="form-search" >
-        <input type="date" id = "date2" name="SelectDate" class="input-medium search-query"  >
+		<form class="form-search" method = "post">
+        <input type="date" id = "date2" name="date2" class="input-medium search-query" value="<?php if(isset($_SESSION['date'])) echo $_SESSION['date'] ?>" >
        
        </form>
-
-		
 		
 		<table class="table table-striped table-hover">
         <thead>
@@ -52,25 +52,55 @@
                 </tr>
         </thead>
         <tbody>
+		<style>
+		.color0{
+		}
+		.color1{
+		background:green !important;}
+		</style>
         <?php
         $i=1;
-        foreach($data -> result() as $row) { 
+        foreach($data -> result() as $row) {
             $email = $row -> student;
             $this -> db -> where('email',$email);
             $r = $this -> db -> get('student');
             $stu = $r->row();
             $name = $stu -> name;
             $class = $stu -> class; 
+			if(isset($_SESSION['date'])){
+			$d=$_SESSION['date'];
+			$aq="SELECT * FROM `stuhasattend` WHERE date1='$d' and student= '$email'";
+			$q = mysql_query($aq);
+			$d=mysql_fetch_assoc($q);
+
+			}
             ?>
             <tr class="info">
                 <td> <?php echo $i; $i++;?> </td>
                 <td> <?php echo $name;?> </td>
                 <td> <form class="form-search" action="<?php echo base_url();?>teacher/markattend" method="post">
 					<input type="hidden" name="emailid" value="<?php echo $email; ?>"/>
-					<input type="hidden" id = "date<?php echo $i-1;?>" name="attdate" /> 
-			    <input type="hidden" name="num" value="<?php echo $i-1; ?>"/>			
-					<button id="b1"name="present" type="submit" value="P" onclick="fun(<?php echo $i-1;?>)">P</button>
-					<button id="b2"name="absent" type="submit" value="A" onclick="fun(<?php echo $i-1;?>)">A</button> </form>
+					<script>	$('#date2').change(function() {
+			$('.date1').val($(this).val());
+			});
+			</script>
+			
+				<input type="hidden" class = "date1" name="attdate" value="<?php if(isset($_SESSION['date'])) echo $_SESSION['date'] ?>"/>
+				<button name="present" style = " width:30px;
+    height: 30px;
+    background-color: initial;
+    border: solid 2px green;
+    border-radius: 50%;" type="submit" id = "pr" onclick="this.style.color='#000000';
+this.style.backgroundColor = '#008000'" value = "<?php if(isset($_SESSION['present1'])) echo $_SESSION['present1'] ?>" class = "<?php if(isset($d['value'])) echo 'color'.$d['value']; ?>" >P</button>
+				
+				
+				<button name="absent" style = "width: 30px;
+    height: 30px;
+    background-color: initial;
+    border: solid 2px red;
+    border-radius: 50%;" type="submit" id = "pr" onclick="this.style.color='#000000';
+this.style.backgroundColor = '#cc0000'" value="<?php if(isset($_SESSION['absent'])) echo $_SESSION['absent'] ?>" class="<?php if(isset($d['value'])) echo 'color'.!$d['value']; ?>" >A</button> </form>
+					
 				</td>
                 <td> <?php echo $email;?> </td>
             </tr>
@@ -83,17 +113,16 @@
           <h3>  Show Attendance </h3>
         </div>
        <form class="form-search" action="<?php echo base_url();?>teacher/showattendance" method="post">
-        <input type="date" name="showdate" class="input-medium search-query" >
+        <input type="date" name="showdate" class="input-medium search-query" value="<?php if(isset($_SESSION['date2'])) echo $_SESSION['date2'] ?>">
 		<button type="submit" name ="show"  class="btn btn-info">Show</button>
        </form>
-       
 	   
 	   <?php if(isset($showdate)) { ?>
         
 		
 		<?php if($data1 -> num_rows() == 0) { ?>
         <div class="alert alert-info"> 
-        <p> No attendance for today </p>
+        <p> No attendance on this day </p>
         </div>
         <?php } else {?>
         
@@ -110,56 +139,41 @@
         <?php
         $i=1;
         foreach($data1 -> result() as $row) { 
-            $date = $row -> date;
-            $this -> db -> where('date',$date);
-            $r = $this -> db -> get('stuhasattend');
-            $stu = $r->row();
-            $name = $stu -> student;
-			      $this -> db -> where('email',$name);
-			$name1 = $this->db->get('student');
-			$data = $name1 -> row();
-			$name = $data -> name;
-            $value = $stu -> value; 
+            $date = $row -> date1;
+            
+            $name = $row -> student;
+			
+            $value = $row -> value;
+			$this->db->where('email',$name);
+			$row1 = $this->db->get('student');
+			$name1 = $row1 -> row();
+			$name2 = $name1->name;
             ?>
             <tr class="info">
                 <td> <?php echo $i; $i++;?> </td>
-                <td> <?php echo $name;?> </td>
+                <td> <?php echo $name2;?> </td>
                 
                 <td><?php if(($value)==0){ echo "Absent";} else{ echo "Present";} ?></td>
+				<td> <?php echo $date;?></td>
             </tr>
         <?php } ?>
 
         </tbody>
         </table>
         <?php } ?>
-		    <?php } ?>
-	     <?php if(isset($title)) { ?>
+		
+		
+		
+       <?php } ?>
+	   
+	   
+	   
+       <?php if(isset($title)) { ?>
         <div class="alert alert-success"> 
         <p> <?php echo $title?> </p>
         </div>
        <?php } ?>
-       <br>
-       <div class="page-header">
-          <h3>  Remove any existing Student! </h3>
-        </div>
-       <form class="form-search" action="<?php echo base_url();?>teacher/removeStudent" method="post">
-        <input type="text" name="removeEmail"class="input-medium search-query" placeholder="Email of the student">
-        <button type="submit" class="btn btn-danger">Remove</button>
-       </form>
-       <?php if(isset($title1)) { ?>
-        <div class="alert alert-success"> 
-        <p> <?php echo $title1 ?> </p>
-        </div>
-       <?php } ?>
-
-       <script>  
-       function fun(i) {
-        alert("sd");
-      var x=$("#date2").val();
-      alert(x);
-      document.getElementById('date'+i).value = x;
-      alert('date'+i);
-      }
-      </script>
+       
+       
 
        
