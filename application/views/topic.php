@@ -29,9 +29,14 @@
               <?php echo $theory; ?>
           </p>
           <?php if($this -> session -> userdata('roleid')==2) { ?>
-         <a href="<?php echo base_url();?>teacher/editTopic/<?php echo $id;?>"> 
-         <button type="submit" class="btn btn-large btn-success">Edit </button>
+        
+         <p>
+          <a href="<?php echo base_url();?>teacher/editTopic/<?php echo $id;?>"> <button type="submit" class="btn btn-large btn-success">Edit </button>
          </a>
+         <a href="<?php echo base_url();?>teacher/deleteTopic/<?php echo $id;?>"><button type="submit" class="btn btn-large btn-danger">Delete </button>
+         </a>
+         </p>
+        
          <?php } ?>
           </div>
     </div>

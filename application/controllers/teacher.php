@@ -24,7 +24,7 @@ $this->output->set_header("Pragma: no-cache");
 	public function addNews()
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
+		$this->output->set_header("Pragma: no-cache");
 		$head = $_POST['heading'];
 		$cont = $_POST['cont'];
 		$date = date('Y-m-d H:i:s');
@@ -41,7 +41,7 @@ $this->output->set_header("Pragma: no-cache");
 	public function timeline() 
 	{
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
-$this->output->set_header("Pragma: no-cache");
+		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('teacher',$email);
 		$data = $this -> db -> get('news');
@@ -73,6 +73,13 @@ $this->output->set_header("Pragma: no-cache");
 		$this -> db -> where('id',$id);
 		$array = array('show' => 1);
 		$this -> db -> update('topic',$array);
+		$this -> class9();
+	}
+
+	public function deleteTopic($id) 
+	{
+		$this -> db -> where('id',$id);
+		$this -> db -> delete('topic');
 		$this -> class9();
 	}
 	public function viewTopic($id)
