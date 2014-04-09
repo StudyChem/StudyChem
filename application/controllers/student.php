@@ -22,7 +22,7 @@ class Student extends CI_Controller {
 		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
 		$this -> db -> where('student',$email);
-		$data1 = $this -> db -> get('teacherclass');
+		$data1 = $this -> db -> get('teacherClass');
 		
 		$teacher = $data1 -> row();
 		$email = $teacher -> teacher;
@@ -72,7 +72,7 @@ $this->output->set_header("Pragma: no-cache");
 		$this->output->set_header("Cache-Control: no-store, no-cache, must-revalidate, no-transform, max-age=0, post-check=0, pre-check=0");
 		$this->output->set_header("Pragma: no-cache");
 		$email = $this -> session -> userdata('email');
-		$quizid = 9;
+		$quizid = 7;
 		$this->db->where('quizid',$quizid);
 		$data = $this -> db -> get('problem');
 		
@@ -170,7 +170,7 @@ $this->output->set_header("Pragma: no-cache");
 		$assgname =  $_POST['assgname1'];
 		$email = $this->session->userdata('email');
 		$this -> db -> where('student',$email);
-		$data1 = $this -> db -> get('teacherclass');
+		$data1 = $this -> db -> get('teacherClass');
 		
 		$data = $data1-> row();
 		$teacher = $data->teacher;

@@ -80,7 +80,7 @@
 		</td>
 		</tr>
 	</table>
-		<div id="timer"><?php  echo 1100; ?></div>
+		<div id="timer"><?php echo 1100; ?></div>
 	<ul class="pager">
 		<form action="<?php echo base_url();?>sxcxc" method="post" class="">
 		<?php 
@@ -102,8 +102,7 @@
 	</ul>
 	</div>        
 		</div>
-	
-	</div>
+    	</div>
     </div>
 	<div class = "content" style = "height: 200px;"></div>
       <script type="text/javascript" src="<?php echo base_url('assests/js/jquery.min.js'); ?>"></script>
